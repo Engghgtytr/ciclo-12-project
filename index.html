@@ -1,0 +1,1446 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ciclo 12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Leaflet 1.9.4 (BSD-2) */
+/* required styles */
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+.leaflet-container {
+	overflow: hidden;
+	}
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
+	  -webkit-user-drag: none;
+	}
+/* Prevents IE11 from highlighting tiles in blue */
+.leaflet-tile::selection {
+	background: transparent;
+}
+/* Safari renders non-retina tile on retina better with this, but Chrome is worse */
+.leaflet-safari .leaflet-tile {
+	image-rendering: -webkit-optimize-contrast;
+	}
+/* hack that prevents hw layers "stretching" when loading new tiles */
+.leaflet-safari .leaflet-tile-container {
+	width: 1600px;
+	height: 1600px;
+	-webkit-transform-origin: 0 0;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	display: block;
+	}
+/* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
+/* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+.leaflet-container .leaflet-overlay-pane svg {
+	max-width: none !important;
+	max-height: none !important;
+	}
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
+	max-width: none !important;
+	max-height: none !important;
+	width: auto;
+	padding: 0;
+	}
+
+.leaflet-container img.leaflet-tile {
+	/* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
+	mix-blend-mode: plus-lighter;
+}
+
+.leaflet-container.leaflet-touch-zoom {
+	-ms-touch-action: pan-x pan-y;
+	touch-action: pan-x pan-y;
+	}
+.leaflet-container.leaflet-touch-drag {
+	-ms-touch-action: pinch-zoom;
+	/* Fallback for FF which doesn't support pinch-zoom */
+	touch-action: none;
+	touch-action: pinch-zoom;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.leaflet-container {
+	-webkit-tap-highlight-color: transparent;
+}
+.leaflet-container a {
+	-webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+.leaflet-tile {
+	filter: inherit;
+	visibility: hidden;
+	}
+.leaflet-tile-loaded {
+	visibility: inherit;
+	}
+.leaflet-zoom-box {
+	width: 0;
+	height: 0;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	z-index: 800;
+	}
+/* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
+.leaflet-overlay-pane svg {
+	-moz-user-select: none;
+	}
+
+.leaflet-pane         { z-index: 400; }
+
+.leaflet-tile-pane    { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane  { z-index: 500; }
+.leaflet-marker-pane  { z-index: 600; }
+.leaflet-tooltip-pane   { z-index: 650; }
+.leaflet-popup-pane   { z-index: 700; }
+
+.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane svg    { z-index: 200; }
+
+.leaflet-vml-shape {
+	width: 1px;
+	height: 1px;
+	}
+.lvml {
+	behavior: url(#default#VML);
+	display: inline-block;
+	position: absolute;
+	}
+
+
+/* control positioning */
+
+.leaflet-control {
+	position: relative;
+	z-index: 800;
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+.leaflet-top,
+.leaflet-bottom {
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	}
+.leaflet-top {
+	top: 0;
+	}
+.leaflet-right {
+	right: 0;
+	}
+.leaflet-bottom {
+	bottom: 0;
+	}
+.leaflet-left {
+	left: 0;
+	}
+.leaflet-control {
+	float: left;
+	clear: both;
+	}
+.leaflet-right .leaflet-control {
+	float: right;
+	}
+.leaflet-top .leaflet-control {
+	margin-top: 10px;
+	}
+.leaflet-bottom .leaflet-control {
+	margin-bottom: 10px;
+	}
+.leaflet-left .leaflet-control {
+	margin-left: 10px;
+	}
+.leaflet-right .leaflet-control {
+	margin-right: 10px;
+	}
+
+
+/* zoom and fade animations */
+
+.leaflet-fade-anim .leaflet-popup {
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+	opacity: 1;
+	}
+.leaflet-zoom-animated {
+	-webkit-transform-origin: 0 0;
+	    -ms-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	}
+svg.leaflet-zoom-animated {
+	will-change: transform;
+}
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+	}
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+	}
+
+.leaflet-zoom-anim .leaflet-zoom-hide {
+	visibility: hidden;
+	}
+
+
+/* cursors */
+
+.leaflet-interactive {
+	cursor: pointer;
+	}
+.leaflet-grab {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:         grab;
+	}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+	cursor: crosshair;
+	}
+.leaflet-popup-pane,
+.leaflet-control {
+	cursor: auto;
+	}
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+	cursor: move;
+	cursor: -webkit-grabbing;
+	cursor:    -moz-grabbing;
+	cursor:         grabbing;
+	}
+
+/* marker & overlays interactivity */
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+	pointer-events: none;
+	}
+
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+
+/* visual tweaks */
+
+.leaflet-container {
+	background: #ddd;
+	outline-offset: 1px;
+	}
+.leaflet-container a {
+	color: #0078A8;
+	}
+.leaflet-zoom-box {
+	border: 2px dotted #38f;
+	background: rgba(255,255,255,0.5);
+	}
+
+
+/* general typography */
+.leaflet-container {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.5;
+	}
+
+
+/* general toolbar styles */
+
+.leaflet-bar {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+	border-radius: 4px;
+	}
+.leaflet-bar a {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	}
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+	background-color: #f4f4f4;
+	}
+.leaflet-bar a:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	}
+.leaflet-bar a:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom: none;
+	}
+.leaflet-bar a.leaflet-disabled {
+	cursor: default;
+	background-color: #f4f4f4;
+	color: #bbb;
+	}
+
+.leaflet-touch .leaflet-bar a {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	}
+.leaflet-touch .leaflet-bar a:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	}
+.leaflet-touch .leaflet-bar a:last-child {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	}
+
+/* zoom control */
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+	}
+
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+	font-size: 22px;
+	}
+
+
+/* layers control */
+
+.leaflet-control-layers {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	background: #fff;
+	border-radius: 5px;
+	}
+.leaflet-control-layers-toggle {
+	background-image: url(images/layers.png);
+	width: 36px;
+	height: 36px;
+	}
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: url(images/layers-2x.png);
+	background-size: 26px 26px;
+	}
+.leaflet-touch .leaflet-control-layers-toggle {
+	width: 44px;
+	height: 44px;
+	}
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+	display: none;
+	}
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+	display: block;
+	position: relative;
+	}
+.leaflet-control-layers-expanded {
+	padding: 6px 10px 6px 6px;
+	color: #333;
+	background: #fff;
+	}
+.leaflet-control-layers-scrollbar {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 5px;
+	}
+.leaflet-control-layers-selector {
+	margin-top: 2px;
+	position: relative;
+	top: 1px;
+	}
+.leaflet-control-layers label {
+	display: block;
+	font-size: 13px;
+	font-size: 1.08333em;
+	}
+.leaflet-control-layers-separator {
+	height: 0;
+	border-top: 1px solid #ddd;
+	margin: 5px -10px 5px -6px;
+	}
+
+/* Default icon URLs */
+.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+	background-image: url(images/marker-icon.png);
+	}
+
+
+/* attribution and scale controls */
+
+.leaflet-container .leaflet-control-attribution {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 0;
+	}
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+	padding: 0 5px;
+	color: #333;
+	line-height: 1.4;
+	}
+.leaflet-control-attribution a {
+	text-decoration: none;
+	}
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:focus {
+	text-decoration: underline;
+	}
+.leaflet-attribution-flag {
+	display: inline !important;
+	vertical-align: baseline !important;
+	width: 1em;
+	height: 0.6669em;
+	}
+.leaflet-left .leaflet-control-scale {
+	margin-left: 5px;
+	}
+.leaflet-bottom .leaflet-control-scale {
+	margin-bottom: 5px;
+	}
+.leaflet-control-scale-line {
+	border: 2px solid #777;
+	border-top: none;
+	line-height: 1.1;
+	padding: 2px 5px 1px;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	background: rgba(255, 255, 255, 0.8);
+	text-shadow: 1px 1px #fff;
+	}
+.leaflet-control-scale-line:not(:first-child) {
+	border-top: 2px solid #777;
+	border-bottom: none;
+	margin-top: -2px;
+	}
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+	border-bottom: 2px solid #777;
+	}
+
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	box-shadow: none;
+	}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
+	}
+
+
+/* popup */
+
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+.leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.leaflet-popup-content {
+	margin: 13px 24px 13px 20px;
+	line-height: 1.3;
+	font-size: 13px;
+	font-size: 1.08333em;
+	min-height: 1px;
+	}
+.leaflet-popup-content p {
+	margin: 17px 0;
+	margin: 1.3em 0;
+	}
+.leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -20px;
+	overflow: hidden;
+	pointer-events: none;
+	}
+.leaflet-popup-tip {
+	width: 17px;
+	height: 17px;
+	padding: 1px;
+
+	margin: -10px auto 0;
+	pointer-events: auto;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: white;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	font: 16px/24px Tahoma, Verdana, sans-serif;
+	color: #757575;
+	text-decoration: none;
+	background: transparent;
+	}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+	color: #585858;
+	}
+.leaflet-popup-scrolled {
+	overflow: auto;
+	}
+
+.leaflet-oldie .leaflet-popup-content-wrapper {
+	-ms-zoom: 1;
+	}
+.leaflet-oldie .leaflet-popup-tip {
+	width: 24px;
+	margin: 0 auto;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+	}
+
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+	border: 1px solid #999;
+	}
+
+
+/* div icon */
+
+.leaflet-div-icon {
+	background: #fff;
+	border: 1px solid #666;
+	}
+
+
+/* Tooltip */
+/* Base styles for the element that has a tooltip */
+.leaflet-tooltip {
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+.leaflet-tooltip.leaflet-interactive {
+	cursor: pointer;
+	pointer-events: auto;
+	}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	position: absolute;
+	pointer-events: none;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+	}
+
+/* Directions */
+
+.leaflet-tooltip-bottom {
+	margin-top: 6px;
+}
+.leaflet-tooltip-top {
+	margin-top: -6px;
+}
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+	left: 50%;
+	margin-left: -6px;
+	}
+.leaflet-tooltip-top:before {
+	bottom: 0;
+	margin-bottom: -12px;
+	border-top-color: #fff;
+	}
+.leaflet-tooltip-bottom:before {
+	top: 0;
+	margin-top: -12px;
+	margin-left: -6px;
+	border-bottom-color: #fff;
+	}
+.leaflet-tooltip-left {
+	margin-left: -6px;
+}
+.leaflet-tooltip-right {
+	margin-left: 6px;
+}
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	top: 50%;
+	margin-top: -6px;
+	}
+.leaflet-tooltip-left:before {
+	right: 0;
+	margin-right: -12px;
+	border-left-color: #fff;
+	}
+.leaflet-tooltip-right:before {
+	left: 0;
+	margin-left: -12px;
+	border-right-color: #fff;
+	}
+
+/* Printing */
+
+@media print {
+	/* Prevent printers from removing background-images of controls. */
+	.leaflet-control {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+		}
+	}
+
+
+/* Layout: barra de sinalização no topo com as abas; cada aba é uma tela; o mapa usa duas colunas (mapa + painel) que viram uma no celular. */
+:root {
+  --papel: #F2F5F0;
+  --superficie: #FFFFFF;
+  --superficie-2: #E6ECE4;
+  --tinta: #16231B;
+  --tinta-2: #4B5B51;
+  --linha: #D2DAD0;
+  --verde: #2E6B47;
+  --verde-forte: #22553A;
+  --sobre-verde: #FFFFFF;
+  --mar: #1F5F73;
+  --barro: #B5582C;
+  --cat-eletro: #4E45AE;
+  --cat-recicla: #18707F;
+  --cat-roupa: #B5582C;
+  --cat-alimento: #47791F;
+  --conama-azul: #1F5FBF;
+  --conama-vermelho: #C62828;
+  --conama-verde: #2E7D32;
+  --conama-amarelo: #E2B100;
+  --conama-marrom: #7A4E2D;
+  --conama-laranja: #E86A10;
+  --conama-cinza: #8A908C;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-texto: "Atkinson Hyperlegible", "Segoe UI", Roboto, Arial, sans-serif;
+  --raio: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel: #101712; --superficie: #17201A; --superficie-2: #1F2A23; --tinta: #E2EAE4; --tinta-2: #A2B1A7; --linha: #2E3A32;
+    --verde: #7CC59B; --verde-forte: #9BD7B3; --sobre-verde: #0E1912; --mar: #7DBACD; --barro: #E58C5F;
+    --cat-eletro: #A49DF2; --cat-recicla: #62BCCD; --cat-roupa: #E58C5F; --cat-alimento: #98CB6E;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --papel: #101712; --superficie: #17201A; --superficie-2: #1F2A23; --tinta: #E2EAE4; --tinta-2: #A2B1A7; --linha: #2E3A32;
+  --verde: #7CC59B; --verde-forte: #9BD7B3; --sobre-verde: #0E1912; --mar: #7DBACD; --barro: #E58C5F;
+  --cat-eletro: #A49DF2; --cat-recicla: #62BCCD; --cat-roupa: #E58C5F; --cat-alimento: #98CB6E;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--papel); color: var(--tinta); font-family: var(--f-texto); font-size: 16px; line-height: 1.55; }
+h1, h2, h3 { font-family: var(--f-display); font-stretch: 78%; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 750; }
+h3 { font-size: 1.3rem; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--mar); }
+:focus-visible { outline: 3px solid var(--mar); outline-offset: 2px; }
+.num { font-variant-numeric: tabular-nums; }
+.rotulo { font-family: var(--f-display); font-stretch: 90%; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-2); }
+.miolo { width: 100%; max-width: 1180px; margin: 0 auto; padding-inline: 16px; }
+
+/* Topo */
+.topo { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 1000; background: var(--verde-forte); color: #FFFFFF; }
+:root[data-theme="dark"] .topo { background: #0B130E; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .topo { background: #0B130E; } }
+.topo .miolo { display: flex; align-items: center; gap: 20px; padding-block: 10px; flex-wrap: wrap; }
+.marca { display: flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-family: var(--f-display); font-stretch: 75%; font-weight: 800; font-size: 1.5rem; letter-spacing: 0.01em; }
+.marca svg { width: 36px; height: 36px; flex: none; }
+.abas { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin-left: auto; min-width: 0; max-width: 100%; }
+.abas::-webkit-scrollbar { display: none; }
+.abas a { white-space: nowrap; color: #DCEBE1; text-decoration: none; font-family: var(--f-display); font-stretch: 88%; font-weight: 600; font-size: 0.95rem; padding: 8px 12px; border-radius: 999px; }
+.abas a:hover { background: rgba(255,255,255,0.12); color: #FFFFFF; }
+.abas a[aria-current="page"] { background: #FFFFFF; color: #16351F; }
+@media (max-width: 760px) { .abas { margin-left: 0; width: 100%; } }
+
+main { padding-block: 32px 56px; }
+.aba { display: grid; gap: 28px; }
+
+/* Botões */
+.btn { display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; padding: 11px 18px; font: 700 0.98rem var(--f-texto); cursor: pointer; text-decoration: none; background: var(--verde); color: var(--sobre-verde); }
+.btn:hover { background: var(--verde-forte); }
+.btn.sec { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 1.5px var(--linha); }
+.btn.sec:hover { box-shadow: inset 0 0 0 1.5px var(--tinta-2); }
+.btn.peq { padding: 7px 12px; font-size: 0.88rem; }
+
+/* Início */
+.abertura { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+.abertura .lead { font-size: 1.12rem; color: var(--tinta-2); max-width: 60ch; margin-top: 14px; }
+.abertura .acoes { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+.placa { background: var(--superficie); border: 1.5px solid var(--linha); border-radius: 16px; padding: 20px; display: grid; gap: 12px; }
+.placa .linha-cat { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 12px; align-items: center; }
+.ponto { width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--superficie); box-shadow: 0 0 0 2px currentColor; background: currentColor; }
+.c-eletro { color: var(--cat-eletro); } .c-recicla { color: var(--cat-recicla); } .c-roupa { color: var(--cat-roupa); } .c-alimento { color: var(--cat-alimento); }
+@media (max-width: 860px) { .abertura { grid-template-columns: 1fr; } }
+
+.grade-prob { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.cartao-prob { display: grid; grid-template-rows: auto auto 1fr auto; gap: 8px; background: var(--superficie); border: 1.5px solid var(--linha); border-radius: var(--raio); padding: 18px; text-decoration: none; color: var(--tinta); }
+.cartao-prob:hover { border-color: var(--verde); }
+.cartao-prob .grande { font-family: var(--f-display); font-stretch: 72%; font-weight: 800; font-size: 2.1rem; color: var(--barro); line-height: 1; }
+.cartao-prob .meta { font-size: 0.85rem; color: var(--tinta-2); }
+.cartao-prob .ir { font-weight: 700; color: var(--mar); font-size: 0.92rem; }
+
+/* Problemas */
+.indice { display: flex; gap: 8px; flex-wrap: wrap; }
+.indice a { text-decoration: none; color: var(--tinta); background: var(--superficie); border: 1.5px solid var(--linha); padding: 6px 12px; border-radius: 999px; font-size: 0.9rem; }
+.problema { background: var(--superficie); border: 1.5px solid var(--linha); border-radius: 14px; padding: 24px; display: grid; gap: 16px; scroll-margin-top: 90px; }
+.problema .cab { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.selo-ods { display: inline-flex; align-items: center; gap: 6px; font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 0.85rem; padding: 4px 10px; border-radius: 6px; background: var(--superficie-2); color: var(--tinta); }
+.numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.numero { border-top: 3px solid var(--barro); padding-top: 10px; display: grid; gap: 4px; }
+.numero b { font-family: var(--f-display); font-stretch: 72%; font-size: 1.9rem; font-weight: 800; line-height: 1.05; }
+.numero span { color: var(--tinta-2); font-size: 0.95rem; }
+.numero a { font-size: 0.8rem; }
+.solucao { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; justify-content: space-between; background: var(--superficie-2); border-radius: var(--raio); padding: 14px 16px; }
+.solucao p { min-width: 0; flex: 1 1 280px; }
+
+/* Mapa */
+.aviso { background: var(--superficie-2); border-radius: var(--raio); padding: 10px 14px; font-size: 0.92rem; color: var(--tinta-2); }
+.filtros { display: flex; gap: 8px; flex-wrap: wrap; }
+.filtro { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--linha); background: var(--superficie); color: var(--tinta); border-radius: 999px; padding: 6px 12px 6px 8px; font: 600 0.9rem var(--f-texto); cursor: pointer; }
+.filtro .ponto { width: 14px; height: 14px; border-width: 2px; }
+.filtro.c-eletro { color: var(--cat-eletro); } .filtro.c-recicla { color: var(--cat-recicla); } .filtro.c-roupa { color: var(--cat-roupa); } .filtro.c-alimento { color: var(--cat-alimento); }
+.filtro[aria-pressed="false"] { opacity: 0.55; }
+.filtro[aria-pressed="false"] .ponto { background: transparent; }
+.mapa-grade { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .mapa-grade { grid-template-columns: 1fr; } }
+#mapa-area { height: 600px; border-radius: 14px; border: 1.5px solid var(--linha); background: var(--superficie-2); position: relative; overflow: hidden; z-index: 0; }
+@media (max-width: 900px) { #mapa-area { height: 420px; } }
+#mapa-area.sem-tiles { background-color: var(--superficie-2); background-image: linear-gradient(var(--linha) 1px, transparent 1px), linear-gradient(90deg, var(--linha) 1px, transparent 1px); background-size: 48px 48px; }
+#mapa-area.sem-tiles .leaflet-tile-pane { display: none; }
+.nota-mapa { position: absolute; left: 12px; bottom: 12px; z-index: 500; max-width: calc(100% - 24px); background: var(--superficie); color: var(--tinta-2); border: 1px solid var(--linha); border-radius: 8px; padding: 6px 10px; font-size: 0.82rem; }
+.sem-leaflet { display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; color: var(--tinta-2); }
+.painel { display: grid; gap: 14px; min-width: 0; }
+.bloco { background: var(--superficie); border: 1.5px solid var(--linha); border-radius: 14px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.bloco-cab { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; max-height: 330px; overflow-y: auto; }
+.item-ponto { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 10px; align-items: start; padding: 10px; border-radius: 8px; border: 1px solid var(--linha); background: var(--papel); }
+.item-ponto .ponto { width: 14px; height: 14px; border-width: 2px; margin-top: 4px; }
+.item-ponto button.nome { all: unset; cursor: pointer; font-weight: 700; color: var(--tinta); }
+.item-ponto button.nome:focus-visible { outline: 3px solid var(--mar); }
+.item-ponto .det { font-size: 0.85rem; color: var(--tinta-2); }
+.item-ponto .dist { font-size: 0.85rem; color: var(--tinta-2); white-space: nowrap; }
+.tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 1px 7px; border-radius: 999px; background: var(--superficie-2); color: var(--tinta-2); margin-left: 4px; vertical-align: middle; }
+.tag.voce { background: var(--verde); color: var(--sobre-verde); }
+.remover { border: 0; background: none; color: var(--barro); font: 700 0.8rem var(--f-texto); cursor: pointer; padding: 2px 0; }
+form.cadastro { display: grid; gap: 10px; }
+.campo { display: grid; gap: 4px; }
+.campo label { font-weight: 700; font-size: 0.9rem; }
+input, select { font: 1rem var(--f-texto); color: var(--tinta); background: var(--papel); border: 1.5px solid var(--linha); border-radius: 8px; padding: 9px 10px; width: 100%; min-width: 0; }
+input:focus, select:focus { border-color: var(--mar); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--mar) 25%, transparent); }
+.dica-local { font-size: 0.85rem; color: var(--tinta-2); }
+.msg { font-size: 0.9rem; font-weight: 700; color: var(--verde); min-height: 1.2em; }
+.msg.erro { color: var(--barro); }
+
+.pino { display: block; width: 22px; height: 22px; border-radius: 50%; border: 3px solid #FFFFFF; box-shadow: 0 1px 4px rgba(0,0,0,0.45); }
+.pino-eletro { background: var(--cat-eletro); } .pino-recicla { background: var(--cat-recicla); } .pino-roupa { background: var(--cat-roupa); } .pino-alimento { background: var(--cat-alimento); }
+.pino-novo { background: #FFFFFF; border-color: var(--tinta); border-style: dashed; }
+.pino-voce { width: 18px; height: 18px; background: #2B7DE9; border-color: #FFFFFF; box-shadow: 0 0 0 6px rgba(43,125,233,0.25); }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--superficie); color: var(--tinta); }
+.leaflet-popup-content { font-family: var(--f-texto); font-size: 0.92rem; margin: 12px 14px; }
+.leaflet-popup-content b { font-family: var(--f-display); font-stretch: 85%; font-size: 1.05rem; }
+.leaflet-container { font-family: var(--f-texto); }
+
+/* Onde descartar */
+.busca { display: grid; gap: 10px; max-width: 720px; }
+.busca input { font-size: 1.15rem; padding: 14px 16px; border-radius: 12px; }
+.atalhos { display: flex; gap: 8px; flex-wrap: wrap; }
+.atalhos button { border: 1.5px solid var(--linha); background: var(--superficie); color: var(--tinta); border-radius: 999px; padding: 5px 12px; font: 0.9rem var(--f-texto); cursor: pointer; }
+.resultados { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.res { background: var(--superficie); border: 1.5px solid var(--linha); border-radius: var(--raio); padding: 16px; display: grid; gap: 10px; align-content: start; }
+.res .destino { font-weight: 700; }
+.res .dica { color: var(--tinta-2); font-size: 0.93rem; }
+.lixeira { display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--tinta-2); }
+.lixeira i { width: 16px; height: 20px; border-radius: 3px 3px 5px 5px; border: 1.5px solid var(--tinta-2); display: inline-block; }
+.legenda-conama { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.85rem; color: var(--tinta-2); }
+
+/* Água e energia */
+.calc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px; align-items: start; }
+@media (max-width: 860px) { .calc { grid-template-columns: 1fr; } }
+.saidas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.saida { background: var(--superficie); border: 1.5px solid var(--linha); border-radius: var(--raio); padding: 14px; display: grid; gap: 2px; }
+.saida b { font-family: var(--f-display); font-stretch: 72%; font-size: 2rem; font-weight: 800; line-height: 1.05; }
+.saida span { color: var(--tinta-2); font-size: 0.9rem; }
+.barras { display: grid; gap: 10px; }
+.barra { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 10px; align-items: center; font-size: 0.9rem; }
+.trilho { background: var(--superficie-2); border-radius: 6px; height: 26px; overflow: hidden; }
+.enche { height: 100%; background: var(--mar); border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; color: #FFFFFF; font-weight: 700; font-size: 0.82rem; white-space: nowrap; transition: width 0.3s ease; }
+.enche.meta { background: var(--verde); color: var(--sobre-verde); }
+.economia { background: var(--superficie-2); border-radius: var(--raio); padding: 14px 16px; font-size: 1.02rem; }
+.economia b { color: var(--verde-forte); }
+ul.dicas { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--tinta-2); }
+
+footer { border-top: 1.5px solid var(--linha); padding-block: 24px; font-size: 0.88rem; color: var(--tinta-2); }
+footer .miolo { display: grid; gap: 6px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+
+<header class="topo">
+  <div class="miolo">
+    <a class="marca" href="#inicio" data-aba="inicio" aria-label="Ciclo 12, início">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="#9BE0B5" stroke-width="4" stroke-dasharray="70 25" transform="rotate(-60 20 20)"/><path d="M29.5 6.5 L35 11 L28 13.5 Z" fill="#9BE0B5"/><text x="20" y="25" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF">12</text></svg>
+      Ciclo 12
+    </a>
+    <nav class="abas" aria-label="Seções">
+      <a href="#inicio" data-aba="inicio">Início</a>
+      <a href="#problemas" data-aba="problemas">Os 5 problemas</a>
+      <a href="#mapa" data-aba="mapa">Mapa de descarte</a>
+      <a href="#onde" data-aba="onde">Onde descartar?</a>
+      <a href="#agua" data-aba="agua">Água e energia</a>
+    </nav>
+  </div>
+</header>
+
+<main class="miolo">
+
+  <!-- INÍCIO -->
+  <section class="aba" id="inicio" aria-labelledby="t-inicio">
+    <div class="abertura">
+      <div>
+        <p class="rotulo">ODS 12 · Consumo e produção responsáveis</p>
+        <h1 id="t-inicio">Cinco problemas de consumo. Um mapa pra resolver no bairro.</h1>
+        <p class="lead">O Ciclo 12 mostra onde descartar ou doar eletrônicos, recicláveis, roupas e comida, explica o que vai em cada lixeira e calcula quanta água e luz sua casa gasta no banho.</p>
+        <div class="acoes">
+          <a class="btn" href="#mapa" data-aba="mapa">Abrir o mapa de descarte</a>
+          <a class="btn sec" href="#problemas" data-aba="problemas">Ver os dados dos 5 problemas</a>
+        </div>
+      </div>
+      <div class="placa" aria-label="Categorias do mapa">
+        <p class="rotulo">No mapa você encontra</p>
+        <div class="linha-cat c-eletro"><span class="ponto"></span><span style="color:var(--tinta)"><b>Eletrônicos e pilhas</b><br><span style="color:var(--tinta-2)">coletores e lojas que recebem de volta</span></span></div>
+        <div class="linha-cat c-recicla"><span class="ponto"></span><span style="color:var(--tinta)"><b>Recicláveis</b><br><span style="color:var(--tinta-2)">ecopontos, PEVs e cooperativas</span></span></div>
+        <div class="linha-cat c-roupa"><span class="ponto"></span><span style="color:var(--tinta)"><b>Roupas e objetos</b><br><span style="color:var(--tinta-2)">bazares e caixas de doação</span></span></div>
+        <div class="linha-cat c-alimento"><span class="ponto"></span><span style="color:var(--tinta)"><b>Alimentos</b><br><span style="color:var(--tinta-2)">bancos de alimentos e compostagem</span></span></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="rotulo" style="margin-bottom:10px">Os problemas que o Ciclo 12 ataca</p>
+      <div class="grade-prob">
+        <a class="cartao-prob" href="#p-alimentos" data-aba="problemas" data-alvo="p-alimentos"><span class="rotulo">Comida</span><span class="grande num">1,05 bi t</span><span>de comida desperdiçada no mundo em 2022</span><span class="ir">Ver dados</span></a>
+        <a class="cartao-prob" href="#p-eletronicos" data-aba="problemas" data-alvo="p-eletronicos"><span class="rotulo">Lixo eletrônico</span><span class="grande num">22,3%</span><span>do lixo eletrônico do mundo é reciclado de forma comprovada</span><span class="ir">Ver dados</span></a>
+        <a class="cartao-prob" href="#p-reciclagem" data-aba="problemas" data-alvo="p-reciclagem"><span class="rotulo">Reciclagem</span><span class="grande num">58%</span><span>dos brasileiros não reconhecem os símbolos de reciclagem</span><span class="ir">Ver dados</span></a>
+        <a class="cartao-prob" href="#p-agua" data-aba="problemas" data-alvo="p-agua"><span class="rotulo">Água e energia</span><span class="grande num">154 L</span><span>por pessoa por dia no Brasil, contra 110 L que a ONU considera suficientes</span><span class="ir">Ver dados</span></a>
+        <a class="cartao-prob" href="#p-roupas" data-aba="problemas" data-alvo="p-roupas"><span class="rotulo">Roupas e objetos</span><span class="grande num">&lt;1%</span><span>do material das roupas vira roupa nova</span><span class="ir">Ver dados</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMAS -->
+  <section class="aba" id="problemas" aria-labelledby="t-problemas" hidden>
+    <div>
+      <p class="rotulo">Dados com fonte</p>
+      <h2 id="t-problemas">Os 5 problemas</h2>
+    </div>
+    <nav class="indice" aria-label="Problemas">
+      <a href="#p-alimentos" data-aba="problemas" data-alvo="p-alimentos">Desperdício de comida</a>
+      <a href="#p-eletronicos" data-aba="problemas" data-alvo="p-eletronicos">Lixo eletrônico</a>
+      <a href="#p-reciclagem" data-aba="problemas" data-alvo="p-reciclagem">Falta de informação sobre reciclagem</a>
+      <a href="#p-agua" data-aba="problemas" data-alvo="p-agua">Água e energia em casa</a>
+      <a href="#p-roupas" data-aba="problemas" data-alvo="p-roupas">Roupas e objetos</a>
+    </nav>
+
+    <article class="problema" id="p-alimentos">
+      <div class="cab"><h3>Desperdício de alimentos em restaurantes e escolas</h3><span class="selo-ods">Meta 12.3</span></div>
+      <div class="numeros">
+        <div class="numero"><b class="num">1,05 bilhão de t</b><span>de alimentos desperdiçados no mundo em 2022, quase um quinto do que chega ao consumidor</span><a href="https://www.unep.org/news-and-stories/press-release/world-squanders-over-1-billion-meals-day-un-report" target="_blank" rel="noopener">PNUMA, Food Waste Index 2024</a></div>
+        <div class="numero"><b class="num">28%</b><span>desse desperdício acontece em restaurantes e serviços de alimentação; 60% nas casas e 12% no varejo</span><a href="https://www.unep.org/news-and-stories/press-release/world-squanders-over-1-billion-meals-day-un-report" target="_blank" rel="noopener">PNUMA, Food Waste Index 2024</a></div>
+        <div class="numero"><b class="num">783 milhões</b><span>de pessoas passaram fome em 2022, no mesmo mundo que desperdiçou mais de 1 bilhão de refeições por dia</span><a href="https://www.unep.org/news-and-stories/press-release/world-squanders-over-1-billion-meals-day-un-report" target="_blank" rel="noopener">PNUMA, Food Waste Index 2024</a></div>
+      </div>
+      <div class="solucao"><p><b>O que o Ciclo 12 faz:</b> mostra no mapa bancos de alimentos e pontos de compostagem, pra escolas e restaurantes doarem o que sobrou sem ser servido (a Lei 14.016/2020 permite essa doação).</p><a class="btn peq" href="#mapa" data-aba="mapa" data-filtro="alimento">Ver no mapa</a></div>
+    </article>
+
+    <article class="problema" id="p-eletronicos">
+      <div class="cab"><h3>Descarte incorreto de lixo eletrônico</h3><span class="selo-ods">Meta 12.5</span></div>
+      <div class="numeros">
+        <div class="numero"><b class="num">62 milhões de t</b><span>de lixo eletrônico gerado no mundo em 2022, 82% a mais que em 2010</span><a href="https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling" target="_blank" rel="noopener">Global E-waste Monitor 2024</a></div>
+        <div class="numero"><b class="num">22,3%</b><span>foi coletado e reciclado de forma documentada; o lixo cresce 5 vezes mais rápido que a reciclagem</span><a href="https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling" target="_blank" rel="noopener">Global E-waste Monitor 2024</a></div>
+        <div class="numero"><b class="num">37%</b><span>dos brasileiros jogam pilhas e eletrônicos no lixo comum</span><a href="https://www.abrema.org.br/2024/06/24/1-em-cada-3-brasileiros-que-diz-ter-coleta-seletiva-nao-separa-o-lixo-aponta-datafolha/" target="_blank" rel="noopener">Datafolha 2024, via Abrema</a></div>
+      </div>
+      <div class="solucao"><p><b>O que o Ciclo 12 faz:</b> mapeia coletores de pilhas e lojas que recebem eletrônicos de volta, e lembra de apagar os dados do aparelho antes.</p><a class="btn peq" href="#mapa" data-aba="mapa" data-filtro="eletro">Ver no mapa</a></div>
+    </article>
+
+    <article class="problema" id="p-reciclagem">
+      <div class="cab"><h3>Falta de informação sobre reciclagem</h3><span class="selo-ods">Meta 12.8</span></div>
+      <div class="numeros">
+        <div class="numero"><b class="num">4%</b><span>do lixo do Brasil é reciclado</span><a href="https://www.abrema.org.br/2024/09/19/brasil-recicla-apenas-4-mas-importa-lixo-para-a-industria/" target="_blank" rel="noopener">Abrema, com dados do SNIS 2023</a></div>
+        <div class="numero"><b class="num">58%</b><span>dos brasileiros não sabem identificar um material reciclável pelo símbolo da embalagem</span><a href="https://www.abrema.org.br/2024/06/24/1-em-cada-3-brasileiros-que-diz-ter-coleta-seletiva-nao-separa-o-lixo-aponta-datafolha/" target="_blank" rel="noopener">Datafolha 2024, via Abrema</a></div>
+        <div class="numero"><b class="num">1 em cada 3</b><span>brasileiros que têm coleta seletiva não separa o lixo em casa</span><a href="https://www.abrema.org.br/2024/06/24/1-em-cada-3-brasileiros-que-diz-ter-coleta-seletiva-nao-separa-o-lixo-aponta-datafolha/" target="_blank" rel="noopener">Datafolha 2024, via Abrema</a></div>
+      </div>
+      <div class="solucao"><p><b>O que o Ciclo 12 faz:</b> você digita o objeto e o site diz pra onde ele vai e qual a cor da lixeira de coleta seletiva.</p><a class="btn peq" href="#onde" data-aba="onde">Onde descartar?</a></div>
+    </article>
+
+    <article class="problema" id="p-agua">
+      <div class="cab"><h3>Consumo excessivo de água e energia em casa</h3><span class="selo-ods">Meta 12.2</span></div>
+      <div class="numeros">
+        <div class="numero"><b class="num">154 L</b><span>de água por pessoa por dia no Brasil; a ONU considera 110 L suficientes</span><a href="https://agenciabrasil.ebc.com.br/geral/noticia/2018-03/brasileiro-consome-significativo-volume-de-agua-que-nao-sai-das-torneiras" target="_blank" rel="noopener">SNIS, via Agência Brasil (2018)</a></div>
+        <div class="numero"><b class="num">135 L</b><span>gastos num banho de 15 minutos com o registro meio aberto</span><a href="https://www.ype.ind.br/ype-explica/como-economizar-agua-no-banho" target="_blank" rel="noopener">Ypê Explica</a></div>
+        <div class="numero"><b class="num">23%</b><span>da carga elétrica das casas no horário de pico vem do chuveiro elétrico, que tem cerca de 4.000 W</span><a href="https://www2.unicamp.br/unicamp/ju/597/o-chuveiro-na-curva-do-consumo" target="_blank" rel="noopener">Jornal da Unicamp (2014)</a></div>
+      </div>
+      <div class="solucao"><p><b>O que o Ciclo 12 faz:</b> calcula quanta água e luz o banho da sua casa gasta por mês e quanto vocês economizam com banhos de 5 minutos.</p><a class="btn peq" href="#agua" data-aba="agua">Abrir a calculadora</a></div>
+    </article>
+
+    <article class="problema" id="p-roupas">
+      <div class="cab"><h3>Roupas e objetos que poderiam ser reutilizados</h3><span class="selo-ods">Meta 12.5</span></div>
+      <div class="numeros">
+        <div class="numero"><b class="num">4 milhões de t</b><span>de resíduos têxteis descartados por ano no Brasil</span><a href="https://www.cnnbrasil.com.br/economia/macroeconomia/brasil-descarta-mais-de-4-milhoes-de-toneladas-de-residuos-texteis-por-ano/" target="_blank" rel="noopener">Abrelpe, via CNN Brasil</a></div>
+        <div class="numero"><b class="num">73%</b><span>do material das roupas no mundo vai pra aterro ou é queimado; menos de 1% vira roupa nova</span><a href="https://courses.edx.org/assets/courseware/v1/e71d832ec1227f12954ae4770ad98534/asset-v1:WageningenX+FASH01x+1T2021+type@asset+block/A_NEW_TEXTILES_ECONOMY.pdf" target="_blank" rel="noopener">Ellen MacArthur Foundation (2017)</a></div>
+        <div class="numero"><b class="num">44 kg</b><span>de roupas e calçados descartados por casa brasileira em 2024</span><a href="https://ecoaliza.com.br/economia-circular/domicilios-brasileiros-descartam-cerca-de-4-milhoes-de-toneladas-de-residuos-texteis-a-cada-ano/" target="_blank" rel="noopener">S2F Partners, via Ecoaliza (2025)</a></div>
+      </div>
+      <div class="solucao"><p><b>O que o Ciclo 12 faz:</b> mostra bazares e caixas de doação perto de você, e manda o que está rasgado pra reciclagem têxtil.</p><a class="btn peq" href="#mapa" data-aba="mapa" data-filtro="roupa">Ver no mapa</a></div>
+    </article>
+  </section>
+
+  <!-- MAPA -->
+  <section class="aba" id="mapa" aria-labelledby="t-mapa" hidden>
+    <div>
+      <p class="rotulo">Sistema de pontos de coleta</p>
+      <h2 id="t-mapa">Mapa de descarte</h2>
+    </div>
+    <p class="aviso">Os pontos marcados como <b>exemplo</b> foram criados pra demonstração. Na versão final eles viriam da prefeitura e dos parceiros. Os pontos que você cadastrar ficam guardados neste navegador.</p>
+    <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
+    <div class="mapa-grade">
+      <div id="mapa-area" role="region" aria-label="Mapa com os pontos de descarte"></div>
+      <div class="painel">
+        <div class="bloco">
+          <div class="bloco-cab"><h3 id="t-lista">Pontos perto</h3><button class="btn sec peq" id="btn-perto" type="button">Usar minha localização</button></div>
+          <p class="msg" id="msg-perto" role="status"></p>
+          <ul class="lista" id="lista-pontos" aria-labelledby="t-lista"></ul>
+        </div>
+        <div class="bloco">
+          <h3>Cadastrar um ponto</h3>
+          <form class="cadastro" id="form-ponto" novalidate>
+            <div class="campo"><label for="p-nome">Nome do local</label><input id="p-nome" type="text" placeholder="Ex.: Mercado da esquina, coletor de pilhas" maxlength="80"></div>
+            <div class="campo"><label for="p-cat">O que ele recebe</label><select id="p-cat"></select></div>
+            <div class="campo"><label for="p-aceita">Detalhes</label><input id="p-aceita" type="text" placeholder="Ex.: pilhas, baterias e celulares" maxlength="120"></div>
+            <div class="campo"><label for="p-horario">Horário</label><input id="p-horario" type="text" placeholder="Ex.: seg a sáb, 8h às 20h" maxlength="60"></div>
+            <p class="dica-local" id="dica-local">Clique no mapa pra marcar onde fica. Sem clique, o ponto vai pro centro do mapa.</p>
+            <button class="btn" type="submit">Cadastrar ponto</button>
+            <p class="msg" id="msg-form" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONDE DESCARTAR -->
+  <section class="aba" id="onde" aria-labelledby="t-onde" hidden>
+    <div>
+      <p class="rotulo">Busca rápida</p>
+      <h2 id="t-onde">Onde descartar?</h2>
+    </div>
+    <div class="busca">
+      <label for="busca-item" class="rotulo">Digite o que você quer jogar fora</label>
+      <input id="busca-item" type="search" placeholder="Ex.: pilha, óleo de cozinha, caixa de leite" autocomplete="off">
+      <div class="atalhos" id="atalhos"></div>
+    </div>
+    <div class="resultados" id="resultados" aria-live="polite"></div>
+    <div class="legenda-conama" aria-label="Cores da coleta seletiva (Resolução CONAMA 275/2001)">
+      <span class="rotulo" style="width:100%">Cores da coleta seletiva · Resolução CONAMA 275/2001</span>
+      <span class="lixeira"><i style="background:var(--conama-azul)"></i>Papel</span>
+      <span class="lixeira"><i style="background:var(--conama-vermelho)"></i>Plástico</span>
+      <span class="lixeira"><i style="background:var(--conama-verde)"></i>Vidro</span>
+      <span class="lixeira"><i style="background:var(--conama-amarelo)"></i>Metal</span>
+      <span class="lixeira"><i style="background:var(--conama-marrom)"></i>Orgânico</span>
+      <span class="lixeira"><i style="background:var(--conama-laranja)"></i>Perigosos</span>
+      <span class="lixeira"><i style="background:var(--conama-cinza)"></i>Não reciclável</span>
+    </div>
+  </section>
+
+  <!-- ÁGUA E ENERGIA -->
+  <section class="aba" id="agua" aria-labelledby="t-agua" hidden>
+    <div>
+      <p class="rotulo">Calculadora da casa</p>
+      <h2 id="t-agua">Quanto o banho da sua casa gasta?</h2>
+    </div>
+    <div class="calc">
+      <form class="bloco" id="form-calc" novalidate>
+        <div class="campo"><label for="c-pessoas">Pessoas na casa</label><input id="c-pessoas" type="number" min="1" max="15" value="4" inputmode="numeric"></div>
+        <div class="campo"><label for="c-minutos">Minutos de banho por pessoa, por dia</label><input id="c-minutos" type="number" min="1" max="60" value="15" inputmode="numeric"></div>
+        <div class="campo"><label for="c-watts">Potência do chuveiro elétrico</label>
+          <select id="c-watts">
+            <option value="0">Não é elétrico (aquecedor a gás ou solar)</option>
+            <option value="3500">3.500 W</option>
+            <option value="4000" selected>4.000 W (o mais comum)</option>
+            <option value="5500">5.500 W</option>
+            <option value="7500">7.500 W</option>
+          </select>
+        </div>
+        <div class="campo"><label for="c-preco">Preço do kWh na sua conta de luz (R$)</label><input id="c-preco" type="number" min="0.1" max="5" step="0.01" value="0.90" inputmode="decimal"></div>
+        <p class="dica-local">Estimativa com o registro meio aberto (cerca de 9 litros por minuto, ou 135 litros em 15 minutos). Confira o preço do kWh na sua conta.</p>
+      </form>
+      <div class="painel">
+        <div class="saidas">
+          <div class="saida"><b class="num" id="o-litros-dia">0</b><span>litros por dia no banho da casa</span></div>
+          <div class="saida"><b class="num" id="o-pct-onu">0</b><span id="o-pct-texto">dos 110 L/dia da ONU vão só no banho de cada um</span></div>
+          <div class="saida"><b class="num" id="o-kwh">0</b><span>kWh por mês no chuveiro</span></div>
+          <div class="saida"><b class="num" id="o-custo">R$ 0</b><span>por mês na conta de luz, só do chuveiro</span></div>
+        </div>
+        <div class="bloco">
+          <h3>Água por mês: hoje e com banho de 5 minutos</h3>
+          <div class="barras">
+            <div class="barra"><span>Banho de hoje</span><div class="trilho"><div class="enche" id="b-hoje" style="width:100%"></div></div></div>
+            <div class="barra"><span>Banho de 5 min</span><div class="trilho"><div class="enche meta" id="b-meta" style="width:33%"></div></div></div>
+          </div>
+          <p class="economia" id="o-economia"></p>
+        </div>
+        <div class="bloco">
+          <h3>Pra gastar menos</h3>
+          <ul class="dicas">
+            <li>Feche o chuveiro enquanto se ensaboa.</li>
+            <li>No verão, use o chuveiro na posição "verão", que gasta menos energia.</li>
+            <li>Escove os dentes com a torneira fechada.</li>
+            <li>Junte roupa pra lavar a máquina cheia.</li>
+            <li>Apague a luz e tire da tomada o que não está usando.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="miolo">
+    <p><b>Ciclo 12</b> · protótipo escolar para o ODS 12 da ONU (Consumo e produção responsáveis)</p>
+    <p>Feito por Enzo Penchel, Bárbara Valentina, Davi Biguetti e Julia Ayumi</p>
+    <p>Mapa: © colaboradores do OpenStreetMap</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var CATS = {
+    eletro:   { nome: "Eletrônicos e pilhas" },
+    recicla:  { nome: "Recicláveis" },
+    roupa:    { nome: "Roupas e objetos" },
+    alimento: { nome: "Alimentos" }
+  };
+  var CENTRO = [-23.5505, -46.6333];
+
+  var EXEMPLOS = [
+    { id: "e1", nome: "Ecoponto (exemplo)", cats: ["recicla", "roupa", "eletro"], aceita: "Recicláveis, móveis velhos, óleo de cozinha em garrafa PET, eletrônicos", horario: "Seg a sáb, 6h às 22h", lat: -23.5452, lng: -46.6402 },
+    { id: "e2", nome: "Coletor de pilhas do mercado (exemplo)", cats: ["eletro"], aceita: "Pilhas, baterias e celulares", horario: "Todos os dias, 7h às 22h", lat: -23.5561, lng: -46.6252 },
+    { id: "e3", nome: "Bazar beneficente (exemplo)", cats: ["roupa"], aceita: "Roupas, sapatos e brinquedos em bom estado", horario: "Ter a sáb, 9h às 17h", lat: -23.5481, lng: -46.6231 },
+    { id: "e4", nome: "Cooperativa de reciclagem (exemplo)", cats: ["recicla"], aceita: "Papel, plástico, vidro e metal separados", horario: "Seg a sex, 8h às 17h", lat: -23.5598, lng: -46.6418 },
+    { id: "e5", nome: "Banco de alimentos (exemplo)", cats: ["alimento"], aceita: "Comida que sobrou sem ser servida, alimentos fechados", horario: "Seg a sex, 8h às 16h", lat: -23.5421, lng: -46.6302 },
+    { id: "e6", nome: "Horta comunitária com compostagem (exemplo)", cats: ["alimento"], aceita: "Cascas de fruta e legumes, borra de café", horario: "Sáb, 8h às 12h", lat: -23.5588, lng: -46.6331 },
+    { id: "e7", nome: "Loja que recebe eletrônicos de volta (exemplo)", cats: ["eletro"], aceita: "Celulares, carregadores, notebooks e lâmpadas", horario: "Seg a sáb, 10h às 22h", lat: -23.5523, lng: -46.6461 },
+    { id: "e8", nome: "Escola parceira, caixa de doação (exemplo)", cats: ["roupa", "alimento"], aceita: "Roupas e alimentos não perecíveis", horario: "Dias letivos, 7h às 18h", lat: -23.5469, lng: -46.6358 },
+    { id: "e9", nome: "PEV de recicláveis (exemplo)", cats: ["recicla"], aceita: "Garrafas PET, latas, vidro e papelão", horario: "24 horas", lat: -23.5536, lng: -46.6199 }
+  ];
+
+  var LIXEIRAS = {
+    azul: ["Lixeira azul", "papel"],
+    vermelho: ["Lixeira vermelha", "plástico"],
+    verde: ["Lixeira verde", "vidro"],
+    amarelo: ["Lixeira amarela", "metal"],
+    marrom: ["Lixeira marrom", "orgânico"],
+    laranja: ["Lixeira laranja", "resíduo perigoso"],
+    cinza: ["Lixeira cinza", "não reciclável"]
+  };
+
+  var ITENS = [
+    { nome: "Pilha", sin: ["pilhas", "bateria pequena"], cat: "eletro", lix: "laranja", destino: "Coletor de pilhas", dica: "Mercados e lojas costumam ter coletor. Nunca no lixo comum." },
+    { nome: "Bateria de celular", sin: ["bateria", "baterias"], cat: "eletro", lix: "laranja", destino: "Coletor de pilhas e baterias", dica: "Se estiver inchada, não fure nem amasse. Leve logo a um coletor." },
+    { nome: "Celular", sin: ["smartphone", "telefone", "tablet"], cat: "eletro", lix: null, destino: "Ponto de lixo eletrônico", dica: "Apague seus dados antes. Se ainda funciona, doe." },
+    { nome: "Carregador e cabos", sin: ["carregador", "cabo", "fone", "fone de ouvido"], cat: "eletro", lix: null, destino: "Ponto de lixo eletrônico", dica: "Pode ir junto com outros eletrônicos." },
+    { nome: "Computador ou notebook", sin: ["computador", "notebook", "pc", "monitor", "teclado", "mouse"], cat: "eletro", lix: null, destino: "Ponto de lixo eletrônico", dica: "Apague os arquivos antes. Peças boas podem ser doadas." },
+    { nome: "Lâmpada fluorescente", sin: ["lampada", "lâmpada"], cat: "eletro", lix: "laranja", destino: "Loja que recebe de volta", dica: "Tem mercúrio. Embrulhe pra não quebrar e leve a uma loja com coletor." },
+    { nome: "Garrafa PET", sin: ["pet", "garrafa plastica", "garrafa de refrigerante"], cat: "recicla", lix: "vermelho", destino: "Coleta seletiva", dica: "Esvazie e amasse pra ocupar menos espaço." },
+    { nome: "Sacola e embalagem plástica", sin: ["sacola", "plastico", "embalagem", "pote plastico"], cat: "recicla", lix: "vermelho", destino: "Coleta seletiva", dica: "Tire o resto de comida antes." },
+    { nome: "Lata de alumínio", sin: ["lata", "latinha", "aluminio"], cat: "recicla", lix: "amarelo", destino: "Coleta seletiva", dica: "Pode amassar." },
+    { nome: "Garrafa ou pote de vidro", sin: ["vidro", "garrafa de vidro", "pote de vidro"], cat: "recicla", lix: "verde", destino: "Coleta seletiva", dica: "Se estiver quebrado, embrulhe em jornal pra proteger quem coleta." },
+    { nome: "Espelho ou vidro de janela", sin: ["espelho", "vidro de janela", "vidro temperado"], cat: "recicla", lix: "cinza", destino: "Ecoponto", dica: "Não vai junto com o vidro de embalagem." },
+    { nome: "Papelão e papel", sin: ["papelao", "caixa de papelao", "papel", "jornal", "caderno"], cat: "recicla", lix: "azul", destino: "Coleta seletiva", dica: "Seco e dobrado." },
+    { nome: "Caixa de leite (longa vida)", sin: ["caixa de leite", "longa vida", "caixa de suco"], cat: "recicla", lix: null, destino: "Coleta seletiva", dica: "É reciclável. Enxágue e dobre. A cor da lixeira muda de cidade pra cidade." },
+    { nome: "Isopor", sin: ["isopor", "bandeja de isopor"], cat: "recicla", lix: "vermelho", destino: "Coleta seletiva (confirme antes)", dica: "É plástico reciclável, mas poucos lugares aceitam. Pergunte no ponto." },
+    { nome: "Óleo de cozinha usado", sin: ["oleo", "óleo", "oleo de fritura"], cat: "recicla", lix: null, destino: "Ponto de coleta de óleo", dica: "Espere esfriar, guarde em garrafa PET fechada e leve a um ecoponto. Nunca na pia." },
+    { nome: "Papel engordurado ou guardanapo usado", sin: ["guardanapo", "papel higienico", "papel engordurado", "caixa de pizza suja"], cat: null, lix: "cinza", destino: "Lixo comum", dica: "Papel sujo de gordura não recicla." },
+    { nome: "Fralda", sin: ["fralda", "absorvente"], cat: null, lix: "cinza", destino: "Lixo comum", dica: "Não é reciclável." },
+    { nome: "Remédio vencido", sin: ["remedio", "medicamento", "comprimido"], cat: null, lix: null, destino: "Farmácia com coletor", dica: "Farmácias recebem remédios vencidos. Não jogue no lixo nem na pia." },
+    { nome: "Roupa em bom estado", sin: ["roupa", "camiseta", "calça", "blusa", "casaco"], cat: "roupa", lix: null, destino: "Doação ou troca", dica: "Lave antes de doar." },
+    { nome: "Roupa rasgada ou manchada", sin: ["roupa rasgada", "tecido", "pano", "retalho"], cat: "roupa", lix: null, destino: "Coleta de tecido para reciclagem", dica: "O tecido vira estopa, enchimento ou fio novo." },
+    { nome: "Sapato e tênis", sin: ["sapato", "tenis", "chinelo", "bota"], cat: "roupa", lix: null, destino: "Doação", dica: "Amarre os pares juntos." },
+    { nome: "Brinquedo", sin: ["brinquedo", "boneca", "carrinho", "jogo"], cat: "roupa", lix: null, destino: "Doação", dica: "Confira se não faltam peças." },
+    { nome: "Móvel velho", sin: ["movel", "sofa", "cadeira", "colchao", "armario"], cat: "roupa", lix: null, destino: "Doação ou ecoponto", dica: "Se estiver bom, doe. Se não, ecoponto ou coleta de objetos grandes da prefeitura." },
+    { nome: "Comida que sobrou sem ser servida", sin: ["comida", "sobra", "marmita", "alimento", "merenda"], cat: "alimento", lix: null, destino: "Banco de alimentos", dica: "Escolas e restaurantes podem doar o que não foi servido (Lei 14.016/2020)." },
+    { nome: "Cascas de fruta e legumes", sin: ["casca", "cascas", "fruta", "legume", "verdura"], cat: "alimento", lix: "marrom", destino: "Compostagem", dica: "Vira adubo numa horta ou composteira." },
+    { nome: "Borra de café", sin: ["cafe", "borra", "filtro de cafe"], cat: "alimento", lix: "marrom", destino: "Compostagem", dica: "O filtro de papel pode ir junto." },
+    { nome: "Comida estragada", sin: ["comida estragada", "resto de prato", "estragado"], cat: "alimento", lix: "marrom", destino: "Compostagem ou lixo orgânico", dica: "Se não tiver compostagem perto, vai no lixo orgânico." }
+  ];
+  var ATALHOS = ["Pilha", "Óleo de cozinha usado", "Caixa de leite (longa vida)", "Celular", "Roupa em bom estado", "Isopor", "Remédio vencido", "Cascas de fruta e legumes"];
+
+  /* ---------- utilidades ---------- */
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function norm(s) { return String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim(); }
+  var fmt = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 });
+  var fmt1 = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 1 });
+  var reais = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 2 });
+  function distKm(a, b) {
+    var R = 6371, rad = Math.PI / 180;
+    var dLat = (b[0] - a[0]) * rad, dLng = (b[1] - a[1]) * rad;
+    var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a[0] * rad) * Math.cos(b[0] * rad) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    return 2 * R * Math.asin(Math.sqrt(h));
+  }
+
+  /* ---------- pontos do usuário (guardados no navegador) ---------- */
+  var CHAVE = "ciclo12-pontos";
+  var pontosUsuario = [];
+  try { var salvo = localStorage.getItem(CHAVE); if (salvo) { pontosUsuario = JSON.parse(salvo) || []; } } catch (e) { pontosUsuario = []; }
+  function guardar() { try { localStorage.setItem(CHAVE, JSON.stringify(pontosUsuario)); return true; } catch (e) { return false; } }
+
+  /* ---------- abas ---------- */
+  var ABAS = ["inicio", "problemas", "mapa", "onde", "agua"];
+  function abrir(aba, alvo) {
+    if (ABAS.indexOf(aba) < 0) { aba = "inicio"; }
+    ABAS.forEach(function (a) { $(a).hidden = (a !== aba); });
+    document.querySelectorAll(".abas a").forEach(function (l) {
+      if (l.getAttribute("data-aba") === aba) { l.setAttribute("aria-current", "page"); } else { l.removeAttribute("aria-current"); }
+    });
+    try { history.replaceState(null, "", "#" + (alvo || aba)); } catch (e) { /* sem histórico neste visualizador */ }
+    if (aba === "mapa") { iniciarMapa(); }
+    if (alvo && $(alvo)) { $(alvo).scrollIntoView({ behavior: "smooth", block: "start" }); } else { window.scrollTo(0, 0); }
+  }
+  document.addEventListener("click", function (ev) {
+    var el = ev.target.closest("[data-aba]");
+    if (!el) { return; }
+    ev.preventDefault();
+    var filtro = el.getAttribute("data-filtro");
+    if (filtro) { filtros = {}; filtros[filtro] = true; desenharFiltros(); }
+    abrir(el.getAttribute("data-aba"), el.getAttribute("data-alvo"));
+  });
+  function lerHash() {
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("p-") === 0) { abrir("problemas", h); } else { abrir(h || "inicio"); }
+  }
+
+  /* ---------- filtros ---------- */
+  var filtros = { eletro: true, recicla: true, roupa: true, alimento: true };
+  function desenharFiltros() {
+    var box = $("filtros");
+    box.innerHTML = "";
+    Object.keys(CATS).forEach(function (k) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "filtro c-" + k;
+      b.setAttribute("aria-pressed", filtros[k] ? "true" : "false");
+      b.innerHTML = '<span class="ponto"></span><span style="color:var(--tinta)">' + esc(CATS[k].nome) + "</span>";
+      b.addEventListener("click", function () { filtros[k] = !filtros[k]; desenharFiltros(); desenharPontos(); });
+      box.appendChild(b);
+    });
+    if (mapa) { desenharPontos(); }
+  }
+
+  /* ---------- mapa ---------- */
+  var mapa = null, camada = null, marcadores = {}, referencia = CENTRO.slice(), posNova = null, marcadorNovo = null, marcadorVoce = null;
+  function iniciarMapa() {
+    var area = $("mapa-area");
+    if (mapa) { setTimeout(function () { mapa.invalidateSize(); }, 50); return; }
+    if (!window.L) {
+      area.classList.add("sem-leaflet");
+      area.textContent = "O mapa não carregou (sem internet?). A lista ao lado continua funcionando.";
+      desenharPontos();
+      return;
+    }
+    mapa = L.map(area, { scrollWheelZoom: true }).setView(CENTRO, 14);
+    var tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "&copy; OpenStreetMap" }).addTo(mapa);
+    var erros = 0, carregou = false;
+    tiles.on("tileload", function () { carregou = true; area.classList.remove("sem-tiles"); var n = $("nota-mapa"); if (n) { n.remove(); } });
+    tiles.on("tileerror", function () {
+      erros += 1;
+      if (erros >= 4 && !carregou && !$("nota-mapa")) {
+        area.classList.add("sem-tiles");
+        var n = document.createElement("div");
+        n.id = "nota-mapa"; n.className = "nota-mapa";
+        n.textContent = "As ruas não carregaram nesta visualização. Os pontos estão nas posições certas.";
+        area.appendChild(n);
+      }
+    });
+    camada = L.layerGroup().addTo(mapa);
+    mapa.on("click", function (e) { marcarNovo(e.latlng); });
+    desenharPontos();
+    setTimeout(function () { mapa.invalidateSize(); }, 50);
+  }
+  function todos() { return EXEMPLOS.concat(pontosUsuario); }
+  function visiveis() { return todos().filter(function (p) { return p.cats.some(function (c) { return filtros[c]; }); }); }
+  function popupHtml(p) {
+    return "<b>" + esc(p.nome) + "</b><br>" + esc(p.cats.map(function (c) { return CATS[c].nome; }).join(" · ")) +
+      (p.aceita ? "<br>Recebe: " + esc(p.aceita) : "") + (p.horario ? "<br>Horário: " + esc(p.horario) : "");
+  }
+  function desenharPontos() {
+    var lista = $("lista-pontos");
+    var pts = visiveis().map(function (p) { return { p: p, d: distKm(referencia, [p.lat, p.lng]) }; });
+    pts.sort(function (a, b) { return a.d - b.d; });
+    if (mapa && camada) {
+      camada.clearLayers(); marcadores = {};
+      pts.forEach(function (o) {
+        var p = o.p;
+        var icone = L.divIcon({ className: "", html: '<span class="pino pino-' + p.cats[0] + '"></span>', iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -10] });
+        marcadores[p.id] = L.marker([p.lat, p.lng], { icon: icone, title: p.nome, keyboard: true }).bindPopup(popupHtml(p)).addTo(camada);
+      });
+    }
+    lista.innerHTML = "";
+    if (!pts.length) {
+      var vazio = document.createElement("li");
+      vazio.className = "dica-local";
+      vazio.textContent = "Nenhuma categoria ligada. Ligue um filtro acima.";
+      lista.appendChild(vazio);
+      return;
+    }
+    pts.forEach(function (o) {
+      var p = o.p;
+      var li = document.createElement("li");
+      li.className = "item-ponto";
+      li.innerHTML =
+        '<span class="ponto c-' + p.cats[0] + '"></span>' +
+        '<div style="min-width:0"><button class="nome" type="button">' + esc(p.nome) + "</button>" + (p.usuario ? '<span class="tag voce">seu ponto</span>' : "") +
+        '<div class="det">' + esc(p.aceita || p.cats.map(function (c) { return CATS[c].nome; }).join(" · ")) + "</div>" +
+        (p.usuario ? '<button class="remover" type="button">Remover</button>' : "") + "</div>" +
+        '<span class="dist num">' + fmt1.format(o.d) + " km</span>";
+      li.querySelector("button.nome").addEventListener("click", function () {
+        if (mapa && marcadores[p.id]) { mapa.setView([p.lat, p.lng], 16); marcadores[p.id].openPopup(); $("mapa-area").scrollIntoView({ behavior: "smooth", block: "center" }); }
+      });
+      var rem = li.querySelector("button.remover");
+      if (rem) {
+        rem.addEventListener("click", function () {
+          if (rem.getAttribute("data-confirmar") !== "1") { rem.setAttribute("data-confirmar", "1"); rem.textContent = "Clique de novo pra remover"; return; }
+          pontosUsuario = pontosUsuario.filter(function (q) { return q.id !== p.id; });
+          guardar(); desenharPontos();
+          $("msg-form").className = "msg"; $("msg-form").textContent = "Ponto removido.";
+        });
+      }
+      lista.appendChild(li);
+    });
+  }
+  function marcarNovo(latlng) {
+    posNova = [latlng.lat, latlng.lng];
+    var icone = L.divIcon({ className: "", html: '<span class="pino pino-novo"></span>', iconSize: [22, 22], iconAnchor: [11, 11] });
+    if (marcadorNovo) { marcadorNovo.setLatLng(latlng); } else { marcadorNovo = L.marker(latlng, { icon: icone, interactive: false }).addTo(mapa); }
+    $("dica-local").textContent = "Local marcado no mapa. Preencha o nome e cadastre.";
+  }
+
+  $("btn-perto").addEventListener("click", function () {
+    var msg = $("msg-perto");
+    msg.className = "msg"; msg.textContent = "Procurando sua localização...";
+    var falhou = function () { msg.className = "msg erro"; msg.textContent = "Não deu pra pegar sua localização. Arraste o mapa até o seu bairro."; };
+    if (!navigator.geolocation) { falhou(); return; }
+    try {
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        referencia = [pos.coords.latitude, pos.coords.longitude];
+        if (mapa) {
+          mapa.setView(referencia, 15);
+          var icone = L.divIcon({ className: "", html: '<span class="pino pino-voce"></span>', iconSize: [18, 18], iconAnchor: [9, 9] });
+          if (marcadorVoce) { marcadorVoce.setLatLng(referencia); } else { marcadorVoce = L.marker(referencia, { icon: icone, title: "Você está aqui" }).addTo(mapa); }
+        }
+        msg.textContent = "Lista ordenada a partir de onde você está.";
+        desenharPontos();
+      }, falhou, { timeout: 8000 });
+    } catch (e) { falhou(); }
+  });
+
+  (function () {
+    var sel = $("p-cat");
+    Object.keys(CATS).forEach(function (k) { var o = document.createElement("option"); o.value = k; o.textContent = CATS[k].nome; sel.appendChild(o); });
+  })();
+  $("form-ponto").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var msg = $("msg-form");
+    var nome = $("p-nome").value.trim();
+    if (nome.length < 3) { msg.className = "msg erro"; msg.textContent = "Escreva o nome do local (pelo menos 3 letras)."; $("p-nome").focus(); return; }
+    var pos = posNova || (mapa ? [mapa.getCenter().lat, mapa.getCenter().lng] : referencia.slice());
+    var cat = $("p-cat").value;
+    var p = { id: "u" + Date.now(), nome: nome, cats: [cat], aceita: $("p-aceita").value.trim(), horario: $("p-horario").value.trim(), lat: pos[0], lng: pos[1], usuario: true };
+    pontosUsuario.push(p);
+    var ok = guardar();
+    filtros[cat] = true; desenharFiltros(); desenharPontos();
+    if (mapa) { mapa.setView(pos, 16); if (marcadores[p.id]) { marcadores[p.id].openPopup(); } }
+    if (marcadorNovo && mapa) { mapa.removeLayer(marcadorNovo); marcadorNovo = null; }
+    posNova = null;
+    $("form-ponto").reset();
+    $("dica-local").textContent = "Clique no mapa pra marcar onde fica. Sem clique, o ponto vai pro centro do mapa.";
+    msg.className = ok ? "msg" : "msg erro";
+    msg.textContent = ok ? "Ponto cadastrado: " + nome + "." : "Ponto cadastrado, mas este navegador não deixou guardar. Ele some ao fechar a página.";
+  });
+
+  /* ---------- onde descartar ---------- */
+  function cartaoItem(it) {
+    var lix = it.lix ? '<span class="lixeira"><i style="background:var(--conama-' + it.lix + ')"></i>' + esc(LIXEIRAS[it.lix][0]) + " · " + esc(LIXEIRAS[it.lix][1]) + "</span>" : "";
+    var botao = it.cat ? '<button class="btn sec peq" type="button" data-ver="' + it.cat + '">Ver pontos de ' + esc(CATS[it.cat].nome.toLowerCase()) + "</button>" : "";
+    return '<article class="res"><h3>' + esc(it.nome) + '</h3><p class="destino">' + esc(it.destino) + "</p>" + lix + '<p class="dica">' + esc(it.dica) + "</p>" + botao + "</article>";
+  }
+  function buscar(q) {
+    var alvo = $("resultados");
+    var n = norm(q);
+    var achados;
+    if (!n) { achados = ATALHOS.map(function (nome) { return ITENS.filter(function (i) { return i.nome === nome; })[0]; }).slice(0, 6); }
+    else {
+      achados = ITENS.filter(function (i) {
+        return norm(i.nome).indexOf(n) >= 0 || i.sin.some(function (s) { return norm(s).indexOf(n) >= 0 || n.indexOf(norm(s)) >= 0; });
+      });
+    }
+    if (!achados.length) {
+      alvo.innerHTML = '<p class="aviso">Não achamos "' + esc(q) + '". Tente outra palavra, como pilha, óleo ou roupa. Na dúvida, pergunte à prefeitura da sua cidade.</p>';
+      return;
+    }
+    alvo.innerHTML = achados.map(cartaoItem).join("");
+  }
+  $("busca-item").addEventListener("input", function (e) { buscar(e.target.value); });
+  $("resultados").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-ver]");
+    if (!b) { return; }
+    filtros = {}; filtros[b.getAttribute("data-ver")] = true; desenharFiltros(); abrir("mapa");
+  });
+  (function () {
+    var box = $("atalhos");
+    ATALHOS.forEach(function (nome) {
+      var b = document.createElement("button");
+      b.type = "button"; b.textContent = nome;
+      b.addEventListener("click", function () { $("busca-item").value = nome; buscar(nome); });
+      box.appendChild(b);
+    });
+  })();
+
+  /* ---------- calculadora ---------- */
+  var LITROS_POR_MIN = 9, ONU = 110;
+  function num(id, padrao, min, max) { var v = parseFloat(String($(id).value).replace(",", ".")); if (!isFinite(v)) { v = padrao; } return Math.min(max, Math.max(min, v)); }
+  function calcular() {
+    var pessoas = Math.round(num("c-pessoas", 4, 1, 15));
+    var minutos = num("c-minutos", 15, 1, 60);
+    var watts = num("c-watts", 4000, 0, 10000);
+    var preco = num("c-preco", 0.9, 0, 5);
+    var litrosDia = pessoas * minutos * LITROS_POR_MIN;
+    var pct = (minutos * LITROS_POR_MIN) / ONU * 100;
+    var kwhMes = pessoas * (minutos / 60) * (watts / 1000) * 30;
+    var custo = kwhMes * preco;
+    var meta = Math.min(minutos, 5);
+    var litrosMes = litrosDia * 30, litrosMesMeta = pessoas * meta * LITROS_POR_MIN * 30;
+    var kwhMeta = pessoas * (meta / 60) * (watts / 1000) * 30;
+    $("o-litros-dia").textContent = fmt.format(litrosDia) + " L";
+    $("o-pct-onu").textContent = fmt.format(pct) + "%";
+    $("o-pct-texto").textContent = "dos 110 L/dia da ONU vão só no banho de cada pessoa";
+    $("o-kwh").textContent = watts ? fmt.format(kwhMes) + " kWh" : "0 kWh";
+    $("o-custo").textContent = reais.format(custo);
+    var maior = Math.max(litrosMes, litrosMesMeta) || 1;
+    $("b-hoje").style.width = (litrosMes / maior * 100) + "%";
+    $("b-hoje").textContent = fmt.format(litrosMes) + " L";
+    $("b-meta").style.width = (litrosMesMeta / maior * 100) + "%";
+    $("b-meta").textContent = fmt.format(litrosMesMeta) + " L";
+    var eco = $("o-economia");
+    if (minutos <= 5) { eco.innerHTML = "Os banhos da sua casa já estão em 5 minutos ou menos. Ótimo."; }
+    else {
+      var economiaL = litrosMes - litrosMesMeta, economiaR = (kwhMes - kwhMeta) * preco;
+      eco.innerHTML = "Com banhos de 5 minutos, sua casa economiza <b>" + fmt.format(economiaL) + " litros de água</b>" +
+        (watts ? " e <b>" + reais.format(economiaR) + " na conta de luz</b>" : "") + " por mês.";
+    }
+  }
+  ["c-pessoas", "c-minutos", "c-watts", "c-preco"].forEach(function (id) { $(id).addEventListener("input", calcular); $(id).addEventListener("change", calcular); });
+  $("form-calc").addEventListener("submit", function (e) { e.preventDefault(); });
+
+  /* ---------- início ---------- */
+  desenharFiltros();
+  buscar("");
+  calcular();
+  window.addEventListener("hashchange", lerHash);
+  lerHash();
+})();
+</script>
+
+</body>
+</html>

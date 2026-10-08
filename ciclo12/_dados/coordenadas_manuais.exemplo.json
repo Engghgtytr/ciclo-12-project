@@ -1,0 +1,8 @@
+{
+  "_como_usar": "Copie este arquivo para coordenadas_manuais.json, troque os números pelos do Google Maps e rode: node _dados/gerar_pontos.mjs",
+  "pev-05": {
+    "lat": -23,
+    "lng": -46,
+    "nota": "Conferido no Google Maps por NOME em DD/MM/2026"
+  }
+}

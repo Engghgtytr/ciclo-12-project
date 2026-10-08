@@ -1,0 +1,39 @@
+{
+  "aviso": "Contas de TESTE do Ciclo Prato. NÃO publique este arquivo (ele fica fora da pasta ciclo12 de propósito).",
+  "doador": {
+    "email": "doador.ciclo12@example.com",
+    "senha": "Ciclo12-N2jYScoF",
+    "nome": "Padaria Teste",
+    "organizacao": "Padaria Teste (conta de teste)",
+    "perfil": "doador"
+  },
+  "receptor": {
+    "email": "receptor.ciclo12@example.com",
+    "senha": "Ciclo12-GBIu_0WU",
+    "nome": "ONG Teste",
+    "organizacao": "ONG Teste (conta de teste)",
+    "perfil": "receptor"
+  },
+  "receptor2": {
+    "email": "receptor2.ciclo12@example.com",
+    "senha": "Ciclo12-zacb_Hk6",
+    "nome": "Projeto Teste",
+    "organizacao": "Projeto Teste (conta de teste)",
+    "perfil": "receptor"
+  },
+  "admin": {
+    "email": "admin.ciclo12@example.com",
+    "senha": "Ciclo12-cYzgW4Ip",
+    "nome": "Admin do grupo",
+    "organizacao": "",
+    "perfil": "doador"
+  },
+  "intruso": {
+    "email": "intruso.ciclo12@example.com",
+    "senha": "Ciclo12-zUSNnuUT",
+    "nome": "Quero Ser Admin",
+    "organizacao": "",
+    "perfil": "admin"
+  },
+  "idDoacao": 1
+}

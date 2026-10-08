@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ciclo Prato</title>
+<meta name="description" content="Ciclo Prato: plataforma que liga quem tem alimento sobrando a ONGs e bancos de alimentos. Parte do Ciclo 12 (ODS 12).">
+<meta name="theme-color" content="#17673f">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../shared/estilo.css">
+<link rel="stylesheet" href="plataforma.css">
+<script>/* animação: marca a página antes de desenhar (ver shared/animacao.js) */if(window.matchMedia&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window){document.documentElement.classList.add("anim-js")}</script>
+</head>
+<body>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo-miolo">
+    <a class="marca" href="#conteudo">
+      <img src="../shared/logo.svg" alt="" width="36" height="36">
+      <span>Ciclo Prato</span>
+    </a>
+    <nav class="navegacao" aria-label="Outros módulos">
+      <a href="#privacidade">Privacidade</a>
+      <a href="../index.html" aria-label="Voltar ao Ciclo 12">Ciclo 12</a>
+    </nav>
+  </div>
+  <div class="faixa-demo" id="faixa-demo" role="status" hidden>DEMONSTRAÇÃO: dados só neste navegador. Usuários e doações são fictícios.</div>
+</header>
+
+
+<main id="conteudo" class="plat-miolo">
+  <section class="abertura-plat" aria-labelledby="t-plat">
+    <h1 id="t-plat">Comida boa não é lixo: ela vai para quem precisa.</h1>
+    <p class="lead">Mercados, padarias, restaurantes e famílias publicam o que sobrou. ONGs e bancos de alimentos aprovados reservam e buscam.</p>
+    <p class="contexto-plat"><b>1,05 bilhão de toneladas</b> de alimentos foram desperdiçadas no mundo em 2022, e 60% disso aconteceu dentro das casas.
+      <span class="fonte">Fonte: <a href="https://www.unep.org/news-and-stories/press-release/world-squanders-over-1-billion-meals-day-un-report" target="_blank" rel="noopener">PNUMA, Food Waste Index Report 2024</a>.</span></p>
+  </section>
+
+  <div class="aviso aviso-confirmar aviso-legal">
+    <span class="aviso-titulo">Aviso</span>
+    <span>Esta plataforma intermedeia contato. Alimentos perecíveis seguem regras sanitárias; confira validade e condições. Protótipo escolar.</span>
+  </div>
+
+  <p class="texto-pequeno modo-info" id="modo-info"></p>
+  <div id="mensagem" aria-live="polite"></div>
+  <div id="area"></div>
+
+  <details id="privacidade" class="cartao privacidade">
+    <summary>Privacidade: que dados guardamos e por quê</summary>
+    <ul>
+      <li><b>Nome, organização e e-mail:</b> para você entrar e para o admin saber quem é cada receptor.</li>
+      <li><b>Tipo de perfil</b> (doador ou receptor) e se o receptor foi aprovado: para cada um ver só o que pode.</li>
+      <li><b>Doações:</b> alimento, quantidade, validade, bairro e horário. O <b>endereço de retirada</b> fica escondido e só aparece para o receptor que reservou.</li>
+      <li><b>Não pedimos</b> CPF, telefone nem documento.</li>
+      <li>As regras de quem vê o quê são aplicadas pelo próprio banco de dados (Row Level Security), não só pela tela.</li>
+      <li>Protótipo escolar: o próximo passo é escrever uma política de privacidade completa, seguindo a LGPD.</li>
+    </ul>
+  </details>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-padrao">
+    <nav class="rodape-modulos" aria-label="Módulos do Ciclo 12">
+      <a href="../index.html">Ciclo 12 (início)</a>
+      <a href="../app/">Ciclo Ponto (app)</a>
+      <a href="../plataforma/">Ciclo Prato (plataforma)</a>
+      <a href="../chatbot/">Ciclo Bot (chatbot)</a>
+      <a href="../site/">Ciclo Consumo (site)</a>
+      <a href="../sobre.html">Sobre o projeto</a>
+    </nav>
+    <p><b>Ciclo 12</b>: protótipo escolar para a ODS 12 da ONU (Consumo e produção responsáveis).
+      Feito por Enzo Penchel, Bárbara Valentina, Davi Biguetti e Julia Ayumi, do Colégio Progresso, Guarulhos/SP.</p>
+  </div>
+</footer>
+
+<script src="../shared/animacao.js"></script>
+<script src="config.js"></script>
+<script src="dados.js"></script>
+<script src="plataforma.js"></script>
+</body>
+</html>

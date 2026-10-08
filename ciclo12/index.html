@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ciclo 12</title>
+<meta name="description" content="Ciclo 12: cinco problemas de consumo, dados com fonte, mapa de descarte em Guarulhos e quatro módulos para a ODS 12.">
+<meta name="theme-color" content="#17673f">
+<link rel="icon" href="shared/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="shared/estilo.css">
+<link rel="stylesheet" href="hub.css">
+<script>/* animação: marca a página antes de desenhar (ver shared/animacao.js) */if(window.matchMedia&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window){document.documentElement.classList.add("anim-js")}</script>
+</head>
+<body>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo-miolo">
+    <a class="marca" href="#inicio" data-aba="inicio">
+      <img src="shared/logo.svg" alt="" width="36" height="36">
+      <span>Ciclo 12</span>
+    </a>
+    <nav class="navegacao" aria-label="Seções">
+      <a href="#inicio" data-aba="inicio">Início</a>
+      <a href="#problemas" data-aba="problemas">Problemas</a>
+      <a href="#mapa" data-aba="mapa">Mapa de descarte</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo" class="container">
+
+  <!-- ================= INÍCIO ================= -->
+  <section id="inicio" class="aba-tela" aria-labelledby="t-inicio">
+    <div class="abertura">
+      <div class="abertura-texto anim-entrada">
+        <p class="sobretitulo">ODS 12 · Consumo e produção responsáveis</p>
+        <h1 id="t-inicio">Cinco problemas de consumo. Quatro ferramentas para agir em Guarulhos.</h1>
+        <p class="lead">Dados com fonte, mapa de descarte perto da escola e módulos para descartar, doar e economizar.</p>
+        <div class="acoes">
+          <a class="botao" href="#mapa" data-aba="mapa">Abrir o mapa</a>
+          <a class="botao botao-secundario" href="#problemas" data-aba="problemas">Ver os problemas</a>
+        </div>
+      </div>
+
+      <aside class="perto" aria-labelledby="t-perto">
+        <h2 id="t-perto" class="perto-titulo">Ecopontos mais perto do Colégio Progresso</h2>
+        <ol class="perto-lista" id="perto-lista"></ol>
+        <p class="texto-pequeno perto-nota">Distância em linha reta a partir da escola. "≈" indica posição aproximada.
+          Endereço da escola a confirmar com a secretaria.</p>
+      </aside>
+    </div>
+
+    <h2 class="titulo-secao">Os 5 problemas</h2>
+    <div class="grade-problemas">
+      <a class="problema-cartao destaque" href="#p-alimentos" data-aba="problemas" data-alvo="p-alimentos">
+        <span class="problema-tema">Desperdício de alimentos</span>
+        <span class="problema-numero">1,05 bilhão de t</span>
+        <span>de comida desperdiçada no mundo em 2022; 60% disso aconteceu dentro das casas.</span>
+        <span class="problema-fonte">PNUMA, Food Waste Index 2024</span>
+      </a>
+      <a class="problema-cartao" href="#p-eletronicos" data-aba="problemas" data-alvo="p-eletronicos">
+        <span class="problema-tema">Lixo eletrônico</span>
+        <span class="problema-numero">22,3%</span>
+        <span>dos 62 milhões de toneladas de 2022 tiveram coleta e reciclagem documentadas.</span>
+        <span class="problema-fonte">Global E-waste Monitor 2024</span>
+      </a>
+      <a class="problema-cartao" href="#p-reciclagem" data-aba="problemas" data-alvo="p-reciclagem">
+        <span class="problema-tema">Reciclagem</span>
+        <span class="problema-numero">4%</span>
+        <span>dos resíduos do Brasil são reciclados.</span>
+        <span class="problema-fonte">Abrema, com dados do SNIS 2023</span>
+      </a>
+      <a class="problema-cartao" href="#p-agua" data-aba="problemas" data-alvo="p-agua">
+        <span class="problema-tema">Água e energia</span>
+        <span class="problema-numero">154 L</span>
+        <span>por pessoa por dia no Brasil; a ONU considera 110 L suficientes.</span>
+        <span class="problema-fonte">SNIS, via Agência Brasil (2018)</span>
+      </a>
+      <a class="problema-cartao" href="#p-roupas" data-aba="problemas" data-alvo="p-roupas">
+        <span class="problema-tema">Roupas e objetos</span>
+        <span class="problema-numero">73%</span>
+        <span>do material das roupas no mundo vai para aterro ou incineração.</span>
+        <span class="problema-fonte">Ellen MacArthur Foundation (2017)</span>
+      </a>
+    </div>
+
+    <h2 class="titulo-secao">Os 4 módulos</h2>
+    <p class="texto-pequeno">Cada módulo vira um link quando estiver pronto e testado.</p>
+    <ul class="modulos">
+      <li>
+        <a class="modulo modulo-pronto" href="app/">
+          <span class="modulo-nome">Ciclo Ponto <small>app para celular</small></span>
+          <span class="modulo-faz">Lixo eletrônico e roupas: GPS, câmera e lembretes.</span>
+          <span class="etiqueta etiqueta-ok">Abrir o app</span>
+        </a>
+      </li>
+      <li>
+        <a class="modulo modulo-pronto" href="plataforma/">
+          <span class="modulo-nome">Ciclo Prato <small>plataforma</small></span>
+          <span class="modulo-faz">Desperdício de alimentos: doadores, receptores e painel de dados.</span>
+          <span class="etiqueta etiqueta-ok">Abrir a plataforma</span>
+        </a>
+      </li>
+      <li>
+        <a class="modulo modulo-pronto" href="chatbot/">
+          <span class="modulo-nome">Ciclo Bot <small>chatbot</small></span>
+          <span class="modulo-faz">Reciclagem: tira dúvidas sobre onde descartar cada item.</span>
+          <span class="etiqueta etiqueta-ok">Abrir o chatbot</span>
+        </a>
+      </li>
+      <li>
+        <a class="modulo modulo-pronto" href="site/">
+          <span class="modulo-nome">Ciclo Consumo <small>site</small></span>
+          <span class="modulo-faz">Água e energia: calculadora do banho e dicas.</span>
+          <span class="etiqueta etiqueta-ok">Abrir o site</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= PROBLEMAS ================= -->
+  <section id="problemas" class="aba-tela" aria-labelledby="t-problemas" hidden>
+    <h1 id="t-problemas">Os 5 problemas, com dados e fonte</h1>
+    <nav class="indice" aria-label="Problemas">
+      <a href="#p-alimentos" data-aba="problemas" data-alvo="p-alimentos">Alimentos</a>
+      <a href="#p-eletronicos" data-aba="problemas" data-alvo="p-eletronicos">Lixo eletrônico</a>
+      <a href="#p-reciclagem" data-aba="problemas" data-alvo="p-reciclagem">Reciclagem</a>
+      <a href="#p-agua" data-aba="problemas" data-alvo="p-agua">Água e energia</a>
+      <a href="#p-roupas" data-aba="problemas" data-alvo="p-roupas">Roupas e objetos</a>
+    </nav>
+
+    <article class="problema" id="p-alimentos" aria-labelledby="t-alimentos">
+      <h2 id="t-alimentos">Desperdício de alimentos</h2>
+      <p>Em 2022 o mundo desperdiçou 1,05 bilhão de toneladas de alimentos, quase um quinto de tudo o que chegou ao consumidor. A maior parte do desperdício não acontece no mercado nem no restaurante: acontece em casa.</p>
+      <figure class="grafico">
+        <figcaption>Onde o desperdício de alimentos aconteceu em 2022 (mundo)</figcaption>
+        <svg viewBox="0 0 320 40" role="img" aria-labelledby="g1-desc" class="barra-svg">
+          <desc id="g1-desc">Casas 60%, serviços de alimentação 28%, varejo 12%.</desc>
+          <rect class="viz-1" x="0" y="4" width="189.6" height="32" rx="4"><title>Casas: 60%</title></rect>
+          <rect class="viz-2" x="191.6" y="4" width="88.5" height="32"><title>Serviços de alimentação: 28%</title></rect>
+          <rect class="viz-3" x="282.1" y="4" width="37.9" height="32" rx="4"><title>Varejo: 12%</title></rect>
+        </svg>
+        <ul class="legenda">
+          <li><span class="amostra viz-1"></span>Casas <b>60%</b></li>
+          <li><span class="amostra viz-2"></span>Serviços de alimentação <b>28%</b></li>
+          <li><span class="amostra viz-3"></span>Varejo <b>12%</b></li>
+        </ul>
+      </figure>
+      <p class="fonte">Fonte: <a href="https://www.unep.org/news-and-stories/press-release/world-squanders-over-1-billion-meals-day-un-report" target="_blank" rel="noopener">PNUMA, Food Waste Index Report 2024</a></p>
+      <p class="meta-ods"><b>Meta 12.3:</b> até 2030, reduzir pela metade o desperdício de alimentos per capita mundial, nos níveis de varejo e do consumidor, e reduzir as perdas ao longo das cadeias de produção e abastecimento.</p>
+      <p class="modulo-liga">No Ciclo 12: <a href="plataforma/"><b>Ciclo Prato</b></a> (plataforma de doação de alimentos).</p>
+    </article>
+
+    <article class="problema" id="p-eletronicos" aria-labelledby="t-eletronicos">
+      <h2 id="t-eletronicos">Descarte incorreto de lixo eletrônico</h2>
+      <p>Foram 62 milhões de toneladas de lixo eletrônico em 2022, 82% a mais que em 2010. Menos de um quarto teve coleta e reciclagem documentadas; o resto some do controle e pode contaminar solo e água.</p>
+      <figure class="grafico">
+        <figcaption>Destino documentado do lixo eletrônico em 2022 (mundo)</figcaption>
+        <svg viewBox="0 0 320 40" role="img" aria-labelledby="g2-desc" class="barra-svg">
+          <desc id="g2-desc">22,3% com coleta e reciclagem documentadas; 77,7% sem documentação.</desc>
+          <rect class="viz-destaque" x="0" y="4" width="70.9" height="32" rx="4"><title>Coleta e reciclagem documentadas: 22,3%</title></rect>
+          <rect class="viz-resto" x="72.9" y="4" width="247.1" height="32" rx="4"><title>Sem documentação: 77,7%</title></rect>
+        </svg>
+        <ul class="legenda">
+          <li><span class="amostra viz-destaque"></span>Coleta e reciclagem documentadas <b>22,3%</b></li>
+          <li><span class="amostra viz-resto"></span>Sem documentação <b>77,7%</b></li>
+        </ul>
+      </figure>
+      <p class="fonte">Fonte: <a href="https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling" target="_blank" rel="noopener">Global E-waste Monitor 2024 (ITU e UNITAR)</a></p>
+      <p class="meta-ods"><b>Meta 12.5:</b> até 2030, reduzir substancialmente a geração de resíduos por meio da prevenção, redução, reciclagem e reuso.</p>
+      <p class="modulo-liga">No Ciclo 12: <a href="app/"><b>Ciclo Ponto</b></a> (app com pontos de descarte e lembretes).</p>
+    </article>
+
+    <article class="problema" id="p-reciclagem" aria-labelledby="t-reciclagem">
+      <h2 id="t-reciclagem">Falta de informação sobre reciclagem</h2>
+      <p>O Brasil recicla só 4% dos seus resíduos. Parte do problema é informação: 58% dos brasileiros dizem não saber reconhecer os símbolos de reciclagem nas embalagens.</p>
+      <figure class="grafico">
+        <figcaption>Resíduos reciclados no Brasil</figcaption>
+        <svg viewBox="0 0 320 40" role="img" aria-labelledby="g3-desc" class="barra-svg">
+          <desc id="g3-desc">4% reciclados; 96% não reciclados.</desc>
+          <rect class="viz-destaque" x="0" y="4" width="12.7" height="32" rx="4"><title>Reciclados: 4%</title></rect>
+          <rect class="viz-resto" x="14.7" y="4" width="305.3" height="32" rx="4"><title>Não reciclados: 96%</title></rect>
+        </svg>
+        <ul class="legenda">
+          <li><span class="amostra viz-destaque"></span>Reciclados <b>4%</b></li>
+          <li><span class="amostra viz-resto"></span>Não reciclados <b>96%</b></li>
+        </ul>
+      </figure>
+      <p class="fonte">Fontes: <a href="https://www.abrema.org.br/2024/09/19/brasil-recicla-apenas-4-mas-importa-lixo-para-a-industria/" target="_blank" rel="noopener">Abrema, com dados do SNIS 2023</a>; <a href="https://www.abrema.org.br/2024/06/24/1-em-cada-3-brasileiros-que-diz-ter-coleta-seletiva-nao-separa-o-lixo-aponta-datafolha/" target="_blank" rel="noopener">pesquisa Datafolha 2024, divulgada pela Abrema</a> (58%)</p>
+      <p class="meta-ods"><b>Meta 12.8:</b> até 2030, garantir que as pessoas, em todos os lugares, tenham informação relevante e conscientização para o desenvolvimento sustentável e estilos de vida em harmonia com a natureza.</p>
+      <p class="modulo-liga">No Ciclo 12: <a href="chatbot/"><b>Ciclo Bot</b></a> (chatbot sobre onde descartar cada item).</p>
+    </article>
+
+    <article class="problema" id="p-agua" aria-labelledby="t-agua">
+      <h2 id="t-agua">Consumo excessivo de água e energia em casa</h2>
+      <p>Cada brasileiro consome em média 154 litros de água por dia. A ONU considera 110 litros suficientes para as necessidades de uma pessoa. O banho é um dos lugares onde dá para economizar água e luz ao mesmo tempo.</p>
+      <figure class="grafico">
+        <figcaption>Litros de água por pessoa, por dia</figcaption>
+        <svg viewBox="0 0 320 84" role="img" aria-labelledby="g4-desc" class="barra-svg barra-svg-alta">
+          <desc id="g4-desc">Média do Brasil: 154 litros. Recomendado pela ONU: 110 litros.</desc>
+          <line class="viz-eixo" x1="0" y1="0" x2="0" y2="84"></line>
+          <rect class="viz-destaque" x="0" y="6" width="320" height="30" rx="4"><title>Média no Brasil: 154 L</title></rect>
+          <rect class="viz-resto" x="0" y="48" width="228.6" height="30" rx="4"><title>Recomendado pela ONU: 110 L</title></rect>
+        </svg>
+        <ul class="legenda">
+          <li><span class="amostra viz-destaque"></span>Média no Brasil <b>154 L</b></li>
+          <li><span class="amostra viz-resto"></span>Recomendado pela ONU <b>110 L</b></li>
+        </ul>
+      </figure>
+      <p class="fonte">Fonte: <a href="https://agenciabrasil.ebc.com.br/geral/noticia/2018-03/brasileiro-consome-significativo-volume-de-agua-que-nao-sai-das-torneiras" target="_blank" rel="noopener">SNIS, via Agência Brasil (2018)</a>. Dado de 2018: pode haver número mais recente.</p>
+      <p class="meta-ods"><b>Meta 12.2:</b> até 2030, alcançar a gestão sustentável e o uso eficiente dos recursos naturais.</p>
+      <p class="modulo-liga">No Ciclo 12: <a href="site/"><b>Ciclo Consumo</b></a> (site com calculadora do banho).</p>
+    </article>
+
+    <article class="problema" id="p-roupas" aria-labelledby="t-roupas">
+      <h2 id="t-roupas">Roupas e objetos que poderiam ser reutilizados</h2>
+      <p>De todo o material usado para fazer roupas no mundo, 73% acaba em aterro ou é queimado depois do uso. Doar, trocar e consertar mantém a peça em uso por mais tempo.</p>
+      <figure class="grafico">
+        <figcaption>Destino do material das roupas no mundo (dados de 2015)</figcaption>
+        <svg viewBox="0 0 320 40" role="img" aria-labelledby="g5-desc" class="barra-svg">
+          <desc id="g5-desc">73% aterro ou incineração; 27% outros destinos.</desc>
+          <rect class="viz-destaque" x="0" y="4" width="232.1" height="32" rx="4"><title>Aterro ou incineração: 73%</title></rect>
+          <rect class="viz-resto" x="234.1" y="4" width="85.9" height="32" rx="4"><title>Outros destinos: 27%</title></rect>
+        </svg>
+        <ul class="legenda">
+          <li><span class="amostra viz-destaque"></span>Aterro ou incineração <b>73%</b></li>
+          <li><span class="amostra viz-resto"></span>Outros destinos <b>27%</b></li>
+        </ul>
+      </figure>
+      <p class="fonte">Fonte: <a href="https://content.ellenmacarthurfoundation.org/m/7f818b40f06e1afd/original/Summary-of-findings-A-New-Textiles-Economy.pdf" target="_blank" rel="noopener">Ellen MacArthur Foundation, A New Textiles Economy (2017), figura 3</a></p>
+      <p class="meta-ods"><b>Meta 12.5:</b> até 2030, reduzir substancialmente a geração de resíduos por meio da prevenção, redução, reciclagem e reuso.</p>
+      <p class="modulo-liga">No Ciclo 12: <a href="app/"><b>Ciclo Ponto</b></a> (app para doar, trocar ou descartar roupas e objetos).</p>
+    </article>
+    <p class="texto-pequeno">Texto das metas: <a href="https://www.ipea.gov.br/ods/ods12.html" target="_blank" rel="noopener">IPEA, ODS 12</a> (versão das Nações Unidas).</p>
+  </section>
+
+  <!-- ================= MAPA ================= -->
+  <section id="mapa" class="aba-tela" aria-labelledby="t-mapa" hidden>
+    <h1 id="t-mapa">Mapa de descarte</h1>
+    <div class="aviso aviso-confirmar">
+      <span class="aviso-titulo">Confira antes de ir</span>
+      <p>Lista dos 33 Ecopontos (PEVs) publicada pela Agência Mural em 10/10/2025. Horários e materiais podem ter mudado:
+        confirme com a Prefeitura de Guarulhos. Posições marcadas como aproximadas ainda serão conferidas pelo grupo.</p>
+    </div>
+
+    <div class="controles">
+      <div class="campo">
+        <label for="filtro-material">O que você quer descartar?</label>
+        <select id="filtro-material"></select>
+      </div>
+      <button class="botao botao-secundario" id="btn-perto" type="button">Pontos perto de mim</button>
+    </div>
+    <p class="resposta-filtro" id="resposta-filtro" role="status"></p>
+
+    <div class="mapa-grade">
+      <div class="mapa-caixa">
+        <div id="mapa-area" role="region" aria-label="Mapa dos ecopontos de Guarulhos"></div>
+        <ul class="mapa-legenda" aria-label="Legenda do mapa">
+          <li><span class="pino-legenda pino-escola"></span>Escola</li>
+          <li><span class="pino-legenda pino-pev"></span>Ecoponto (número achado)</li>
+          <li><span class="pino-legenda pino-pev pino-aprox"></span>Ecoponto (posição aproximada)</li>
+        </ul>
+      </div>
+      <div class="lista-caixa">
+        <p class="lista-resumo" id="lista-resumo" aria-live="polite"></p>
+        <p class="texto-pequeno" id="lista-referencia"></p>
+        <ol class="lista-pontos" id="lista-pontos"></ol>
+        <div id="lista-doacao"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-grade">
+    <div>
+      <p>Dados de PEV: Agência Mural, 10/10/2025; confirme horários e materiais com a Prefeitura de Guarulhos.</p>
+      <p>Mapa: © colaboradores do OpenStreetMap. Coordenadas: Nominatim (OpenStreetMap).</p>
+    </div>
+    <div>
+      <h2 class="rodape-titulo">Referências</h2>
+      <ul class="referencias">
+        <li><a href="https://www.unep.org/news-and-stories/press-release/world-squanders-over-1-billion-meals-day-un-report" target="_blank" rel="noopener">PNUMA, Food Waste Index Report 2024</a></li>
+        <li><a href="https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling" target="_blank" rel="noopener">Global E-waste Monitor 2024</a></li>
+        <li><a href="https://www.abrema.org.br/2024/09/19/brasil-recicla-apenas-4-mas-importa-lixo-para-a-industria/" target="_blank" rel="noopener">Abrema: Brasil recicla apenas 4% (2024)</a></li>
+        <li><a href="https://www.abrema.org.br/2024/06/24/1-em-cada-3-brasileiros-que-diz-ter-coleta-seletiva-nao-separa-o-lixo-aponta-datafolha/" target="_blank" rel="noopener">Datafolha 2024, via Abrema</a></li>
+        <li><a href="https://agenciabrasil.ebc.com.br/geral/noticia/2018-03/brasileiro-consome-significativo-volume-de-agua-que-nao-sai-das-torneiras" target="_blank" rel="noopener">SNIS, via Agência Brasil (2018)</a></li>
+        <li><a href="https://content.ellenmacarthurfoundation.org/m/7f818b40f06e1afd/original/Summary-of-findings-A-New-Textiles-Economy.pdf" target="_blank" rel="noopener">Ellen MacArthur Foundation (2017)</a></li>
+        <li><a href="https://agenciamural.org.br/confira-onde-estao-os-ecopontos-de-guarulhos/" target="_blank" rel="noopener">Agência Mural: Ecopontos de Guarulhos (10/10/2025)</a></li>
+        <li><a href="https://www.ipea.gov.br/ods/ods12.html" target="_blank" rel="noopener">IPEA: metas da ODS 12</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container rodape-padrao">
+    <nav class="rodape-modulos" aria-label="Módulos do Ciclo 12">
+      <a href="index.html">Ciclo 12 (início)</a>
+      <a href="app/">Ciclo Ponto (app)</a>
+      <a href="plataforma/">Ciclo Prato (plataforma)</a>
+      <a href="chatbot/">Ciclo Bot (chatbot)</a>
+      <a href="site/">Ciclo Consumo (site)</a>
+      <a href="sobre.html">Sobre o projeto</a>
+    </nav>
+    <p><b>Ciclo 12</b>: protótipo escolar para a ODS 12 da ONU (Consumo e produção responsáveis).
+      Feito por Enzo Penchel, Bárbara Valentina, Davi Biguetti e Julia Ayumi, do Colégio Progresso, Guarulhos/SP.</p>
+  </div>
+</footer>
+
+<script src="shared/animacao.js"></script>
+
+<script src="shared/pontos.js"></script>
+<script src="hub.js"></script>
+</body>
+</html>

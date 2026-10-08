@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="logo-titulo">
+  <title id="logo-titulo">Ciclo 12 — logo</title>
+  <!-- Desenho próprio do grupo: duas setas curvas que se perseguem formando um ciclo.
+       Não é o símbolo de reciclagem de nenhuma marca. -->
+  <style>
+    .seta-a { stroke: #17673f; fill: none; }
+    .ponta-a { fill: #17673f; }
+    .seta-b { stroke: #2f8f3a; fill: none; }
+    .ponta-b { fill: #2f8f3a; }
+    @media (prefers-color-scheme: dark) {
+      .seta-a { stroke: #5ccf8c; }
+      .ponta-a { fill: #5ccf8c; }
+      .seta-b { stroke: #8fd16a; }
+      .ponta-b { fill: #8fd16a; }
+    }
+  </style>
+  <!-- Seta de cima: vai da esquerda para a direita passando por cima -->
+  <path class="seta-a" d="M12.68 26.82 A20 20 0 0 1 51.32 26.82" stroke-width="7" stroke-linecap="round"/>
+  <polygon class="ponta-a" points="57.6,25.1 45.0,28.5 53.4,35.0"/>
+  <!-- Seta de baixo: mesma forma girada 180° -->
+  <path class="seta-b" d="M51.32 37.18 A20 20 0 0 1 12.68 37.18" stroke-width="7" stroke-linecap="round"/>
+  <polygon class="ponta-b" points="6.4,38.9 19.0,35.5 10.6,29.0"/>
+</svg>

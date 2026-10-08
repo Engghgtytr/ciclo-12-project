@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre o Ciclo 12</title>
+<meta name="description" content="Como o Ciclo 12 funciona: diagrama do sistema, fontes dos dados e próximos passos.">
+<meta name="theme-color" content="#17673f">
+<link rel="icon" href="shared/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="shared/estilo.css">
+<style>
+  main.container { padding-top: var(--esp-5); padding-bottom: var(--esp-6); max-width: 56rem; }
+  .sobre h1 { font-size: clamp(2rem, 6vw, 2.6rem); letter-spacing: -0.02em; }
+  .secao-sobre { padding: var(--esp-5) 0; border-top: 1px solid var(--cor-borda); }
+  .secao-sobre p, .secao-sobre li { max-width: 65ch; }
+  .diagrama-caixa { overflow-x: auto; border: 1px solid var(--cor-borda); border-radius: var(--raio); background: var(--cor-superficie); padding: var(--esp-3); }
+  .diagrama { display: block; min-width: 640px; width: 100%; height: auto; }
+  .diagrama .no { fill: var(--cor-superficie); stroke: var(--cor-borda); stroke-width: 1.5; }
+  .diagrama .no-hub { fill: var(--cor-superficie-2); stroke: var(--cor-primaria); stroke-width: 2; }
+  .diagrama .no-dado { fill: var(--cor-superficie-2); stroke: var(--cor-texto-suave); stroke-dasharray: 5 4; }
+  .diagrama .titulo-no { font: 700 15px var(--fonte); fill: var(--cor-texto); }
+  .diagrama .texto-no { font: 12px var(--fonte); fill: var(--cor-texto-suave); }
+  .diagrama .linha { stroke: var(--cor-texto-suave); stroke-width: 1.5; fill: none; }
+  .diagrama .linha-dado { stroke: var(--cor-texto-suave); stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+  .diagrama .ponta { fill: var(--cor-texto-suave); }
+  .lista-modulos { padding-left: 1.1rem; display: grid; gap: var(--esp-2); }
+  .fontes { padding-left: 1.1rem; display: grid; gap: var(--esp-2); }
+</style>
+</head>
+<body>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="topo-miolo">
+    <a class="marca" href="index.html">
+      <img src="shared/logo.svg" alt="" width="36" height="36">
+      <span>Ciclo 12</span>
+    </a>
+    <nav class="navegacao" aria-label="Seções">
+      <a href="#diagrama">Diagrama</a>
+      <a href="#fontes">Fontes</a>
+      <a href="#proximos">Próximos passos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo" class="container sobre">
+  <h1>Sobre o Ciclo 12</h1>
+  <p class="lead">Um sistema com 4 módulos para 5 problemas de consumo, todos ligados por um hub e pela mesma lista de pontos de coleta.</p>
+
+  <section id="diagrama" class="secao-sobre" aria-labelledby="t-diagrama">
+    <h2 id="t-diagrama">Como as partes se ligam</h2>
+    <div class="diagrama-caixa">
+      <svg class="diagrama" viewBox="0 0 720 400" role="img" aria-labelledby="d-titulo d-desc">
+        <title id="d-titulo">Diagrama do sistema Ciclo 12</title>
+        <desc id="d-desc">O hub liga os quatro módulos: app Ciclo Ponto, chatbot Ciclo Bot, plataforma Ciclo Prato e site Ciclo Consumo. O app, o chatbot e o mapa do hub usam o mesmo arquivo de pontos de coleta. A plataforma usa o banco de dados Supabase, com modo demonstração de reserva.</desc>
+        <defs>
+          <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path class="ponta" d="M0,0 L10,5 L0,10 z"/>
+          </marker>
+        </defs>
+        <!-- hub -->
+        <rect class="no no-hub" x="240" y="20" width="240" height="64" rx="12"/>
+        <text class="titulo-no" x="360" y="47" text-anchor="middle">Hub (index.html)</text>
+        <text class="texto-no" x="360" y="68" text-anchor="middle">5 problemas, gráficos e mapa</text>
+        <!-- linhas do hub para os módulos -->
+        <path class="linha" d="M300,84 C300,120 90,120 90,158" marker-end="url(#seta)"/>
+        <path class="linha" d="M340,84 C340,120 270,120 270,158" marker-end="url(#seta)"/>
+        <path class="linha" d="M380,84 C380,120 450,120 450,158" marker-end="url(#seta)"/>
+        <path class="linha" d="M420,84 C420,120 630,120 630,158" marker-end="url(#seta)"/>
+        <!-- módulos -->
+        <rect class="no" x="10" y="160" width="160" height="78" rx="12"/>
+        <text class="titulo-no" x="90" y="188" text-anchor="middle">Ciclo Ponto</text>
+        <text class="texto-no" x="90" y="207" text-anchor="middle">app: GPS, câmera,</text>
+        <text class="texto-no" x="90" y="223" text-anchor="middle">lembretes</text>
+        <rect class="no" x="190" y="160" width="160" height="78" rx="12"/>
+        <text class="titulo-no" x="270" y="188" text-anchor="middle">Ciclo Bot</text>
+        <text class="texto-no" x="270" y="207" text-anchor="middle">chatbot por regras,</text>
+        <text class="texto-no" x="270" y="223" text-anchor="middle">47 itens, offline</text>
+        <rect class="no" x="370" y="160" width="160" height="78" rx="12"/>
+        <text class="titulo-no" x="450" y="188" text-anchor="middle">Ciclo Prato</text>
+        <text class="texto-no" x="450" y="207" text-anchor="middle">plataforma: 3 perfis,</text>
+        <text class="texto-no" x="450" y="223" text-anchor="middle">doações e painel</text>
+        <rect class="no" x="550" y="160" width="160" height="78" rx="12"/>
+        <text class="titulo-no" x="630" y="188" text-anchor="middle">Ciclo Consumo</text>
+        <text class="texto-no" x="630" y="207" text-anchor="middle">site: dados, calculadora,</text>
+        <text class="texto-no" x="630" y="223" text-anchor="middle">dicas</text>
+        <!-- dados compartilhados -->
+        <path class="linha-dado" d="M90,238 L90,300 L135,300" marker-end="url(#seta)"/>
+        <path class="linha-dado" d="M270,238 L270,300 L245,300" marker-end="url(#seta)"/>
+        <rect class="no no-dado" x="135" y="276" width="110" height="48" rx="10"/>
+        <text class="titulo-no" x="190" y="305" text-anchor="middle">pontos.js</text>
+        <text class="texto-no" x="190" y="352" text-anchor="middle">33 Ecopontos + escola,</text>
+        <text class="texto-no" x="190" y="368" text-anchor="middle">a mesma lista do mapa do hub</text>
+        <path class="linha-dado" d="M450,238 L450,276" marker-end="url(#seta)"/>
+        <rect class="no no-dado" x="390" y="278" width="120" height="48" rx="10"/>
+        <text class="titulo-no" x="450" y="307" text-anchor="middle">Supabase</text>
+        <text class="texto-no" x="450" y="352" text-anchor="middle">login real e regras (RLS);</text>
+        <text class="texto-no" x="450" y="368" text-anchor="middle">reserva: modo demonstração</text>
+      </svg>
+    </div>
+    <ul class="lista-modulos">
+      <li><b>Hub:</b> mostra os 5 problemas com dados e fonte, o mapa dos 33 Ecopontos de Guarulhos e leva aos módulos.</li>
+      <li><b>Ciclo Ponto (app):</b> lixo eletrônico, roupas e objetos. Usa GPS, câmera e notificação local e funciona sem internet depois do primeiro acesso.</li>
+      <li><b>Ciclo Bot (chatbot):</b> responde onde descartar 47 itens, por regras, sem inteligência artificial e sem internet.</li>
+      <li><b>Ciclo Prato (plataforma):</b> doação de alimentos com login real, perfis de doador, receptor e admin e painel de dados.</li>
+      <li><b>Ciclo Consumo (site):</b> consumo de água e energia, calculadora do banho e dicas.</li>
+    </ul>
+  </section>
+
+  <section id="fontes" class="secao-sobre" aria-labelledby="t-fontes">
+    <h2 id="t-fontes">Fontes dos dados</h2>
+    <ul class="fontes">
+      <li><a href="https://www.unep.org/news-and-stories/press-release/world-squanders-over-1-billion-meals-day-un-report" target="_blank" rel="noopener">PNUMA, Food Waste Index Report 2024</a>: 1,05 bilhão de toneladas desperdiçadas em 2022; 60% nas casas.</li>
+      <li><a href="https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling" target="_blank" rel="noopener">Global E-waste Monitor 2024 (ITU e UNITAR)</a>: 62 milhões de toneladas; 22,3% com reciclagem documentada.</li>
+      <li><a href="https://www.abrema.org.br/2024/09/19/brasil-recicla-apenas-4-mas-importa-lixo-para-a-industria/" target="_blank" rel="noopener">Abrema, com dados do SNIS 2023</a>: o Brasil recicla 4% dos resíduos.</li>
+      <li><a href="https://www.abrema.org.br/2024/06/24/1-em-cada-3-brasileiros-que-diz-ter-coleta-seletiva-nao-separa-o-lixo-aponta-datafolha/" target="_blank" rel="noopener">Pesquisa Datafolha 2024, divulgada pela Abrema</a>: 58% não sabem reconhecer os símbolos de reciclagem.</li>
+      <li><a href="https://agenciabrasil.ebc.com.br/geral/noticia/2018-03/brasileiro-consome-significativo-volume-de-agua-que-nao-sai-das-torneiras" target="_blank" rel="noopener">SNIS, via Agência Brasil (2018)</a>: 154 L de água por pessoa por dia; ONU considera 110 L suficientes.</li>
+      <li><a href="https://www2.unicamp.br/unicamp/ju/597/o-chuveiro-na-curva-do-consumo" target="_blank" rel="noopener">Jornal da Unicamp nº 597 (2014)</a>: chuveiro elétrico responde por cerca de 23% da carga das casas no horário de pico.</li>
+      <li><a href="https://content.ellenmacarthurfoundation.org/m/7f818b40f06e1afd/original/Summary-of-findings-A-New-Textiles-Economy.pdf" target="_blank" rel="noopener">Ellen MacArthur Foundation, A New Textiles Economy (2017)</a>: 73% do material das roupas vai para aterro ou incineração.</li>
+      <li><a href="https://agenciamural.org.br/confira-onde-estao-os-ecopontos-de-guarulhos/" target="_blank" rel="noopener">Agência Mural (10/10/2025)</a>: lista dos 33 Ecopontos de Guarulhos, horários e o que recebem e não recebem.</li>
+      <li><a href="https://conama.mma.gov.br/?option=com_sisconama&amp;task=arquivo.download&amp;id=273" target="_blank" rel="noopener">Resolução CONAMA nº 275/2001</a>: cores da coleta seletiva.</li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noopener">Lei 12.305/2010, art. 33</a>: logística reversa de pilhas, baterias, pneus, lâmpadas fluorescentes e eletroeletrônicos.</li>
+      <li><a href="https://www.ipea.gov.br/ods/ods12.html" target="_blank" rel="noopener">IPEA: metas da ODS 12</a>: texto das metas 12.2, 12.3, 12.5 e 12.8.</li>
+      <li><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap e Nominatim</a>: mapa e coordenadas dos Ecopontos (© colaboradores do OpenStreetMap).</li>
+      <li><a href="https://www.escol.as/287199-progresso-colegio" target="_blank" rel="noopener">escol.as</a>: endereço do Colégio Progresso (diretório de escolas; ainda a confirmar com a secretaria).</li>
+    </ul>
+  </section>
+
+  <section id="proximos" class="secao-sobre" aria-labelledby="t-proximos">
+    <h2 id="t-proximos">Próximos passos</h2>
+    <ul class="lista-modulos">
+      <li><b>WhatsApp oficial:</b> levar o Ciclo Bot para o WhatsApp pela plataforma da Meta, o que exige conta comercial e aprovação.</li>
+      <li><b>Publicação em loja:</b> hoje o app se instala pelo navegador. Para a Google Play, uma conta pessoal nova precisa de teste fechado com 12 testadores por 14 dias seguidos.</li>
+      <li><b>Notificação push:</b> lembretes com o app fechado precisam de um servidor enviando a mensagem.</li>
+      <li><b>Parcerias:</b> banco de alimentos e ONGs como receptores reais da plataforma; Prefeitura de Guarulhos para confirmar Ecopontos e horários.</li>
+      <li><b>Dados confirmados:</b> ligar para os Ecopontos e locais de doação, conferir cada coordenada no mapa e substituir os itens marcados como EXEMPLO e "a confirmar".</li>
+      <li><b>Privacidade:</b> escrever uma política de privacidade completa, seguindo a LGPD.</li>
+      <li><b>Validação com usuários reais:</b> testar com famílias, comerciantes e ONGs do bairro e medir o uso antes de falar em impacto.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-padrao">
+    <nav class="rodape-modulos" aria-label="Módulos do Ciclo 12">
+      <a href="index.html">Ciclo 12 (início)</a>
+      <a href="app/">Ciclo Ponto (app)</a>
+      <a href="plataforma/">Ciclo Prato (plataforma)</a>
+      <a href="chatbot/">Ciclo Bot (chatbot)</a>
+      <a href="site/">Ciclo Consumo (site)</a>
+      <a href="sobre.html">Sobre o projeto</a>
+    </nav>
+    <p><b>Ciclo 12</b>: protótipo escolar para a ODS 12 da ONU (Consumo e produção responsáveis).
+      Feito por Enzo Penchel, Bárbara Valentina, Davi Biguetti e Julia Ayumi, do Colégio Progresso, Guarulhos/SP.</p>
+  </div>
+</footer>
+</body>
+</html>

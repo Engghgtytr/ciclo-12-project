@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ciclo Bot</title>
+<meta name="description" content="Ciclo Bot: tire dúvidas sobre onde descartar cada item em Guarulhos. Funciona por regras, sem internet e sem inteligência artificial. Parte do Ciclo 12 (ODS 12).">
+<meta name="theme-color" content="#17673f">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../shared/estilo.css">
+<link rel="stylesheet" href="bot.css">
+<script>/* animação: marca a página antes de desenhar (ver shared/animacao.js) */if(window.matchMedia&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window){document.documentElement.classList.add("anim-js")}</script>
+</head>
+<body>
+<a class="pular-conteudo" href="#pergunta">Pular para a caixa de pergunta</a>
+
+<header class="topo">
+  <div class="topo-miolo">
+    <a class="marca" href="#conversa">
+      <img src="../shared/logo.svg" alt="" width="36" height="36">
+      <span>Ciclo Bot</span>
+    </a>
+    <nav class="navegacao" aria-label="Seções">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="../index.html" aria-label="Voltar ao Ciclo 12">Ciclo 12</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo" class="bot-pagina">
+  <section class="chat" aria-labelledby="t-chat">
+    <div class="chat-cabecalho">
+      <h1 id="t-chat" class="chat-titulo">Onde eu descarto isso?</h1>
+      <button class="botao botao-secundario botao-pequeno" type="button" id="btn-limpar" aria-label="Limpar conversa">Limpar</button>
+    </div>
+
+    <div id="conversa" class="conversa" role="log" aria-live="polite" aria-label="Conversa com o Ciclo Bot"></div>
+
+    <div class="menu-rapido" id="menu-rapido" aria-label="Atalhos">
+      <button type="button" data-menu="eletronicos">Eletrônicos</button>
+      <button type="button" data-menu="roupas">Roupas</button>
+      <button type="button" data-menu="cozinha">Cozinha e óleo</button>
+      <button type="button" data-menu="cores">Lixeira por cor</button>
+      <button type="button" data-menu="alimentos">Alimentos</button>
+      <button type="button" data-menu="ods">ODS 12</button>
+      <button type="button" data-menu="perto">Ponto mais perto</button>
+    </div>
+
+    <form id="form-pergunta" class="caixa-pergunta" autocomplete="off">
+      <label for="pergunta" class="so-leitor">Sua pergunta</label>
+      <input id="pergunta" name="pergunta" type="text" maxlength="200" placeholder="Ex.: onde jogo pilha?" enterkeyhint="send">
+      <button class="botao" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <details id="como-funciona" class="como-funciona cartao">
+    <summary>Como funciona</summary>
+    <ul>
+      <li><b>É um bot por regras, não é inteligência artificial.</b> Ele procura as palavras da sua pergunta numa lista de <span id="n-itens">47</span> itens escrita pelo grupo, aceita pequenos erros de digitação e responde com o texto dessa lista.</li>
+      <li><b>Funciona sem internet</b> depois de aberto e não usa chave de API. A conversa fica só na tela: nada é salvo nem enviado.</li>
+      <li><b>Quando a regra não está confirmada, ele não inventa:</b> diz "confirme com a Prefeitura de Guarulhos". A etiqueta verde "Confirmado na fonte" aparece só quando a matéria da Agência Mural (10/10/2025) lista o material como aceito nos Ecopontos.</li>
+      <li>O Ecoponto mais perto sai da mesma lista do mapa do Ciclo 12 (33 Ecopontos de Guarulhos). A distância é em linha reta, a partir da escola ou de você, se permitir a localização.</li>
+      <li><b>Próximo passo:</b> uma versão oficial no WhatsApp depende da plataforma da Meta (conta comercial e aprovação). Por enquanto, não está feita.</li>
+    </ul>
+    <p class="fonte">Fontes: <a href="https://agenciamural.org.br/confira-onde-estao-os-ecopontos-de-guarulhos/" target="_blank" rel="noopener">Agência Mural (Ecopontos de Guarulhos)</a>;
+      <a href="https://conama.mma.gov.br/?option=com_sisconama&amp;task=arquivo.download&amp;id=273" target="_blank" rel="noopener">Resolução CONAMA 275/2001 (cores)</a>;
+      <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noopener">Lei 12.305/2010, art. 33 (logística reversa)</a>;
+      <a href="https://www.ipea.gov.br/ods/ods12.html" target="_blank" rel="noopener">IPEA (metas da ODS 12)</a>.</p>
+  </details>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-padrao">
+    <nav class="rodape-modulos" aria-label="Módulos do Ciclo 12">
+      <a href="../index.html">Ciclo 12 (início)</a>
+      <a href="../app/">Ciclo Ponto (app)</a>
+      <a href="../plataforma/">Ciclo Prato (plataforma)</a>
+      <a href="../chatbot/">Ciclo Bot (chatbot)</a>
+      <a href="../site/">Ciclo Consumo (site)</a>
+      <a href="../sobre.html">Sobre o projeto</a>
+    </nav>
+    <p><b>Ciclo 12</b>: protótipo escolar para a ODS 12 da ONU (Consumo e produção responsáveis).
+      Feito por Enzo Penchel, Bárbara Valentina, Davi Biguetti e Julia Ayumi, do Colégio Progresso, Guarulhos/SP.</p>
+  </div>
+</footer>
+
+<script src="../shared/animacao.js"></script>
+<script src="../shared/pontos.js"></script>
+<script src="conhecimento.js"></script>
+<script src="bot.js"></script>
+</body>
+</html>

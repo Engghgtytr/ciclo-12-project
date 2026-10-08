@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ciclo Consumo</title>
+<meta name="description" content="Ciclo Consumo: consumo de água e energia em casa, calculadora do banho e dicas. Parte do Ciclo 12 (ODS 12).">
+<meta name="theme-color" content="#17673f">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../shared/estilo.css">
+<link rel="stylesheet" href="site.css">
+<script>/* animação: marca a página antes de desenhar (ver shared/animacao.js) */if(window.matchMedia&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window){document.documentElement.classList.add("anim-js")}</script>
+</head>
+<body>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo-miolo">
+    <a class="marca" href="#conteudo">
+      <img src="../shared/logo.svg" alt="" width="36" height="36">
+      <span>Ciclo Consumo</span>
+    </a>
+    <nav class="navegacao" aria-label="Seções">
+      <a href="#problema">Problema</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#dicas">Dicas</a>
+      <a href="../index.html" aria-label="Voltar ao Ciclo 12">Ciclo 12</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo" class="container">
+
+  <section class="abertura-site anim-entrada" aria-labelledby="t-site">
+    <p class="sobretitulo">Ciclo 12 · Água e energia em casa</p>
+    <h1 id="t-site">Quanto o banho da sua casa gasta de água e de luz?</h1>
+    <p class="lead">Veja os dados, faça a conta com os números da sua casa e escolha por onde começar a economizar.</p>
+    <a class="botao" href="#calculadora">Fazer a conta</a>
+  </section>
+
+  <!-- ============ O PROBLEMA ============ -->
+  <section id="problema" class="secao" aria-labelledby="t-problema">
+    <h2 id="t-problema">O problema</h2>
+    <div class="numeros-site">
+      <div class="numero-site">
+        <span class="numero-grande">154 L</span>
+        <p>de água por pessoa, por dia, é a média de consumo no Brasil. A ONU considera <b>110 L</b> por dia suficientes para as necessidades de uma pessoa.</p>
+        <p class="fonte">Fonte: <a href="https://agenciabrasil.ebc.com.br/geral/noticia/2018-03/brasileiro-consome-significativo-volume-de-agua-que-nao-sai-das-torneiras" target="_blank" rel="noopener">SNIS, via Agência Brasil (2018)</a>. Dado de 2018: pode haver número mais recente.</p>
+      </div>
+      <div class="numero-site">
+        <span class="numero-grande">23%</span>
+        <p>da carga de energia elétrica das casas no horário de pico vem do chuveiro elétrico, segundo simulações de uma pesquisa da Unicamp. O chuveiro elétrico está em mais de 70% dos domicílios do país.</p>
+        <p class="fonte">Fonte: <a href="https://www2.unicamp.br/unicamp/ju/597/o-chuveiro-na-curva-do-consumo" target="_blank" rel="noopener">Jornal da Unicamp nº 597, "O chuveiro na curva do consumo" (maio de 2014)</a>.</p>
+      </div>
+    </div>
+    <p class="meta-site"><b>Meta 12.2 da ODS 12:</b> até 2030, alcançar a gestão sustentável e o uso eficiente dos recursos naturais.
+      <span class="fonte">(<a href="https://www.ipea.gov.br/ods/ods12.html" target="_blank" rel="noopener">IPEA</a>)</span></p>
+  </section>
+
+  <!-- ============ CALCULADORA ============ -->
+  <section id="calculadora" class="secao" aria-labelledby="t-calc">
+    <h2 id="t-calc">Calculadora do banho</h2>
+    <div class="calc-grade">
+      <form id="form-calc" class="cartao calc-form" novalidate>
+        <div class="campo">
+          <label for="c-pessoas">Pessoas na casa</label>
+          <input id="c-pessoas" name="pessoas" type="number" inputmode="numeric" min="1" max="20" step="1" value="3" aria-describedby="e-pessoas">
+          <span class="mensagem-erro" id="e-pessoas" hidden></span>
+        </div>
+        <div class="campo">
+          <label for="c-minutos">Minutos de banho por pessoa, por dia</label>
+          <input id="c-minutos" name="minutos" type="number" inputmode="decimal" min="1" max="60" step="0.5" value="15" aria-describedby="e-minutos">
+          <span class="mensagem-erro" id="e-minutos" hidden></span>
+        </div>
+        <div class="campo">
+          <label for="c-potencia">Chuveiro</label>
+          <select id="c-potencia" name="potencia">
+            <option value="0">Não é elétrico (gás ou solar)</option>
+            <option value="4000" selected>Elétrico de 4.000 W</option>
+            <option value="5500">Elétrico de 5.500 W</option>
+          </select>
+          <span class="ajuda">A potência vem escrita no chuveiro ou na caixa dele.</span>
+        </div>
+        <div class="campo">
+          <label for="c-preco">Preço do kWh na sua conta de luz (R$)</label>
+          <input id="c-preco" name="preco" type="number" inputmode="decimal" min="0.01" max="10" step="0.01" placeholder="Ex.: veja na sua conta" aria-describedby="a-preco e-preco">
+          <span class="ajuda" id="a-preco">Ajuste pela sua conta de luz. Não colocamos um valor pronto porque a tarifa muda de cidade para cidade e de mês para mês.</span>
+          <span class="mensagem-erro" id="e-preco" hidden></span>
+        </div>
+        <div class="campo">
+          <label for="c-vazao">Vazão do chuveiro (litros por minuto)</label>
+          <input id="c-vazao" name="vazao" type="number" inputmode="decimal" min="1" max="30" step="0.5" value="9" aria-describedby="a-vazao e-vazao">
+          <span class="ajuda" id="a-vazao">9 L/min é um valor de partida escolhido pelo grupo, <b>não é um dado medido</b>. Para saber o seu: abra o chuveiro como no banho, encha um balde por 1 minuto e veja quantos litros deu.</span>
+          <span class="mensagem-erro" id="e-vazao" hidden></span>
+        </div>
+        <button class="botao" type="submit">Calcular</button>
+      </form>
+
+      <div class="calc-resultado" aria-live="polite">
+        <div class="aviso aviso-conflito" id="calc-erro" role="alert" hidden>
+          <span class="aviso-titulo">Confira os campos</span>
+          <span>Corrija os campos marcados para ver o resultado.</span>
+        </div>
+        <div class="saidas">
+          <div class="saida"><span class="saida-valor" id="o-litros">-</span><span>litros por dia no banho da casa</span></div>
+          <div class="saida"><span class="saida-valor" id="o-pct">-</span><span id="o-pct-texto">dos 110 L/dia da ONU vão só no banho de cada pessoa</span></div>
+          <div class="saida"><span class="saida-valor" id="o-kwh">-</span><span>kWh por mês no chuveiro</span></div>
+          <div class="saida"><span class="saida-valor" id="o-custo">-</span><span id="o-custo-texto">por mês na conta de luz, só do chuveiro</span></div>
+        </div>
+
+        <div class="economia cartao">
+          <h3>Se cada pessoa tirar 5 minutos do banho</h3>
+          <p id="o-economia">-</p>
+        </div>
+
+        <figure class="grafico cartao">
+          <figcaption>Litros de água por pessoa, por dia</figcaption>
+          <svg id="grafico-agua" viewBox="0 0 340 150" role="img" aria-labelledby="grafico-desc" class="grafico-agua">
+            <desc id="grafico-desc">Comparação entre a média do Brasil, o recomendado pela ONU e o banho de cada pessoa da sua casa.</desc>
+          </svg>
+          <p class="texto-pequeno">A média do Brasil e a da ONU contam toda a água do dia. A barra verde conta <b>só o banho</b>.</p>
+        </figure>
+      </div>
+    </div>
+
+    <details class="como-calculamos cartao">
+      <summary>Como calculamos</summary>
+      <ul>
+        <li><b>Litros por dia (casa)</b> = pessoas × minutos × vazão (L/min)</li>
+        <li><b>% da meta da ONU</b> = (minutos × vazão) ÷ 110 L × 100. Compara o banho de uma pessoa com os 110 L que a ONU considera suficientes para o dia todo.</li>
+        <li><b>kWh por mês</b> = pessoas × (minutos ÷ 60) × (potência em W ÷ 1000) × 30 dias</li>
+        <li><b>Custo por mês</b> = kWh por mês × preço do kWh</li>
+        <li><b>Economia com 5 minutos a menos</b> = as mesmas contas usando 5 minutos (ou o banho inteiro, se ele já tiver 5 minutos ou menos) × 30 dias</li>
+      </ul>
+      <p class="texto-pequeno">O mês tem 30 dias nas contas. É uma estimativa: a conta real depende da temperatura escolhida, de quanto o registro fica aberto e de impostos e bandeiras na conta de luz.</p>
+    </details>
+  </section>
+
+  <!-- ============ DICAS ============ -->
+  <section id="dicas" class="secao" aria-labelledby="t-dicas">
+    <h2 id="t-dicas">10 dicas para gastar menos</h2>
+    <ol class="dicas">
+      <li class="dica"><b>Feche o chuveiro enquanto se ensaboa.</b> A água só corre quando você está enxaguando.</li>
+      <li class="dica"><b>Use a posição "verão" nos dias quentes.</b> No chuveiro elétrico ela usa menos potência.</li>
+      <li class="dica"><b>Escove os dentes com a torneira fechada.</b> Abra só para molhar a escova e enxaguar.</li>
+      <li class="dica"><b>Ensaboe a louça com a torneira fechada.</b> Depois enxágue tudo de uma vez.</li>
+      <li class="dica"><b>Junte roupa para lavar.</b> Use a máquina com a carga cheia.</li>
+      <li class="dica"><b>Conserte vazamentos.</b> Torneira pingando e descarga escorrendo gastam água o dia inteiro.</li>
+      <li class="dica"><b>Reaproveite a água da máquina.</b> Ela serve para lavar o quintal ou a calçada.</li>
+      <li class="dica"><b>Troque a mangueira pelo balde.</b> Para lavar carro ou calçada, o balde gasta bem menos.</li>
+      <li class="dica"><b>Tire da tomada o que não está usando.</b> Aparelhos em espera (luz vermelha acesa) continuam gastando energia.</li>
+      <li class="dica"><b>Prefira lâmpadas LED e apague a luz ao sair.</b> Iluminação acesa sem ninguém no cômodo é desperdício.</li>
+    </ol>
+  </section>
+
+  <!-- ============ RECEBER DICAS ============ -->
+  <section id="receber" class="secao" aria-labelledby="t-receber">
+    <h2 id="t-receber">Receber dicas</h2>
+    <div class="aviso aviso-exemplo">
+      <span class="aviso-titulo">Protótipo</span>
+      <p>Neste protótipo os dados ficam <b>só neste navegador</b> (no seu aparelho) e <b>não são enviados</b> para ninguém. Nenhum e-mail será mandado.</p>
+    </div>
+    <form id="form-cadastro" class="cartao cadastro" novalidate>
+      <div class="campo">
+        <label for="r-nome">Nome</label>
+        <input id="r-nome" name="nome" type="text" autocomplete="given-name" maxlength="60" aria-describedby="e-nome">
+        <span class="mensagem-erro" id="e-nome" hidden></span>
+      </div>
+      <div class="campo">
+        <label for="r-email">E-mail</label>
+        <input id="r-email" name="email" type="email" autocomplete="email" maxlength="120" aria-describedby="e-email">
+        <span class="mensagem-erro" id="e-email" hidden></span>
+      </div>
+      <div class="acoes-form">
+        <button class="botao" type="submit">Quero receber dicas</button>
+        <button class="botao botao-secundario" type="button" id="btn-apagar">Apagar meus dados deste navegador</button>
+      </div>
+      <p class="mensagem-form" id="msg-cadastro" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container">
+      <h2 class="rodape-titulo">Referências</h2>
+      <ul class="referencias">
+        <li><a href="https://agenciabrasil.ebc.com.br/geral/noticia/2018-03/brasileiro-consome-significativo-volume-de-agua-que-nao-sai-das-torneiras" target="_blank" rel="noopener">SNIS, via Agência Brasil (2018): 154 L e 110 L por pessoa</a></li>
+        <li><a href="https://www2.unicamp.br/unicamp/ju/597/o-chuveiro-na-curva-do-consumo" target="_blank" rel="noopener">Jornal da Unicamp nº 597 (2014): o chuveiro na curva do consumo</a></li>
+        <li><a href="https://www.ipea.gov.br/ods/ods12.html" target="_blank" rel="noopener">IPEA: metas da ODS 12</a></li>
+      </ul>
+  </div>
+  <div class="container rodape-padrao">
+    <nav class="rodape-modulos" aria-label="Módulos do Ciclo 12">
+      <a href="../index.html">Ciclo 12 (início)</a>
+      <a href="../app/">Ciclo Ponto (app)</a>
+      <a href="../plataforma/">Ciclo Prato (plataforma)</a>
+      <a href="../chatbot/">Ciclo Bot (chatbot)</a>
+      <a href="../site/">Ciclo Consumo (site)</a>
+      <a href="../sobre.html">Sobre o projeto</a>
+    </nav>
+    <p><b>Ciclo 12</b>: protótipo escolar para a ODS 12 da ONU (Consumo e produção responsáveis).
+      Feito por Enzo Penchel, Bárbara Valentina, Davi Biguetti e Julia Ayumi, do Colégio Progresso, Guarulhos/SP.</p>
+  </div>
+</footer>
+
+<script src="../shared/animacao.js"></script>
+
+<script src="site.js"></script>
+</body>
+</html>

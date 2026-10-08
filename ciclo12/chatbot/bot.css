@@ -1,0 +1,233 @@
+/* =========================================================
+   Ciclo Bot — estilos só do chatbot
+   Identidade do Ciclo 12 (verde, cartões, logo próprio). Não imita o WhatsApp:
+   sem papel de parede, sem "rabinho" nos balões, sem marcas de lido.
+   ========================================================= */
+
+.bot-pagina {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: var(--esp-3) var(--esp-4) var(--esp-6);
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  /* altura da tela menos o topo; dvh evita pulo da barra do navegador no celular */
+  height: calc(100dvh - 140px);
+  min-height: 460px;
+  overflow: hidden;
+}
+.chat-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-3);
+  padding: var(--esp-3) var(--esp-4);
+  border-bottom: 1px solid var(--cor-borda);
+}
+.chat-titulo {
+  font-size: 1.15rem;
+  margin: 0;
+}
+.botao-pequeno {
+  min-height: 36px;
+  padding: var(--esp-1) var(--esp-3);
+  font-size: var(--tam-pequeno);
+}
+
+/* Conversa */
+.conversa {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--esp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  scroll-behavior: smooth;
+  background: var(--cor-fundo);
+}
+.msg {
+  display: flex;
+  gap: var(--esp-2);
+  max-width: 92%;
+  align-items: flex-end;
+}
+.msg-bot { align-self: flex-start; }
+.msg-usuario { align-self: flex-end; flex-direction: row-reverse; }
+.msg-avatar {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  margin-bottom: 2px;
+}
+.balao {
+  padding: var(--esp-3) var(--esp-4);
+  border-radius: var(--raio);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.msg-bot .balao {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto);
+}
+.msg-usuario .balao {
+  background: var(--cor-primaria);
+  color: var(--cor-primaria-texto);
+}
+.balao p { margin: 0 0 var(--esp-2); }
+.balao > :last-child { margin-bottom: 0; }
+.balao-titulo {
+  font-weight: 800;
+  font-size: 1.02rem;
+  margin-bottom: var(--esp-1);
+}
+.linha-info {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--esp-2);
+  margin: var(--esp-2) 0;
+  font-size: 0.95rem;
+}
+.linha-info b { white-space: nowrap; }
+.amostra-lixeira {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--cor-borda);
+  vertical-align: -2px;
+  margin-right: var(--esp-1);
+}
+/* Cores oficiais da coleta seletiva (CONAMA 275/2001) */
+.cor-azul { background: #1f5fbf; }
+.cor-vermelho { background: #c62828; }
+.cor-verde { background: #2e7d32; }
+.cor-amarelo { background: #e2b100; }
+.cor-preto { background: #222222; }
+.cor-laranja { background: #e86a10; }
+.cor-branco { background: #ffffff; border-color: #8a908c; }
+.cor-roxo { background: #6a1b9a; }
+.cor-marrom { background: #7a4e2d; }
+.cor-cinza { background: #8a908c; }
+.lista-cores {
+  list-style: none;
+  padding: 0;
+  margin: var(--esp-2) 0;
+  display: grid;
+  gap: var(--esp-1);
+}
+.bloco-pev {
+  margin-top: var(--esp-2);
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: var(--raio-pequeno);
+  background: var(--cor-superficie-2);
+  font-size: 0.95rem;
+}
+.bloco-pev p { margin: 0 0 var(--esp-1); }
+.etiquetas-msg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-1);
+  margin-top: var(--esp-2);
+}
+
+/* "digitando..." */
+.digitando .balao {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  padding: var(--esp-3) var(--esp-4);
+}
+.digitando .ponto-dig {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cor-texto-suave);
+  animation: bot-pulsar 1s infinite ease-in-out;
+}
+.digitando .ponto-dig:nth-child(2) { animation-delay: 0.15s; }
+.digitando .ponto-dig:nth-child(3) { animation-delay: 0.3s; }
+@keyframes bot-pulsar {
+  0%, 80%, 100% { opacity: 0.3; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+
+/* Botões de resposta rápida dentro da conversa e menu fixo */
+.respostas-rapidas,
+.menu-rapido {
+  display: flex;
+  gap: var(--esp-2);
+  flex-wrap: wrap;
+}
+.respostas-rapidas { margin-top: var(--esp-2); }
+.menu-rapido {
+  padding: var(--esp-2) var(--esp-3);
+  border-top: 1px solid var(--cor-borda);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.respostas-rapidas button,
+.menu-rapido button {
+  flex: none;
+  min-height: 40px;
+  padding: var(--esp-1) var(--esp-3);
+  font: inherit;
+  font-size: var(--tam-pequeno);
+  font-weight: 600;
+  color: var(--cor-primaria);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-primaria);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.respostas-rapidas button:hover,
+.menu-rapido button:hover {
+  background: var(--cor-superficie-2);
+}
+
+/* Caixa de pergunta */
+.caixa-pergunta {
+  display: flex;
+  gap: var(--esp-2);
+  padding: var(--esp-3);
+  border-top: 1px solid var(--cor-borda);
+  background: var(--cor-superficie);
+}
+.caixa-pergunta input {
+  flex: 1;
+  min-width: 0;
+}
+
+.como-funciona {
+  margin-top: var(--esp-4);
+}
+.como-funciona summary {
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.como-funciona ul {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: var(--esp-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .conversa { scroll-behavior: auto; }
+}
+
+#btn-limpar { white-space: nowrap; flex: none; }
+/* Em telas largas os atalhos quebram linha em vez de ficarem cortados */
+@media (min-width: 640px) {
+  .menu-rapido { flex-wrap: wrap; overflow-x: visible; }
+}

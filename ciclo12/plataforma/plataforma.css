@@ -1,0 +1,152 @@
+/* =========================================================
+   Ciclo Prato — estilos só da plataforma
+   ========================================================= */
+[hidden] { display: none !important; }
+
+/* A faixa fica DENTRO do topo fixo: os dois aparecem sempre, sem um cobrir o outro */
+.faixa-demo {
+  background: var(--exemplo-fundo);
+  color: var(--exemplo-texto);
+  border-bottom: 2px solid var(--exemplo-borda);
+  padding: var(--esp-2) var(--esp-4);
+  font-weight: 800;
+  text-align: center;
+  font-size: var(--tam-pequeno);
+}
+
+.plat-miolo {
+  width: 100%;
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: var(--esp-4) var(--esp-4) var(--esp-6);
+}
+.abertura-plat h1 {
+  font-size: clamp(2rem, 6vw, 2.6rem);
+  letter-spacing: -0.02em;
+  max-width: 22ch;
+}
+.lead { font-size: 1.1rem; color: var(--cor-texto-suave); max-width: 55ch; }
+.contexto-plat { max-width: 60ch; }
+.contexto-plat .fonte { display: block; }
+.modo-info { margin: 0 0 var(--esp-3); }
+
+.entrada { max-width: 34rem; }
+.contas-demo {
+  display: grid;
+  gap: var(--esp-2);
+  justify-items: start;
+  margin-top: var(--esp-4);
+  padding-top: var(--esp-3);
+  border-top: 1px solid var(--cor-borda);
+}
+.botao-pequeno { min-height: 36px; padding: var(--esp-1) var(--esp-3); font-size: var(--tam-pequeno); }
+.contas-demo .botao-pequeno { text-align: left; }
+fieldset.campo {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+  padding: var(--esp-2) var(--esp-3);
+}
+fieldset.campo legend { font-weight: 600; padding: 0 var(--esp-1); }
+
+.ola {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--esp-3);
+}
+.ola p { margin: 0; }
+
+/* Doações */
+.doacao {
+  padding: var(--esp-4);
+  margin-bottom: var(--esp-3);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+.doacao p { margin: 0 0 var(--esp-1); }
+.doacao-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-2);
+}
+.doacao-topo h3 { margin: 0; }
+.doacao-numeros b { font-variant-numeric: tabular-nums; }
+.linha-endereco { font-weight: 600; }
+.doacao-acoes { display: flex; flex-wrap: wrap; gap: var(--esp-2); margin-top: var(--esp-3); }
+.vazio {
+  padding: var(--esp-5) var(--esp-4);
+  text-align: center;
+  border: 1px dashed var(--cor-borda);
+  border-radius: var(--raio);
+  color: var(--cor-texto-suave);
+}
+
+/* Admin */
+.lista-receptores { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--esp-3); }
+.receptor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp-3);
+  flex-wrap: wrap;
+  padding: var(--esp-3) var(--esp-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+.receptor p { margin: 0 0 var(--esp-1); }
+.receptor-nome { font-weight: 800; }
+
+/* Painel */
+.titulo-painel { font-size: var(--tam-h3); margin-top: var(--esp-2); }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-4);
+}
+@media (min-width: 760px) { .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  padding: var(--esp-3);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-suave);
+}
+.tile-valor {
+  font-size: clamp(1.3rem, 4.5vw, 1.7rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--cor-texto);
+  font-variant-numeric: tabular-nums;
+}
+.por-situacao {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--esp-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-4);
+}
+.grafico { margin: 0 0 var(--esp-4); }
+.grafico-semanas { display: block; width: 100%; max-width: 30rem; height: auto; }
+.grafico-semanas text { font-family: var(--fonte); font-size: 12px; fill: var(--cor-texto); }
+.grafico-semanas .rotulo-valor { font-weight: 700; }
+.ranking { padding-left: 1.2rem; margin: 0 0 var(--esp-4); display: grid; gap: var(--esp-1); max-width: 30rem; }
+.ranking li span { margin-right: var(--esp-2); }
+.ranking li b { font-variant-numeric: tabular-nums; }
+.refeicoes { max-width: 34rem; }
+.refeicoes-saida { margin: 0; }
+
+.privacidade { margin-top: var(--esp-5); }
+.privacidade summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.privacidade ul { padding-left: 1.1rem; display: grid; gap: var(--esp-2); }

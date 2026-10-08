@@ -1,0 +1,25 @@
+// Testa a atualização de fuso: banco ANTIGO + dados → aplica atualizacao-fuso.sql → dados continuam e "hoje" é o de São Paulo
+import { PGlite } from '@electric-sql/pglite';
+import { readFileSync } from 'node:fs';
+const [antigo, mig] = [readFileSync(process.argv[2], 'utf8'), readFileSync(process.argv[3], 'utf8')];
+const db = new PGlite();
+await db.exec(`create schema auth; create table auth.users (id uuid primary key default gen_random_uuid(), email text unique, raw_user_meta_data jsonb default '{}');
+create role anon nologin; create role authenticated nologin;
+create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub', true), '')::uuid $$;
+grant usage on schema auth to anon, authenticated; grant execute on function auth.uid() to anon, authenticated; grant usage on schema public to anon, authenticated;
+alter default privileges in schema public grant all on tables to anon, authenticated; alter default privileges in schema public grant all on functions to anon, authenticated;`);
+await db.exec(antigo);
+const d = (await db.query(`insert into auth.users (email, raw_user_meta_data) values ('d@t.local', '{"perfil":"doador","nome":"Doador"}') returning id`)).rows[0].id;
+await db.query(`insert into public.doacoes (doador_id, alimento, categoria, quantidade_kg, validade, bairro, horario_retirada) values ($1,'Pão','padaria',2,current_date + 1,'Centro','tarde')`, [d]);
+const antes = (await db.query('select count(*)::int n from public.doacoes')).rows[0].n;
+await db.exec(mig);
+const depois = (await db.query('select count(*)::int n from public.doacoes')).rows[0].n;
+const perfis = (await db.query('select count(*)::int n from public.profiles')).rows[0].n;
+const tz = (await db.query("select public.hoje_sp()::text h, (now() at time zone 'UTC')::date::text u")).rows[0];
+const pol = (await db.query("select qual from pg_policies where policyname = 'doacao: receptor aprovado ve disponiveis e nao vencidas'")).rows[0];
+const fn = (await db.query("select prosrc from pg_proc where proname = 'validade_futura'")).rows[0].prosrc;
+console.log('dados antes:', antes, '| depois:', depois, '| perfis:', perfis);
+console.log('hoje em São Paulo:', tz.h, '| hoje em UTC:', tz.u);
+console.log('política usa hoje_sp:', /hoje_sp/.test(pol.qual), '| gatilho usa hoje_sp:', /hoje_sp/.test(fn));
+await db.exec(mig); console.log('rodar a atualização 2 vezes: sem erro');
+console.log(antes === depois && perfis === 1 && /hoje_sp/.test(pol.qual) && /hoje_sp/.test(fn) ? 'PASSOU: atualização não apaga nada e troca as regras de data' : 'FALHOU');

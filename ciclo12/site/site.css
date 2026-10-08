@@ -1,0 +1,185 @@
+/* =========================================================
+   Ciclo Consumo — estilos só do site (site/index.html)
+   Usa os tokens e componentes de shared/estilo.css.
+   ========================================================= */
+
+main.container {
+  padding-top: var(--esp-5);
+  padding-bottom: var(--esp-6);
+}
+[hidden] { display: none !important; }
+
+.abertura-site {
+  padding: var(--esp-4) 0 var(--esp-5);
+}
+.abertura-site h1 {
+  font-size: clamp(2rem, 6vw, 2.9rem);
+  letter-spacing: -0.02em;
+  max-width: 22ch;
+}
+.sobretitulo {
+  font-size: var(--tam-pequeno);
+  font-weight: 700;
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--esp-2);
+}
+.lead {
+  font-size: 1.1rem;
+  color: var(--cor-texto-suave);
+  max-width: 55ch;
+}
+
+.secao {
+  padding: var(--esp-5) 0;
+  border-top: 1px solid var(--cor-borda);
+  scroll-margin-top: 110px;
+}
+
+/* O problema: dois números lado a lado no computador */
+.numeros-site {
+  display: grid;
+  gap: var(--esp-5);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 800px) {
+  .numeros-site { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.numero-site p { max-width: 55ch; }
+.numero-grande {
+  display: block;
+  font-size: clamp(2.4rem, 8vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--cor-primaria);
+  margin-bottom: var(--esp-2);
+}
+.meta-site {
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-pequeno);
+  padding: var(--esp-3) var(--esp-4);
+  max-width: 65ch;
+}
+
+/* Calculadora: formulário à esquerda, resultado à direita no computador */
+.calc-grade {
+  display: grid;
+  gap: var(--esp-4);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .calc-grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+}
+.calc-resultado {
+  display: grid;
+  gap: var(--esp-4);
+  min-width: 0;
+}
+.saidas {
+  display: grid;
+  gap: var(--esp-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.saida {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  padding: var(--esp-3);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-suave);
+}
+.saida-valor {
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--cor-texto);
+}
+.economia h3 { font-size: var(--tam-h3); }
+.economia p { margin: 0; }
+.grafico { margin: 0; }
+.grafico figcaption {
+  font-weight: 700;
+  margin-bottom: var(--esp-2);
+}
+.grafico-agua {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.grafico-agua text {
+  font-family: var(--fonte);
+  font-size: 13px;
+  fill: var(--cor-texto);
+}
+.grafico-agua .rotulo-valor { font-weight: 700; }
+
+.como-calculamos {
+  margin-top: var(--esp-4);
+}
+.como-calculamos summary {
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.como-calculamos ul {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: var(--esp-2);
+}
+
+/* 10 dicas em cartões: 1 coluna no celular, 2 no tablet, 3 no computador */
+.dicas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--esp-3);
+  grid-template-columns: 1fr;
+  counter-reset: dica;
+}
+@media (min-width: 640px) {
+  .dicas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  .dicas { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.dica {
+  counter-increment: dica;
+  position: relative;
+  padding: var(--esp-4) var(--esp-4) var(--esp-4) 3.25rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+.dica::before {
+  content: counter(dica);
+  position: absolute;
+  left: var(--esp-4);
+  top: var(--esp-4);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--cor-primaria);
+}
+.dica b { display: block; margin-bottom: var(--esp-1); }
+
+/* Cadastro */
+.cadastro { max-width: 34rem; }
+.acoes-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3);
+}
+.mensagem-form {
+  margin: var(--esp-3) 0 0;
+  min-height: 1.5em;
+  font-weight: 600;
+}
+.mensagem-form.ok { color: var(--ok-texto); }
+.mensagem-form.erro { color: var(--conflito-texto); }

@@ -1,0 +1,684 @@
+/* =========================================================
+   Ciclo 12 — estilo compartilhado por todos os módulos
+   (hub, app, plataforma, chatbot e site)
+   Mobile-first: pensado primeiro para telas de 390 px.
+   ========================================================= */
+
+/* ---------- 1. Cores (modo claro) ---------- */
+:root {
+  color-scheme: light dark;
+
+  --cor-fundo: #f6faf7;
+  --cor-superficie: #ffffff;
+  --cor-superficie-2: #e9f3ec;
+  --cor-texto: #15241b;
+  --cor-texto-suave: #4a5d51;
+  --cor-borda: #c9dccf;
+
+  --cor-primaria: #17673f;        /* verde dos botões (texto branco em cima) */
+  --cor-primaria-hover: #11532f;
+  --cor-primaria-texto: #ffffff;
+  --cor-destaque: #2f8f3a;        /* segundo verde, do logo */
+  --cor-link: #12603a;
+  --cor-foco: #0b63c5;            /* contorno de foco bem visível */
+
+  /* Caixas de aviso */
+  --exemplo-fundo: #fff4d6;
+  --exemplo-borda: #b7791f;
+  --exemplo-texto: #5c3a00;
+  --confirmar-fundo: #e7f0ff;
+  --confirmar-borda: #2f6fd1;
+  --confirmar-texto: #123a7a;
+  --conflito-fundo: #fde8e8;
+  --conflito-borda: #c53030;
+  --conflito-texto: #742a2a;
+  --ok-fundo: #e3f5e8;
+  --ok-borda: #2f855a;
+  --ok-texto: #1c4532;
+
+  /* Tipografia */
+  --fonte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fonte-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+  --tam-base: 1rem;
+  --tam-pequeno: 0.875rem;
+  --tam-h1: clamp(1.6rem, 5vw, 2.4rem);
+  --tam-h2: clamp(1.6rem, 4.5vw, 2.1rem);
+  --tam-h3: 1.25rem;
+
+  /* Espaços, cantos e sombra */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-5: 1.5rem;
+  --esp-6: 2rem;
+  --raio: 12px;
+  --raio-pequeno: 8px;
+  --sombra: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06);
+  --largura-max: 72rem;
+}
+
+/* ---------- 2. Cores (modo escuro, automático pelo sistema) ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #0e1712;
+    --cor-superficie: #16231b;
+    --cor-superficie-2: #1d2e23;
+    --cor-texto: #e4f1e8;
+    --cor-texto-suave: #a9c1b1;
+    --cor-borda: #2f4537;
+
+    --cor-primaria: #5ccf8c;
+    --cor-primaria-hover: #7fdca5;
+    --cor-primaria-texto: #08130c;
+    --cor-destaque: #8fd16a;
+    --cor-link: #7fdca5;
+    --cor-foco: #7cb8ff;
+
+    --exemplo-fundo: #3a2c0a;
+    --exemplo-borda: #e0a93b;
+    --exemplo-texto: #ffe3a3;
+    --confirmar-fundo: #13284a;
+    --confirmar-borda: #6aa1f2;
+    --confirmar-texto: #cfe0ff;
+    --conflito-fundo: #3d1515;
+    --conflito-borda: #f07070;
+    --conflito-texto: #ffd0d0;
+    --ok-fundo: #15301f;
+    --ok-borda: #5ccf8c;
+    --ok-texto: #c9f0d6;
+
+    --sombra: 0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ---------- 3. Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  font-size: var(--tam-base);
+  line-height: 1.55;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  overflow-wrap: break-word; /* evita rolagem horizontal com palavras longas */
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 var(--esp-3);
+}
+h1 { font-size: var(--tam-h1); }
+h2 { font-size: var(--tam-h2); }
+h3 { font-size: var(--tam-h3); }
+
+p {
+  margin: 0 0 var(--esp-4);
+}
+
+a {
+  color: var(--cor-link);
+  text-underline-offset: 2px;
+}
+
+small,
+.texto-pequeno {
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-suave);
+}
+
+code {
+  font-family: var(--fonte-mono);
+  font-size: 0.9em;
+}
+
+/* Foco visível para quem navega pelo teclado */
+:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+/* Texto só para leitores de tela */
+.so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Link "pular para o conteúdo" */
+.pular-conteudo {
+  position: absolute;
+  left: var(--esp-2);
+  top: -3rem;
+  padding: var(--esp-2) var(--esp-3);
+  background: var(--cor-primaria);
+  color: var(--cor-primaria-texto);
+  border-radius: var(--raio-pequeno);
+  z-index: 1000;
+}
+.pular-conteudo:focus {
+  top: var(--esp-2);
+}
+
+/* ---------- 4. Layout ---------- */
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 var(--esp-4);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  padding: var(--esp-3) var(--esp-4);
+  background: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+}
+.cabecalho .logo {
+  width: 40px;
+  height: 40px;
+  flex: none;
+}
+.cabecalho .marca {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.rodape {
+  margin-top: var(--esp-6);
+  padding: var(--esp-5) var(--esp-4);
+  border-top: 1px solid var(--cor-borda);
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-suave);
+}
+
+.grade {
+  display: grid;
+  gap: var(--esp-4);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .grade { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .grade-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- 5. Botões ---------- */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-2);
+  min-height: 44px; /* área de toque confortável no celular */
+  padding: var(--esp-2) var(--esp-4);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: var(--cor-primaria-texto);
+  background: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+  border-radius: var(--raio-pequeno);
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.botao:hover {
+  background: var(--cor-primaria-hover);
+  border-color: var(--cor-primaria-hover);
+}
+.botao:disabled,
+.botao[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.botao-secundario {
+  color: var(--cor-primaria);
+  background: transparent;
+}
+.botao-secundario:hover {
+  color: var(--cor-primaria-texto);
+}
+
+.botao-grande {
+  min-height: 56px;
+  padding: var(--esp-3) var(--esp-5);
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+/* ---------- 6. Cartões ---------- */
+.cartao {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: var(--esp-4);
+}
+.cartao > :last-child {
+  margin-bottom: 0;
+}
+.cartao-titulo {
+  margin-bottom: var(--esp-2);
+}
+.cartao-dado {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--cor-primaria);
+  line-height: 1.1;
+  margin-bottom: var(--esp-2);
+}
+.cartao-fonte {
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- 7. Abas ----------
+   Estrutura esperada:
+   <div class="abas" role="tablist">
+     <button class="aba" role="tab" aria-selected="true" aria-controls="painel-1">...</button>
+   </div>
+   <section class="painel" role="tabpanel" id="painel-1">...</section>
+*/
+.abas {
+  display: flex;
+  gap: var(--esp-1);
+  overflow-x: auto; /* rola só a barra de abas, nunca a página */
+  border-bottom: 2px solid var(--cor-borda);
+  scrollbar-width: thin;
+}
+.aba {
+  flex: none;
+  min-height: 44px;
+  padding: var(--esp-2) var(--esp-4);
+  font: inherit;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+.aba:hover {
+  color: var(--cor-texto);
+}
+.aba[aria-selected="true"] {
+  color: var(--cor-primaria);
+  border-bottom-color: var(--cor-primaria);
+}
+.painel {
+  padding: var(--esp-4) 0;
+}
+.painel[hidden] {
+  display: none;
+}
+
+/* ---------- 8. Formulários ---------- */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  margin-bottom: var(--esp-4);
+}
+.campo label {
+  font-weight: 600;
+}
+.campo .ajuda {
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-suave);
+}
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--esp-2) var(--esp-3);
+  font: inherit;
+  color: var(--cor-texto);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+}
+textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: var(--cor-foco);
+}
+.campo-erro input,
+.campo-erro select,
+.campo-erro textarea,
+[aria-invalid="true"] {
+  border-color: var(--conflito-borda);
+}
+.mensagem-erro {
+  font-size: var(--tam-pequeno);
+  color: var(--conflito-texto);
+  background: var(--conflito-fundo);
+  padding: var(--esp-1) var(--esp-2);
+  border-radius: var(--raio-pequeno);
+}
+.campo-opcao {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  min-height: 44px;
+}
+.campo-opcao input {
+  flex: none; /* não encolhe quando o texto quebra em 2 linhas */
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--cor-primaria);
+}
+
+/* ---------- 9. Avisos e etiquetas ----------
+   .aviso-exemplo   → dado de EXEMPLO (não é real)
+   .aviso-confirmar → informação "a confirmar"
+   .aviso-conflito  → fontes divergem
+   .aviso-ok        → confirmado
+   O texto do rótulo vem do HTML (não só da cor), para não depender só da cor.
+*/
+.aviso {
+  border: 1px solid;
+  border-radius: var(--raio-pequeno);
+  padding: var(--esp-3) var(--esp-4);
+  margin: 0 0 var(--esp-4);
+}
+.aviso > :last-child {
+  margin-bottom: 0;
+}
+.aviso-titulo {
+  display: block;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: var(--tam-pequeno);
+  margin-bottom: var(--esp-1);
+}
+.aviso-exemplo {
+  background: var(--exemplo-fundo);
+  border-color: var(--exemplo-borda);
+  color: var(--exemplo-texto);
+}
+.aviso-confirmar {
+  background: var(--confirmar-fundo);
+  border-color: var(--confirmar-borda);
+  color: var(--confirmar-texto);
+}
+.aviso-conflito {
+  background: var(--conflito-fundo);
+  border-color: var(--conflito-borda);
+  color: var(--conflito-texto);
+}
+.aviso-ok {
+  background: var(--ok-fundo);
+  border-color: var(--ok-borda);
+  color: var(--ok-texto);
+}
+
+/* Etiquetas pequenas (ex.: na lista de pontos do mapa) */
+.etiqueta {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.etiqueta-exemplo {
+  background: var(--exemplo-fundo);
+  border-color: var(--exemplo-borda);
+  color: var(--exemplo-texto);
+}
+.etiqueta-confirmar {
+  background: var(--confirmar-fundo);
+  border-color: var(--confirmar-borda);
+  color: var(--confirmar-texto);
+}
+.etiqueta-conflito {
+  background: var(--conflito-fundo);
+  border-color: var(--conflito-borda);
+  color: var(--conflito-texto);
+}
+.etiqueta-ok {
+  background: var(--ok-fundo);
+  border-color: var(--ok-borda);
+  color: var(--ok-texto);
+}
+
+/* Marcador de "TODO" visível (dado sem fonte ainda) */
+.todo {
+  background: var(--conflito-fundo);
+  color: var(--conflito-texto);
+  border: 1px dashed var(--conflito-borda);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* ---------- 11. Componentes compartilhados pelos módulos ----------
+   Topo com logo e navegação, gráficos SVG simples, legenda, fonte e rodapé.
+   (Antes ficavam só no hub.css; agora o site e os outros módulos usam os mesmos.) */
+/* Cores dos gráficos (validadas com o validador do skill dataviz, claro e escuro) */
+:root {
+  --viz-1: #2a78d6;
+  --viz-2: #eb6834;
+  --viz-3: #1baf7a;
+  --viz-destaque: var(--cor-primaria);
+  --viz-resto: #a7b4ab;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --viz-1: #3987e5;
+    --viz-2: #d95926;
+    --viz-3: #199e70;
+    --viz-resto: #4d6355;
+  }
+}
+
+/* ---------- Topo ---------- */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* acima do mapa (Leaflet usa até 1000 nos controles) */
+  background: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+}
+.topo-miolo {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: var(--esp-2) var(--esp-4);
+  display: flex;
+  align-items: center;
+  gap: var(--esp-4);
+  flex-wrap: wrap;
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+.navegacao {
+  display: flex;
+  gap: var(--esp-1);
+  margin-left: auto;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.navegacao a {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--esp-3);
+  border-radius: var(--raio-pequeno);
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  text-decoration: none;
+}
+.navegacao a:hover {
+  color: var(--cor-texto);
+  background: var(--cor-superficie-2);
+}
+.navegacao a[aria-current="page"] {
+  color: var(--cor-primaria);
+  background: var(--cor-superficie-2);
+}
+@media (max-width: 560px) {
+  .navegacao { margin-left: 0; width: 100%; }
+}
+
+.barra-svg {
+  display: block;
+  width: 100%;
+  max-width: 36rem;
+  height: auto;
+}
+.viz-1 { fill: var(--viz-1); background: var(--viz-1); }
+.viz-2 { fill: var(--viz-2); background: var(--viz-2); }
+.viz-3 { fill: var(--viz-3); background: var(--viz-3); }
+.viz-destaque { fill: var(--viz-destaque); background: var(--viz-destaque); }
+.viz-resto { fill: var(--viz-resto); background: var(--viz-resto); }
+.viz-eixo { stroke: var(--cor-texto-suave); stroke-width: 1; }
+.barra-svg rect:hover { opacity: 0.85; }
+.legenda {
+  list-style: none;
+  padding: 0;
+  margin: var(--esp-2) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-4);
+  font-size: var(--tam-pequeno);
+}
+.legenda li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--esp-2);
+}
+.amostra {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex: none;
+}
+.fonte {
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-suave);
+}
+/* ---------- Rodapé ---------- */
+.rodape-grade {
+  display: grid;
+  gap: var(--esp-5);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px) {
+  .rodape-grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+.rodape-titulo { font-size: 1rem; }
+.referencias {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: var(--esp-1);
+}
+
+/* ---------- 12. Animação de entrada e ao rolar (usada com shared/animacao.js) ----------
+   Só funciona quando o JS coloca "anim-js" no <html>; sem isso, nada fica escondido.
+   Anima só opacidade e deslocamento (leve para o celular). */
+.anim-js .marca img {
+  animation: ciclo-girar 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-js .anim-entrada > * {
+  animation: ciclo-entrar 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--i, 0) * 90ms + 120ms);
+}
+.anim-js .revelar {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--atraso, 0ms);
+}
+.anim-js .revelar.visivel {
+  opacity: 1;
+  transform: none;
+}
+@keyframes ciclo-girar {
+  from { transform: rotate(-200deg) scale(0.8); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes ciclo-entrar {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@media print {
+  .anim-js .revelar { opacity: 1; transform: none; }
+}
+
+/* ---------- 13. Rodapé padrão (igual em todas as páginas) ---------- */
+.rodape-padrao { margin-top: var(--esp-4); padding-top: var(--esp-4); border-top: 1px solid var(--cor-borda); }
+.rodape-padrao p { margin: 0; }
+/* quando o rodapé só tem a parte padrão, não repete a linha divisória */
+.rodape > .rodape-padrao:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.rodape-modulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-1) var(--esp-4);
+  margin-bottom: var(--esp-3);
+}
+.rodape-modulos a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  font-weight: 600;
+}
+
+/* ---------- 10. Movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

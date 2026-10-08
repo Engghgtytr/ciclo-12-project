@@ -1,0 +1,4304 @@
+{
+  "itens": {
+    "escola": {
+      "nome": "Colégio Progresso",
+      "endereco": "Av. Timóteo Penteado, 4405, Vila Galvão",
+      "separado": {
+        "rua": "Avenida Timóteo Penteado",
+        "numero": "4405",
+        "bairro": "Vila Galvão"
+      },
+      "confianca": "alta",
+      "lat": -23.4588902,
+      "lng": -46.5639215,
+      "exibido": "4405, Avenida Doutor Timoteo Penteado, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07061-003, Brasil",
+      "tipo": "house",
+      "rua": "Avenida Doutor Timoteo Penteado",
+      "numeroOSM": "4405",
+      "bairroOSM": "Vila Galvão",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=4405+Avenida+Tim%C3%B3teo+Penteado&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 381615146,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1083797626,
+              "lat": "-23.4588902",
+              "lon": "-46.5639215",
+              "category": "place",
+              "type": "house",
+              "place_rank": 30,
+              "importance": 0.00000999999999995449,
+              "addresstype": "place",
+              "name": "",
+              "display_name": "4405, Avenida Doutor Timoteo Penteado, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07061-003, Brasil",
+              "address": {
+                "house_number": "4405",
+                "road": "Avenida Doutor Timoteo Penteado",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07061-003",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4589402",
+                "-23.4588402",
+                "-46.5639715",
+                "-46.5638715"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-01": {
+      "nome": "Paraventi",
+      "endereco": "Rua Apolônia Vieira de Jesus, 91, Jardim Leila",
+      "separado": {
+        "rua": "Rua Apolônia Vieira de Jesus",
+        "numero": "91",
+        "bairro": "Jardim Leila"
+      },
+      "confianca": "alta",
+      "lat": -23.4581045,
+      "lng": -46.523357,
+      "exibido": "Eco Ponto Paraventi, 91, Rua Apolônia Vieira de Jesus, Jardim Leila, Paraventi, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07121-070, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Apolônia Vieira de Jesus",
+      "numeroOSM": "91",
+      "bairroOSM": "Paraventi",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=91+Rua+Apol%C3%B4nia+Vieira+de+Jesus&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8662453,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016200822,
+              "lat": "-23.4581045",
+              "lon": "-46.5233570",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.00007861829556720863,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Paraventi",
+              "display_name": "Eco Ponto Paraventi, 91, Rua Apolônia Vieira de Jesus, Jardim Leila, Paraventi, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07121-070, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Paraventi",
+                "house_number": "91",
+                "road": "Rua Apolônia Vieira de Jesus",
+                "quarter": "Jardim Leila",
+                "suburb": "Paraventi",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07121-070",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4582436",
+                "-23.4579793",
+                "-46.5235085",
+                "-46.5232093"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-02": {
+      "nome": "Gopoúva",
+      "endereco": "Rua Guarulhos, 34, Gopoúva",
+      "separado": {
+        "rua": "Rua Guarulhos",
+        "numero": "34",
+        "bairro": "Gopoúva"
+      },
+      "confianca": "media",
+      "lat": -23.4682489,
+      "lng": -46.5438826,
+      "exibido": "Rua Guarulhos, Jardim Tranquilidade, Gopoúva, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07020-320, Brasil",
+      "tipo": "residential",
+      "rua": "Rua Guarulhos",
+      "numeroOSM": null,
+      "bairroOSM": "Gopoúva",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=34+Rua+Guarulhos&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8636456,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 826782940,
+              "lat": "-23.4682489",
+              "lon": "-46.5438826",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Guarulhos",
+              "display_name": "Rua Guarulhos, Jardim Tranquilidade, Gopoúva, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07020-320, Brasil",
+              "address": {
+                "road": "Rua Guarulhos",
+                "quarter": "Jardim Tranquilidade",
+                "suburb": "Gopoúva",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07020-320",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4684644",
+                "-23.4680350",
+                "-46.5446125",
+                "-46.5431531"
+              ]
+            },
+            {
+              "place_id": 8706536,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 46414931,
+              "lat": "-23.4691341",
+              "lon": "-46.5409947",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Guarulhos",
+              "display_name": "Rua Guarulhos, Jardim Tranquilidade, Gopoúva, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07020-201, Brasil",
+              "address": {
+                "road": "Rua Guarulhos",
+                "quarter": "Jardim Tranquilidade",
+                "suburb": "Gopoúva",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07020-201",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4700281",
+                "-23.4684644",
+                "-46.5431531",
+                "-46.5391501"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Guarulhos&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8706536,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 46414931,
+              "lat": "-23.4691341",
+              "lon": "-46.5409947",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Guarulhos",
+              "display_name": "Rua Guarulhos, Jardim Tranquilidade, Gopoúva, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07020-201, Brasil",
+              "address": {
+                "road": "Rua Guarulhos",
+                "quarter": "Jardim Tranquilidade",
+                "suburb": "Gopoúva",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07020-201",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4700281",
+                "-23.4684644",
+                "-46.5431531",
+                "-46.5391501"
+              ]
+            },
+            {
+              "place_id": 8636456,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 826782940,
+              "lat": "-23.4682489",
+              "lon": "-46.5438826",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Guarulhos",
+              "display_name": "Rua Guarulhos, Jardim Tranquilidade, Gopoúva, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07020-320, Brasil",
+              "address": {
+                "road": "Rua Guarulhos",
+                "quarter": "Jardim Tranquilidade",
+                "suburb": "Gopoúva",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07020-320",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4684644",
+                "-23.4680350",
+                "-46.5446125",
+                "-46.5431531"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-03": {
+      "nome": "Continental",
+      "endereco": "Rua Valdimiro Laurentino Pêssoa, 655, Parque Continental II",
+      "separado": {
+        "rua": "Rua Valdimiro Laurentino Pêssoa",
+        "numero": "655",
+        "bairro": "Parque Continental II"
+      },
+      "confianca": "nada",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=655+Rua+Valdimiro+Laurentino+P%C3%AAssoa&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Valdimiro+Laurentino+P%C3%AAssoa&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Valdimiro+Laurentino+P%C3%AAssoa%2C+Parque+Continental+II%2C+Guarulhos%2C+S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Valdimiro+Laurentino+P%C3%AAssoa%2C+Guarulhos",
+          "resultados": []
+        }
+      ]
+    },
+    "pev-04": {
+      "nome": "Torres Tibagy",
+      "endereco": "Rua Ouvidor, 337, Parque Santo Antonio",
+      "separado": {
+        "rua": "Rua Ouvidor",
+        "numero": "337",
+        "bairro": "Parque Santo Antonio"
+      },
+      "confianca": "alta",
+      "lat": -23.4572163,
+      "lng": -46.5568281,
+      "exibido": "Eco Ponto Torres Tibagy, 337, Rua Ouvidor, Torres Tibagy, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07062-160, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Ouvidor",
+      "numeroOSM": "337",
+      "bairroOSM": "Torres Tibagy",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=337+Rua+Ouvidor&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8633124,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016400064,
+              "lat": "-23.4572163",
+              "lon": "-46.5568281",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.00007861829556720863,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Torres Tibagy",
+              "display_name": "Eco Ponto Torres Tibagy, 337, Rua Ouvidor, Torres Tibagy, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07062-160, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Torres Tibagy",
+                "house_number": "337",
+                "road": "Rua Ouvidor",
+                "suburb": "Torres Tibagy",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07062-160",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4574038",
+                "-23.4570288",
+                "-46.5570578",
+                "-46.5565983"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-05": {
+      "nome": "Timóteo Penteado",
+      "endereco": "Avenida Faustino Ramalho, 977, Vila Galvão",
+      "separado": {
+        "rua": "Avenida Faustino Ramalho",
+        "numero": "977",
+        "bairro": "Vila Galvão"
+      },
+      "confianca": "media",
+      "lat": -23.4621832,
+      "lng": -46.5614301,
+      "exibido": "Avenida Faustino Ramalho, Jardim Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07062-152, Brasil",
+      "tipo": "residential",
+      "rua": "Avenida Faustino Ramalho",
+      "numeroOSM": null,
+      "bairroOSM": "Jardim Vila Galvão",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=977+Avenida+Faustino+Ramalho&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8548751,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 152746498,
+              "lat": "-23.4621832",
+              "lon": "-46.5614301",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Faustino Ramalho",
+              "display_name": "Avenida Faustino Ramalho, Jardim Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07062-152, Brasil",
+              "address": {
+                "road": "Avenida Faustino Ramalho",
+                "suburb": "Jardim Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07062-152",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4629874",
+                "-23.4613361",
+                "-46.5638393",
+                "-46.5590386"
+              ]
+            },
+            {
+              "place_id": 8520754,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 189452920,
+              "lat": "-23.4631699",
+              "lon": "-46.5644261",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Faustino Ramalho",
+              "display_name": "Avenida Faustino Ramalho, Jardim Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07056-110, Brasil",
+              "address": {
+                "road": "Avenida Faustino Ramalho",
+                "suburb": "Jardim Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07056-110",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4633524",
+                "-23.4629874",
+                "-46.5650129",
+                "-46.5638393"
+              ]
+            },
+            {
+              "place_id": 8540163,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 234837227,
+              "lat": "-23.4633038",
+              "lon": "-46.5675292",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Faustino Ramalho",
+              "display_name": "Avenida Faustino Ramalho, Jardim Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07056-110, Brasil",
+              "address": {
+                "road": "Avenida Faustino Ramalho",
+                "suburb": "Jardim Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07056-110",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4634763",
+                "-23.4631313",
+                "-46.5678075",
+                "-46.5672510"
+              ]
+            },
+            {
+              "place_id": 8534994,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 159632677,
+              "lat": "-23.4630156",
+              "lon": "-46.5679172",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Faustino Ramalho",
+              "display_name": "Avenida Faustino Ramalho, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07056-110, Brasil",
+              "address": {
+                "road": "Avenida Faustino Ramalho",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07056-110",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4631313",
+                "-23.4628631",
+                "-46.5679510",
+                "-46.5678075"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Avenida+Faustino+Ramalho&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8626903,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 152746498,
+              "lat": "-23.4621832",
+              "lon": "-46.5614301",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Faustino Ramalho",
+              "display_name": "Avenida Faustino Ramalho, Jardim Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07062-152, Brasil",
+              "address": {
+                "road": "Avenida Faustino Ramalho",
+                "suburb": "Jardim Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07062-152",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4629874",
+                "-23.4613361",
+                "-46.5638393",
+                "-46.5590386"
+              ]
+            },
+            {
+              "place_id": 8582906,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 189452941,
+              "lat": "-23.4637757",
+              "lon": "-46.5667515",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Faustino Ramalho",
+              "display_name": "Avenida Faustino Ramalho, Jardim Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07056-110, Brasil",
+              "address": {
+                "road": "Avenida Faustino Ramalho",
+                "suburb": "Jardim Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07056-110",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4639008",
+                "-23.4634763",
+                "-46.5672510",
+                "-46.5661928"
+              ]
+            },
+            {
+              "place_id": 8580069,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 234837227,
+              "lat": "-23.4633038",
+              "lon": "-46.5675292",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Faustino Ramalho",
+              "display_name": "Avenida Faustino Ramalho, Jardim Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07056-110, Brasil",
+              "address": {
+                "road": "Avenida Faustino Ramalho",
+                "suburb": "Jardim Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07056-110",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4634763",
+                "-23.4631313",
+                "-46.5678075",
+                "-46.5672510"
+              ]
+            },
+            {
+              "place_id": 8614159,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 159632677,
+              "lat": "-23.4630156",
+              "lon": "-46.5679172",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Faustino Ramalho",
+              "display_name": "Avenida Faustino Ramalho, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07056-110, Brasil",
+              "address": {
+                "road": "Avenida Faustino Ramalho",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07056-110",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4631313",
+                "-23.4628631",
+                "-46.5679510",
+                "-46.5678075"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-06": {
+      "nome": "Iporanga",
+      "endereco": "Rua Adélia Sadalla, 166, Jd. Luciara",
+      "separado": {
+        "rua": "Rua Adélia Sadalla",
+        "numero": "166",
+        "bairro": "Jd. Luciara"
+      },
+      "confianca": "alta",
+      "lat": -23.4403723,
+      "lng": -46.5320134,
+      "exibido": "Eco Ponto Iporanga, 166, Rua Adélia Sadalla, Jardim Santa Cecília, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07131-030, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Adélia Sadalla",
+      "numeroOSM": "166",
+      "bairroOSM": "Vila Rio",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=166+Rua+Ad%C3%A9lia+Sadalla&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8650118,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016223703,
+              "lat": "-23.4403723",
+              "lon": "-46.5320134",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.00007861829556720863,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Iporanga",
+              "display_name": "Eco Ponto Iporanga, 166, Rua Adélia Sadalla, Jardim Santa Cecília, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07131-030, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Iporanga",
+                "house_number": "166",
+                "road": "Rua Adélia Sadalla",
+                "quarter": "Jardim Santa Cecília",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07131-030",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4407537",
+                "-23.4400203",
+                "-46.5322759",
+                "-46.5317260"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-07": {
+      "nome": "Cabrália",
+      "endereco": "Rua Cabrália, 100, Jd. Bela Vista",
+      "separado": {
+        "rua": "Rua Cabrália",
+        "numero": "100",
+        "bairro": "Jd. Bela Vista"
+      },
+      "confianca": "alta",
+      "lat": -23.434582,
+      "lng": -46.5135236,
+      "exibido": "Eco Ponto Cabrália, 100, Rua Cabrália, Jardim Almeida Prado, Bela Vista, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07132-410, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Cabrália",
+      "numeroOSM": "100",
+      "bairroOSM": "Bela Vista",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=100+Rua+Cabr%C3%A1lia&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8568941,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016403471,
+              "lat": "-23.4345820",
+              "lon": "-46.5135236",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Cabrália",
+              "display_name": "Eco Ponto Cabrália, 100, Rua Cabrália, Jardim Almeida Prado, Bela Vista, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07132-410, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Cabrália",
+                "house_number": "100",
+                "road": "Rua Cabrália",
+                "quarter": "Jardim Almeida Prado",
+                "suburb": "Bela Vista",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07132-410",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4347726",
+                "-23.4344000",
+                "-46.5136650",
+                "-46.5133756"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-08": {
+      "nome": "Santos Dumont",
+      "endereco": "Estrada do Saboó, 795, Santos Dumont",
+      "separado": {
+        "rua": "Estrada do Saboó",
+        "numero": "795",
+        "bairro": "Santos Dumont"
+      },
+      "confianca": "media",
+      "lat": -23.3965385,
+      "lng": -46.4557065,
+      "exibido": "Estrada do Saboo, Parque Santos Dumont, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07151-807, Brasil",
+      "tipo": "unclassified",
+      "rua": "Estrada do Saboo",
+      "numeroOSM": null,
+      "bairroOSM": "Bananal",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=795+Estrada+do+Sabo%C3%B3&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8691520,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 472592619,
+              "lat": "-23.3298797",
+              "lon": "-46.4416370",
+              "category": "highway",
+              "type": "unclassified",
+              "place_rank": 26,
+              "importance": 0.053393010605020184,
+              "addresstype": "road",
+              "name": "Estrada do Saboó",
+              "display_name": "Estrada do Saboó, Santa Clara, Marmelo, Mairiporã, São Paulo, Região Sudeste, 07154-190, Brasil",
+              "address": {
+                "road": "Estrada do Saboó",
+                "neighbourhood": "Santa Clara",
+                "suburb": "Marmelo",
+                "city_district": "Mairiporã",
+                "town": "Mairiporã",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07154-190",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.3375243",
+                "-23.3281055",
+                "-46.4502290",
+                "-46.4350793"
+              ]
+            },
+            {
+              "place_id": 8726190,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 496531479,
+              "lat": "-23.3965385",
+              "lon": "-46.4557065",
+              "category": "highway",
+              "type": "unclassified",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Estrada do Saboo",
+              "display_name": "Estrada do Saboo, Parque Santos Dumont, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07151-807, Brasil",
+              "address": {
+                "road": "Estrada do Saboo",
+                "quarter": "Parque Santos Dumont",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07151-807",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.3974971",
+                "-23.3959333",
+                "-46.4567908",
+                "-46.4549670"
+              ]
+            },
+            {
+              "place_id": 8723557,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 243168141,
+              "lat": "-23.4060432",
+              "lon": "-46.4621739",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Estrada do Sabôo",
+              "display_name": "Estrada do Sabôo, Parque Santos Dumont, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07152-000, Brasil",
+              "address": {
+                "road": "Estrada do Sabôo",
+                "quarter": "Parque Santos Dumont",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07152-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4116656",
+                "-23.4011796",
+                "-46.4667338",
+                "-46.4581481"
+              ]
+            },
+            {
+              "place_id": 8673335,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 941608253,
+              "lat": "-23.4120724",
+              "lon": "-46.4578430",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Estrada do Sabôo",
+              "display_name": "Estrada do Sabôo, Jardim Lenize, São João, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07151-030, Brasil",
+              "address": {
+                "road": "Estrada do Sabôo",
+                "quarter": "Jardim Lenize",
+                "suburb": "São João",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07151-030",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4124791",
+                "-23.4116656",
+                "-46.4581481",
+                "-46.4575379"
+              ]
+            },
+            {
+              "place_id": 8680790,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1349910288,
+              "lat": "-23.4008337",
+              "lon": "-46.4669510",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Estrada do Sabôo",
+              "display_name": "Estrada do Sabôo, Parque Santos Dumont, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07152-160, Brasil",
+              "address": {
+                "road": "Estrada do Sabôo",
+                "quarter": "Parque Santos Dumont",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07152-160",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4011796",
+                "-23.4004879",
+                "-46.4671683",
+                "-46.4667338"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Estrada+do+Sabo%C3%B3&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8730211,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 472592619,
+              "lat": "-23.3298797",
+              "lon": "-46.4416370",
+              "category": "highway",
+              "type": "unclassified",
+              "place_rank": 26,
+              "importance": 0.053393010605020184,
+              "addresstype": "road",
+              "name": "Estrada do Saboó",
+              "display_name": "Estrada do Saboó, Santa Clara, Marmelo, Mairiporã, São Paulo, Região Sudeste, 07154-190, Brasil",
+              "address": {
+                "road": "Estrada do Saboó",
+                "neighbourhood": "Santa Clara",
+                "suburb": "Marmelo",
+                "city_district": "Mairiporã",
+                "town": "Mairiporã",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07154-190",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.3375243",
+                "-23.3281055",
+                "-46.4502290",
+                "-46.4350793"
+              ]
+            },
+            {
+              "place_id": 8753543,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 496531479,
+              "lat": "-23.3965385",
+              "lon": "-46.4557065",
+              "category": "highway",
+              "type": "unclassified",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Estrada do Saboo",
+              "display_name": "Estrada do Saboo, Parque Santos Dumont, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07151-807, Brasil",
+              "address": {
+                "road": "Estrada do Saboo",
+                "quarter": "Parque Santos Dumont",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07151-807",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.3974971",
+                "-23.3959333",
+                "-46.4567908",
+                "-46.4549670"
+              ]
+            },
+            {
+              "place_id": 8732827,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 243168141,
+              "lat": "-23.4060432",
+              "lon": "-46.4621739",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Estrada do Sabôo",
+              "display_name": "Estrada do Sabôo, Parque Santos Dumont, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07152-000, Brasil",
+              "address": {
+                "road": "Estrada do Sabôo",
+                "quarter": "Parque Santos Dumont",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07152-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4116656",
+                "-23.4011796",
+                "-46.4667338",
+                "-46.4581481"
+              ]
+            },
+            {
+              "place_id": 8755508,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 941608253,
+              "lat": "-23.4120724",
+              "lon": "-46.4578430",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Estrada do Sabôo",
+              "display_name": "Estrada do Sabôo, Jardim Lenize, São João, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07151-030, Brasil",
+              "address": {
+                "road": "Estrada do Sabôo",
+                "quarter": "Jardim Lenize",
+                "suburb": "São João",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07151-030",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4124791",
+                "-23.4116656",
+                "-46.4581481",
+                "-46.4575379"
+              ]
+            },
+            {
+              "place_id": 8756244,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1349910288,
+              "lat": "-23.4008337",
+              "lon": "-46.4669510",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Estrada do Sabôo",
+              "display_name": "Estrada do Sabôo, Parque Santos Dumont, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07152-160, Brasil",
+              "address": {
+                "road": "Estrada do Sabôo",
+                "quarter": "Parque Santos Dumont",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07152-160",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4011796",
+                "-23.4004879",
+                "-46.4671683",
+                "-46.4667338"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-09": {
+      "nome": "Presidente Dutra",
+      "endereco": "Avenida João Bassi, 707, Jd. Presidente Dutra",
+      "separado": {
+        "rua": "Avenida João Bassi",
+        "numero": "707",
+        "bairro": "Jd. Presidente Dutra"
+      },
+      "confianca": "media",
+      "lat": -23.4176905,
+      "lng": -46.4264565,
+      "exibido": "Avenida João Bassi, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-440, Brasil",
+      "tipo": "unclassified",
+      "rua": "Avenida João Bassi",
+      "numeroOSM": null,
+      "bairroOSM": "Presidente Dutra",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=707+Avenida+Jo%C3%A3o+Bassi&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8730321,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 419485588,
+              "lat": "-23.4176905",
+              "lon": "-46.4264565",
+              "category": "highway",
+              "type": "unclassified",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida João Bassi",
+              "display_name": "Avenida João Bassi, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-440, Brasil",
+              "address": {
+                "road": "Avenida João Bassi",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07172-440",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4201184",
+                "-23.4152678",
+                "-46.4270894",
+                "-46.4258402"
+              ]
+            },
+            {
+              "place_id": 8683990,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 677291490,
+              "lat": "-23.4220233",
+              "lon": "-46.4253624",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida João Bassi",
+              "display_name": "Avenida João Bassi, Vila Maria Dirce, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-440, Brasil",
+              "address": {
+                "road": "Avenida João Bassi",
+                "quarter": "Vila Maria Dirce",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07172-440",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4239328",
+                "-23.4201184",
+                "-46.4258402",
+                "-46.4249034"
+              ]
+            },
+            {
+              "place_id": 8697592,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 852266129,
+              "lat": "-23.4170637",
+              "lon": "-46.4255317",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida João Bassi",
+              "display_name": "Avenida João Bassi, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-440, Brasil",
+              "address": {
+                "road": "Avenida João Bassi",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07172-440",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4174456",
+                "-23.4166819",
+                "-46.4258292",
+                "-46.4252342"
+              ]
+            },
+            {
+              "place_id": 8731721,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 677291491,
+              "lat": "-23.4240704",
+              "lon": "-46.4248267",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida João Bassi",
+              "display_name": "Avenida João Bassi, Vila Maria Dirce, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-100, Brasil",
+              "address": {
+                "road": "Avenida João Bassi",
+                "quarter": "Vila Maria Dirce",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07172-100",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4242080",
+                "-23.4239328",
+                "-46.4249034",
+                "-46.4247501"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Avenida+Jo%C3%A3o+Bassi&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8650368,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 419485588,
+              "lat": "-23.4176905",
+              "lon": "-46.4264565",
+              "category": "highway",
+              "type": "unclassified",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida João Bassi",
+              "display_name": "Avenida João Bassi, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-440, Brasil",
+              "address": {
+                "road": "Avenida João Bassi",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07172-440",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4201184",
+                "-23.4152678",
+                "-46.4270894",
+                "-46.4258402"
+              ]
+            },
+            {
+              "place_id": 8659200,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 677291490,
+              "lat": "-23.4220233",
+              "lon": "-46.4253624",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida João Bassi",
+              "display_name": "Avenida João Bassi, Vila Maria Dirce, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-440, Brasil",
+              "address": {
+                "road": "Avenida João Bassi",
+                "quarter": "Vila Maria Dirce",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07172-440",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4239328",
+                "-23.4201184",
+                "-46.4258402",
+                "-46.4249034"
+              ]
+            },
+            {
+              "place_id": 8594677,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 852266129,
+              "lat": "-23.4170637",
+              "lon": "-46.4255317",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida João Bassi",
+              "display_name": "Avenida João Bassi, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-440, Brasil",
+              "address": {
+                "road": "Avenida João Bassi",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07172-440",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4174456",
+                "-23.4166819",
+                "-46.4258292",
+                "-46.4252342"
+              ]
+            },
+            {
+              "place_id": 8647001,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 677291491,
+              "lat": "-23.4240704",
+              "lon": "-46.4248267",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida João Bassi",
+              "display_name": "Avenida João Bassi, Vila Maria Dirce, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07172-100, Brasil",
+              "address": {
+                "road": "Avenida João Bassi",
+                "quarter": "Vila Maria Dirce",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07172-100",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4242080",
+                "-23.4239328",
+                "-46.4249034",
+                "-46.4247501"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-10": {
+      "nome": "Bom Clima",
+      "endereco": "Rua João Bernardo de Medeiros, 800",
+      "separado": {
+        "rua": "Rua João Bernardo de Medeiros",
+        "numero": "800",
+        "bairro": null
+      },
+      "confianca": "nada",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=800+Rua+Jo%C3%A3o+Bernardo+de+Medeiros&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Jo%C3%A3o+Bernardo+de+Medeiros&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Jo%C3%A3o+Bernardo+de+Medeiros%2C+Guarulhos%2C+S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Jo%C3%A3o+Bernardo+de+Medeiros%2C+Guarulhos",
+          "resultados": []
+        }
+      ]
+    },
+    "pev-11": {
+      "nome": "Macedo",
+      "endereco": "Rua Soldado Estanislau Wojcik, 26, Vila Sant'Anna",
+      "separado": {
+        "rua": "Rua Soldado Estanislau Wojcik",
+        "numero": "26",
+        "bairro": "Vila Sant'Anna"
+      },
+      "confianca": "alta",
+      "lat": -23.4711678,
+      "lng": -46.5211522,
+      "exibido": "Eco Ponto Macedo, 26, Rua Soldado Estanislau Wojcik, Centro, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07111-000, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Soldado Estanislau Wojcik",
+      "numeroOSM": "26",
+      "bairroOSM": "Centro",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=26+Rua+Soldado+Estanislau+Wojcik&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8553949,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016196012,
+              "lat": "-23.4711678",
+              "lon": "-46.5211522",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.00007861829556720863,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Macedo",
+              "display_name": "Eco Ponto Macedo, 26, Rua Soldado Estanislau Wojcik, Centro, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07111-000, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Macedo",
+                "house_number": "26",
+                "road": "Rua Soldado Estanislau Wojcik",
+                "suburb": "Centro",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07111-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4713782",
+                "-23.4710854",
+                "-46.5212810",
+                "-46.5209887"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-12": {
+      "nome": "Ponte Grande",
+      "endereco": "Alameda Josefina L. Zamataro, 233, Vila Zamataro",
+      "separado": {
+        "rua": "Alameda Josefina L. Zamataro",
+        "numero": "233",
+        "bairro": "Vila Zamataro"
+      },
+      "confianca": "media",
+      "lat": -23.5075802,
+      "lng": -46.5553085,
+      "exibido": "Alameda Josefina Leme Zamataro, Vila Zamataro, Ponte Grande, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07032-180, Brasil",
+      "tipo": "residential",
+      "rua": "Alameda Josefina Leme Zamataro",
+      "numeroOSM": null,
+      "bairroOSM": "Ponte Grande",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=233+Alameda+Josefina+L.+Zamataro&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Alameda+Josefina+L.+Zamataro&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8729178,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 255615222,
+              "lat": "-23.5075802",
+              "lon": "-46.5553085",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Alameda Josefina Leme Zamataro",
+              "display_name": "Alameda Josefina Leme Zamataro, Vila Zamataro, Ponte Grande, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07032-180, Brasil",
+              "address": {
+                "road": "Alameda Josefina Leme Zamataro",
+                "quarter": "Vila Zamataro",
+                "suburb": "Ponte Grande",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07032-180",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.5085007",
+                "-23.5066490",
+                "-46.5561520",
+                "-46.5544664"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-13": {
+      "nome": "Vila Barros",
+      "endereco": "Rua Guilherme Lino dos Santos, 349, Jardim Flor do Campo",
+      "separado": {
+        "rua": "Rua Guilherme Lino dos Santos",
+        "numero": "349",
+        "bairro": "Jardim Flor do Campo"
+      },
+      "confianca": "alta",
+      "lat": -23.4509671,
+      "lng": -46.5040518,
+      "exibido": "Eco Ponto Vila Barros, 349, Rua Guilherme Lino dos Santos, Jardim Flôr de Campo, CECAP, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07192-100, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Guilherme Lino dos Santos",
+      "numeroOSM": "349",
+      "bairroOSM": "CECAP",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=349+Rua+Guilherme+Lino+dos+Santos&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8639686,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016214035,
+              "lat": "-23.4509671",
+              "lon": "-46.5040518",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Vila Barros",
+              "display_name": "Eco Ponto Vila Barros, 349, Rua Guilherme Lino dos Santos, Jardim Flôr de Campo, CECAP, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07192-100, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Vila Barros",
+                "house_number": "349",
+                "road": "Rua Guilherme Lino dos Santos",
+                "quarter": "Jardim Flôr de Campo",
+                "suburb": "CECAP",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07192-100",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4512709",
+                "-23.4506667",
+                "-46.5045058",
+                "-46.5037393"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-14": {
+      "nome": "Vila Galvão",
+      "endereco": "Rua Ipiranga, 543, Vila Galvão",
+      "separado": {
+        "rua": "Rua Ipiranga",
+        "numero": "543",
+        "bairro": "Vila Galvão"
+      },
+      "confianca": "media",
+      "lat": -23.4492733,
+      "lng": -46.56438,
+      "exibido": "Rua Ipiranga, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07074-042, Brasil",
+      "tipo": "residential",
+      "rua": "Rua Ipiranga",
+      "numeroOSM": null,
+      "bairroOSM": "Vila Galvão",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=543+Rua+Ipiranga&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8628502,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 46414955,
+              "lat": "-23.4492733",
+              "lon": "-46.5643800",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Ipiranga",
+              "display_name": "Rua Ipiranga, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07074-042, Brasil",
+              "address": {
+                "road": "Rua Ipiranga",
+                "quarter": "Jardim do Papai",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07074-042",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4496734",
+                "-23.4488487",
+                "-46.5659212",
+                "-46.5628322"
+              ]
+            },
+            {
+              "place_id": 8629671,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 942697957,
+              "lat": "-23.4486961",
+              "lon": "-46.5664374",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Ipiranga",
+              "display_name": "Rua Ipiranga, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07074-000, Brasil",
+              "address": {
+                "road": "Rua Ipiranga",
+                "quarter": "Jardim do Papai",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07074-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4488487",
+                "-23.4485435",
+                "-46.5669537",
+                "-46.5659212"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Ipiranga&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8628502,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 46414955,
+              "lat": "-23.4492733",
+              "lon": "-46.5643800",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Ipiranga",
+              "display_name": "Rua Ipiranga, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07074-042, Brasil",
+              "address": {
+                "road": "Rua Ipiranga",
+                "quarter": "Jardim do Papai",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07074-042",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4496734",
+                "-23.4488487",
+                "-46.5659212",
+                "-46.5628322"
+              ]
+            },
+            {
+              "place_id": 8629671,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 942697957,
+              "lat": "-23.4486961",
+              "lon": "-46.5664374",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Ipiranga",
+              "display_name": "Rua Ipiranga, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07074-000, Brasil",
+              "address": {
+                "road": "Rua Ipiranga",
+                "quarter": "Jardim do Papai",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07074-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4488487",
+                "-23.4485435",
+                "-46.5669537",
+                "-46.5659212"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-15": {
+      "nome": "Cabuçu",
+      "endereco": "Av. Pedro de Souza Lopes (altura do nº 7800)",
+      "separado": {
+        "rua": "Avenida Pedro de Souza Lopes",
+        "numero": "7800",
+        "bairro": null
+      },
+      "confianca": "media",
+      "lat": -23.4191785,
+      "lng": -46.5568581,
+      "exibido": "Avenida Pedro de Souza Lopes, Jardim Cambará, Cabuçu, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07085-380, Brasil",
+      "tipo": "secondary",
+      "rua": "Avenida Pedro de Souza Lopes",
+      "numeroOSM": null,
+      "bairroOSM": "Cabuçu",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=7800+Avenida+Pedro+de+Souza+Lopes&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8648744,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 589546191,
+              "lat": "-23.4191785",
+              "lon": "-46.5568581",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Jardim Cambará, Cabuçu, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07085-380, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Jardim Cambará",
+                "suburb": "Cabuçu",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07085-380",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4249048",
+                "-23.4145097",
+                "-46.5607037",
+                "-46.5492112"
+              ]
+            },
+            {
+              "place_id": 8646855,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 463959533,
+              "lat": "-23.4452904",
+              "lon": "-46.5658188",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07074-000, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Jardim do Papai",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07074-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4485435",
+                "-23.4420662",
+                "-46.5669537",
+                "-46.5654176"
+              ]
+            },
+            {
+              "place_id": 8613517,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 943331731,
+              "lat": "-23.4527136",
+              "lon": "-46.5685314",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07071-040, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Jardim do Papai",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07071-040",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4538784",
+                "-23.4515186",
+                "-46.5691885",
+                "-46.5679133"
+              ]
+            },
+            {
+              "place_id": 8607451,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 525740336,
+              "lat": "-23.4332353",
+              "lon": "-46.5658757",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Parque Continental I, Cabuçu, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07076-000, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Parque Continental I",
+                "suburb": "Cabuçu",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07076-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4340277",
+                "-23.4325427",
+                "-46.5659290",
+                "-46.5655611"
+              ]
+            },
+            {
+              "place_id": 8653585,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 675331650,
+              "lat": "-23.4142931",
+              "lon": "-46.5491338",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Parque Continental III, Cabuçu, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07085-380, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Parque Continental III",
+                "suburb": "Cabuçu",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07085-380",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4145097",
+                "-23.4140766",
+                "-46.5492112",
+                "-46.5490564"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Avenida+Pedro+de+Souza+Lopes&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8641163,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 589546191,
+              "lat": "-23.4191785",
+              "lon": "-46.5568581",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Jardim Cambará, Cabuçu, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07085-380, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Jardim Cambará",
+                "suburb": "Cabuçu",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07085-380",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4249048",
+                "-23.4145097",
+                "-46.5607037",
+                "-46.5492112"
+              ]
+            },
+            {
+              "place_id": 8552134,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 463959533,
+              "lat": "-23.4452904",
+              "lon": "-46.5658188",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07074-000, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Jardim do Papai",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07074-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4485435",
+                "-23.4420662",
+                "-46.5669537",
+                "-46.5654176"
+              ]
+            },
+            {
+              "place_id": 8624968,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 943331731,
+              "lat": "-23.4527136",
+              "lon": "-46.5685314",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Jardim do Papai, Vila Galvão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07071-040, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Jardim do Papai",
+                "suburb": "Vila Galvão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07071-040",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4538784",
+                "-23.4515186",
+                "-46.5691885",
+                "-46.5679133"
+              ]
+            },
+            {
+              "place_id": 8590355,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 525740336,
+              "lat": "-23.4332353",
+              "lon": "-46.5658757",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Parque Continental I, Cabuçu, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07076-000, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Parque Continental I",
+                "suburb": "Cabuçu",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07076-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4340277",
+                "-23.4325427",
+                "-46.5659290",
+                "-46.5655611"
+              ]
+            },
+            {
+              "place_id": 8595164,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 675331650,
+              "lat": "-23.4142931",
+              "lon": "-46.5491338",
+              "category": "highway",
+              "type": "secondary",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Avenida Pedro de Souza Lopes",
+              "display_name": "Avenida Pedro de Souza Lopes, Parque Continental III, Cabuçu, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07085-380, Brasil",
+              "address": {
+                "road": "Avenida Pedro de Souza Lopes",
+                "quarter": "Parque Continental III",
+                "suburb": "Cabuçu",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07085-380",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4145097",
+                "-23.4140766",
+                "-46.5492112",
+                "-46.5490564"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-16": {
+      "nome": "Vila Rio",
+      "endereco": "Av. Benjamin Harris Hunnicutt, 1509, Vila Rio",
+      "separado": {
+        "rua": "Avenida Benjamin Harris Hunnicutt",
+        "numero": "1509",
+        "bairro": "Vila Rio"
+      },
+      "confianca": "baixa",
+      "lat": -23.4310563,
+      "lng": -46.5375487,
+      "exibido": "Avenida Benjamin Harris Hunnicut, Avenida Benjamim Harris Hunnicutt, Jardim Santa Cecília, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-350, Brasil",
+      "tipo": "bus_stop",
+      "rua": "Avenida Benjamim Harris Hunnicutt",
+      "numeroOSM": null,
+      "bairroOSM": "Vila Rio",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=1509+Avenida+Benjamin+Harris+Hunnicutt&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Avenida+Benjamin+Harris+Hunnicutt&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Avenida+Benjamin+Harris+Hunnicutt%2C+Vila+Rio%2C+Guarulhos%2C+S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8506358,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "node",
+              "osm_id": 8672841839,
+              "lat": "-23.4310563",
+              "lon": "-46.5375487",
+              "category": "highway",
+              "type": "bus_stop",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "highway",
+              "name": "Avenida Benjamin Harris Hunnicut",
+              "display_name": "Avenida Benjamin Harris Hunnicut, Avenida Benjamim Harris Hunnicutt, Jardim Santa Cecília, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-350, Brasil",
+              "address": {
+                "highway": "Avenida Benjamin Harris Hunnicut",
+                "road": "Avenida Benjamim Harris Hunnicutt",
+                "quarter": "Jardim Santa Cecília",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07124-350",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4311063",
+                "-23.4310063",
+                "-46.5375987",
+                "-46.5374987"
+              ]
+            },
+            {
+              "place_id": 8538312,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "node",
+              "osm_id": 8674034014,
+              "lat": "-23.4333162",
+              "lon": "-46.5374342",
+              "category": "highway",
+              "type": "bus_stop",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "highway",
+              "name": "Avenida Benjamin Harris Hunnicut",
+              "display_name": "Avenida Benjamin Harris Hunnicut, Avenida Benjamim Harris Hunnicutt, Jardim Santa Cecília, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-000, Brasil",
+              "address": {
+                "highway": "Avenida Benjamin Harris Hunnicut",
+                "road": "Avenida Benjamim Harris Hunnicutt",
+                "quarter": "Jardim Santa Cecília",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07124-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4333662",
+                "-23.4332662",
+                "-46.5374842",
+                "-46.5373842"
+              ]
+            },
+            {
+              "place_id": 8545745,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "node",
+              "osm_id": 8672841840,
+              "lat": "-23.4297429",
+              "lon": "-46.5379252",
+              "category": "highway",
+              "type": "bus_stop",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "highway",
+              "name": "Avenida Benjamin Harris Hunnicut, 1923",
+              "display_name": "Avenida Benjamin Harris Hunnicut, 1923, Avenida Benjamim Harris Hunnicutt, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-350, Brasil",
+              "address": {
+                "highway": "Avenida Benjamin Harris Hunnicut, 1923",
+                "road": "Avenida Benjamim Harris Hunnicutt",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07124-350",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4297929",
+                "-23.4296929",
+                "-46.5379752",
+                "-46.5378752"
+              ]
+            },
+            {
+              "place_id": 8580039,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "node",
+              "osm_id": 8672841841,
+              "lat": "-23.4296639",
+              "lon": "-46.5376649",
+              "category": "highway",
+              "type": "bus_stop",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "highway",
+              "name": "Avenida Benjamin Harris Hunnicut, 1900",
+              "display_name": "Avenida Benjamin Harris Hunnicut, 1900, Avenida Benjamim Harris Hunnicutt, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-350, Brasil",
+              "address": {
+                "highway": "Avenida Benjamin Harris Hunnicut, 1900",
+                "road": "Avenida Benjamim Harris Hunnicutt",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07124-350",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4297139",
+                "-23.4296139",
+                "-46.5377149",
+                "-46.5376149"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Avenida+Benjamin+Harris+Hunnicutt%2C+Guarulhos",
+          "resultados": [
+            {
+              "place_id": 8506358,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "node",
+              "osm_id": 8672841839,
+              "lat": "-23.4310563",
+              "lon": "-46.5375487",
+              "category": "highway",
+              "type": "bus_stop",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "highway",
+              "name": "Avenida Benjamin Harris Hunnicut",
+              "display_name": "Avenida Benjamin Harris Hunnicut, Avenida Benjamim Harris Hunnicutt, Jardim Santa Cecília, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-350, Brasil",
+              "address": {
+                "highway": "Avenida Benjamin Harris Hunnicut",
+                "road": "Avenida Benjamim Harris Hunnicutt",
+                "quarter": "Jardim Santa Cecília",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07124-350",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4311063",
+                "-23.4310063",
+                "-46.5375987",
+                "-46.5374987"
+              ]
+            },
+            {
+              "place_id": 8538312,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "node",
+              "osm_id": 8674034014,
+              "lat": "-23.4333162",
+              "lon": "-46.5374342",
+              "category": "highway",
+              "type": "bus_stop",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "highway",
+              "name": "Avenida Benjamin Harris Hunnicut",
+              "display_name": "Avenida Benjamin Harris Hunnicut, Avenida Benjamim Harris Hunnicutt, Jardim Santa Cecília, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-000, Brasil",
+              "address": {
+                "highway": "Avenida Benjamin Harris Hunnicut",
+                "road": "Avenida Benjamim Harris Hunnicutt",
+                "quarter": "Jardim Santa Cecília",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07124-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4333662",
+                "-23.4332662",
+                "-46.5374842",
+                "-46.5373842"
+              ]
+            },
+            {
+              "place_id": 8545745,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "node",
+              "osm_id": 8672841840,
+              "lat": "-23.4297429",
+              "lon": "-46.5379252",
+              "category": "highway",
+              "type": "bus_stop",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "highway",
+              "name": "Avenida Benjamin Harris Hunnicut, 1923",
+              "display_name": "Avenida Benjamin Harris Hunnicut, 1923, Avenida Benjamim Harris Hunnicutt, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-350, Brasil",
+              "address": {
+                "highway": "Avenida Benjamin Harris Hunnicut, 1923",
+                "road": "Avenida Benjamim Harris Hunnicutt",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07124-350",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4297929",
+                "-23.4296929",
+                "-46.5379752",
+                "-46.5378752"
+              ]
+            },
+            {
+              "place_id": 8580039,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "node",
+              "osm_id": 8672841841,
+              "lat": "-23.4296639",
+              "lon": "-46.5376649",
+              "category": "highway",
+              "type": "bus_stop",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "highway",
+              "name": "Avenida Benjamin Harris Hunnicut, 1900",
+              "display_name": "Avenida Benjamin Harris Hunnicut, 1900, Avenida Benjamim Harris Hunnicutt, Vila Rio, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07124-350, Brasil",
+              "address": {
+                "highway": "Avenida Benjamin Harris Hunnicut, 1900",
+                "road": "Avenida Benjamim Harris Hunnicutt",
+                "suburb": "Vila Rio",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07124-350",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4297139",
+                "-23.4296139",
+                "-46.5377149",
+                "-46.5376149"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-17": {
+      "nome": "Rosa de França",
+      "endereco": "Rua Nestor Cabral, 61, Jd. Rosa de França",
+      "separado": {
+        "rua": "Rua Nestor Cabral",
+        "numero": "61",
+        "bairro": "Jd. Rosa de França"
+      },
+      "confianca": "media",
+      "lat": -23.4436029,
+      "lng": -46.552743,
+      "exibido": "Rua Nestor Cabral, Vila Carioca, Picanço, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07081-120, Brasil",
+      "tipo": "residential",
+      "rua": "Rua Nestor Cabral",
+      "numeroOSM": null,
+      "bairroOSM": "Picanço",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=61+Rua+Nestor+Cabral&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8633815,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 60712869,
+              "lat": "-23.4436029",
+              "lon": "-46.5527430",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Nestor Cabral",
+              "display_name": "Rua Nestor Cabral, Vila Carioca, Picanço, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07081-120, Brasil",
+              "address": {
+                "road": "Rua Nestor Cabral",
+                "quarter": "Vila Carioca",
+                "suburb": "Picanço",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07081-120",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4443069",
+                "-23.4429086",
+                "-46.5532942",
+                "-46.5521829"
+              ]
+            },
+            {
+              "place_id": 8665263,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1393907818,
+              "lat": "-23.4444333",
+              "lon": "-46.5534044",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Nestor Cabral",
+              "display_name": "Rua Nestor Cabral, Vila Carioca, Picanço, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07081-060, Brasil",
+              "address": {
+                "road": "Rua Nestor Cabral",
+                "quarter": "Vila Carioca",
+                "suburb": "Picanço",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07081-060",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4445682",
+                "-23.4443069",
+                "-46.5534986",
+                "-46.5532942"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Nestor+Cabral&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8633570,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 60712869,
+              "lat": "-23.4436029",
+              "lon": "-46.5527430",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Nestor Cabral",
+              "display_name": "Rua Nestor Cabral, Vila Carioca, Picanço, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07081-120, Brasil",
+              "address": {
+                "road": "Rua Nestor Cabral",
+                "quarter": "Vila Carioca",
+                "suburb": "Picanço",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07081-120",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4443069",
+                "-23.4429086",
+                "-46.5532942",
+                "-46.5521829"
+              ]
+            },
+            {
+              "place_id": 8629862,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1393907818,
+              "lat": "-23.4444333",
+              "lon": "-46.5534044",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Nestor Cabral",
+              "display_name": "Rua Nestor Cabral, Vila Carioca, Picanço, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07081-060, Brasil",
+              "address": {
+                "road": "Rua Nestor Cabral",
+                "quarter": "Vila Carioca",
+                "suburb": "Picanço",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07081-060",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4445682",
+                "-23.4443069",
+                "-46.5534986",
+                "-46.5532942"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-18": {
+      "nome": "Mikail",
+      "endereco": "Rua Justiniano Salvador dos Santos, 269, Parque Mikail",
+      "separado": {
+        "rua": "Rua Justiniano Salvador dos Santos",
+        "numero": "269",
+        "bairro": "Parque Mikail"
+      },
+      "confianca": "alta",
+      "lat": -23.4089139,
+      "lng": -46.4943557,
+      "exibido": "Eco Ponto Mikail, 269, Rua Justiniano Salvador dos Santos, Parque Mikail, Taboão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07142-460, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Justiniano Salvador dos Santos",
+      "numeroOSM": "269",
+      "bairroOSM": "Taboão",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=269+Rua+Justiniano+Salvador+dos+Santos&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8751654,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016409957,
+              "lat": "-23.4089139",
+              "lon": "-46.4943557",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Mikail",
+              "display_name": "Eco Ponto Mikail, 269, Rua Justiniano Salvador dos Santos, Parque Mikail, Taboão, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07142-460, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Mikail",
+                "house_number": "269",
+                "road": "Rua Justiniano Salvador dos Santos",
+                "quarter": "Parque Mikail",
+                "suburb": "Taboão",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07142-460",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4090122",
+                "-23.4088229",
+                "-46.4944052",
+                "-46.4943043"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-19": {
+      "nome": "Adriana",
+      "endereco": "Rua Walter Pereira de Lima, 105, Vila Sítio dos Morros",
+      "separado": {
+        "rua": "Rua Walter Pereira de Lima",
+        "numero": "105",
+        "bairro": "Vila Sítio dos Morros"
+      },
+      "confianca": "media",
+      "lat": -23.4199752,
+      "lng": -46.5204126,
+      "exibido": "Rua Walter Pereira de Lima, Parque Flamengo, Morros, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07135-210, Brasil",
+      "tipo": "residential",
+      "rua": "Rua Walter Pereira de Lima",
+      "numeroOSM": null,
+      "bairroOSM": "Morros",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=105+Rua+Walter+Pereira+de+Lima&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8646112,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 502776042,
+              "lat": "-23.4199752",
+              "lon": "-46.5204126",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Walter Pereira de Lima",
+              "display_name": "Rua Walter Pereira de Lima, Parque Flamengo, Morros, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07135-210, Brasil",
+              "address": {
+                "road": "Rua Walter Pereira de Lima",
+                "quarter": "Parque Flamengo",
+                "suburb": "Morros",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07135-210",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4206617",
+                "-23.4193068",
+                "-46.5204880",
+                "-46.5203565"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Walter+Pereira+de+Lima&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8664168,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 502776042,
+              "lat": "-23.4199752",
+              "lon": "-46.5204126",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Walter Pereira de Lima",
+              "display_name": "Rua Walter Pereira de Lima, Parque Flamengo, Morros, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07135-210, Brasil",
+              "address": {
+                "road": "Rua Walter Pereira de Lima",
+                "quarter": "Parque Flamengo",
+                "suburb": "Morros",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07135-210",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4206617",
+                "-23.4193068",
+                "-46.5204880",
+                "-46.5203565"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-20": {
+      "nome": "Fortaleza",
+      "endereco": "Rua Medeia Escardino Mariano, 311, Jardim Fortaleza",
+      "separado": {
+        "rua": "Rua Medeia Escardino Mariano",
+        "numero": "311",
+        "bairro": "Jardim Fortaleza"
+      },
+      "confianca": "nada",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=311+Rua+Medeia+Escardino+Mariano&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Medeia+Escardino+Mariano&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Medeia+Escardino+Mariano%2C+Jardim+Fortaleza%2C+Guarulhos%2C+S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Medeia+Escardino+Mariano%2C+Guarulhos",
+          "resultados": []
+        }
+      ]
+    },
+    "pev-21": {
+      "nome": "Haroldo Veloso",
+      "endereco": "Rua Campos Gerais, 163, Haroldo Veloso",
+      "separado": {
+        "rua": "Rua Campos Gerais",
+        "numero": "163",
+        "bairro": "Haroldo Veloso"
+      },
+      "confianca": "alta",
+      "lat": -23.4168352,
+      "lng": -46.4681914,
+      "exibido": "Eco Ponto Haroldo Veloso, 163, Rua Campos Gerais, Haroldo Veloso, São João, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07155-060, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Campos Gerais",
+      "numeroOSM": "163",
+      "bairroOSM": "São João",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=163+Rua+Campos+Gerais&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8739632,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016422355,
+              "lat": "-23.4168352",
+              "lon": "-46.4681914",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Haroldo Veloso",
+              "display_name": "Eco Ponto Haroldo Veloso, 163, Rua Campos Gerais, Haroldo Veloso, São João, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07155-060, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Haroldo Veloso",
+                "house_number": "163",
+                "road": "Rua Campos Gerais",
+                "quarter": "Haroldo Veloso",
+                "suburb": "São João",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07155-060",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4169552",
+                "-23.4167109",
+                "-46.4684282",
+                "-46.4679478"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-22": {
+      "nome": "Bondança",
+      "endereco": "Rua Ivan Edmundo Scarameli, 62, Jardim Bondança",
+      "separado": {
+        "rua": "Rua Ivan Edmundo Scarameli",
+        "numero": "62",
+        "bairro": "Jardim Bondança"
+      },
+      "confianca": "nada",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=62+Rua+Ivan+Edmundo+Scarameli&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Ivan+Edmundo+Scarameli&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Ivan+Edmundo+Scarameli%2C+Jardim+Bondan%C3%A7a%2C+Guarulhos%2C+S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Ivan+Edmundo+Scarameli%2C+Guarulhos",
+          "resultados": []
+        }
+      ]
+    },
+    "pev-23": {
+      "nome": "Lavras",
+      "endereco": "Av. José Brumati, 1857, Lavras",
+      "separado": {
+        "rua": "Avenida José Brumati",
+        "numero": "1857",
+        "bairro": "Lavras"
+      },
+      "confianca": "nada",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=1857+Avenida+Jos%C3%A9+Brumati&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Avenida+Jos%C3%A9+Brumati&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Avenida+Jos%C3%A9+Brumati%2C+Lavras%2C+Guarulhos%2C+S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Avenida+Jos%C3%A9+Brumati%2C+Guarulhos",
+          "resultados": []
+        }
+      ]
+    },
+    "pev-24": {
+      "nome": "Cidade Soimco",
+      "endereco": "Rua Bento Gonçalves, s/nº, Cidade Soimco",
+      "separado": {
+        "rua": "Rua Bento Gonçalves",
+        "numero": null,
+        "bairro": "Cidade Soimco"
+      },
+      "confianca": "media",
+      "lat": -23.4444569,
+      "lng": -46.466288,
+      "exibido": "Rua Bento Gonçalves, Conjunto Paes de Barros, Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07183-150, Brasil",
+      "tipo": "residential",
+      "rua": "Rua Bento Gonçalves",
+      "numeroOSM": null,
+      "bairroOSM": "Cumbica",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Bento+Gon%C3%A7alves&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8749384,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 560344665,
+              "lat": "-23.4444569",
+              "lon": "-46.4662880",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Bento Gonçalves",
+              "display_name": "Rua Bento Gonçalves, Conjunto Paes de Barros, Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07183-150, Brasil",
+              "address": {
+                "road": "Rua Bento Gonçalves",
+                "quarter": "Conjunto Paes de Barros",
+                "suburb": "Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07183-150",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4457626",
+                "-23.4432329",
+                "-46.4665483",
+                "-46.4658004"
+              ]
+            },
+            {
+              "place_id": 8749272,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 477393164,
+              "lat": "-23.4460590",
+              "lon": "-46.4662501",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Bento Gonçalves",
+              "display_name": "Rua Bento Gonçalves, Conjunto Paes de Barros, Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07181-100, Brasil",
+              "address": {
+                "road": "Rua Bento Gonçalves",
+                "quarter": "Conjunto Paes de Barros",
+                "suburb": "Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07181-100",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4461391",
+                "-23.4457626",
+                "-46.4668109",
+                "-46.4658004"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-25": {
+      "nome": "INOCOOP",
+      "endereco": "Av. Francisco Xavier Correia, 489, Residencial Parque Cumbica",
+      "separado": {
+        "rua": "Avenida Francisco Xavier Correia",
+        "numero": "489",
+        "bairro": "Residencial Parque Cumbica"
+      },
+      "confianca": "media",
+      "lat": -23.4198989,
+      "lng": -46.4248424,
+      "exibido": "Avenida Francisco Xavier Correia, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07174-530, Brasil",
+      "tipo": "tertiary",
+      "rua": "Avenida Francisco Xavier Correia",
+      "numeroOSM": null,
+      "bairroOSM": "Presidente Dutra",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=489+Avenida+Francisco+Xavier+Correia&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8756708,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1425783701,
+              "lat": "-23.4198989",
+              "lon": "-46.4248424",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Francisco Xavier Correia",
+              "display_name": "Avenida Francisco Xavier Correia, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07174-530, Brasil",
+              "address": {
+                "road": "Avenida Francisco Xavier Correia",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07174-530",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4201184",
+                "-23.4196674",
+                "-46.4258402",
+                "-46.4238473"
+              ]
+            },
+            {
+              "place_id": 8739682,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1425783693,
+              "lat": "-23.4196403",
+              "lon": "-46.4231759",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Francisco Xavier Correia",
+              "display_name": "Avenida Francisco Xavier Correia, Residencial Parque Cumbica, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07174-530, Brasil",
+              "address": {
+                "road": "Avenida Francisco Xavier Correia",
+                "quarter": "Residencial Parque Cumbica",
+                "suburb": "Bonsucesso",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07174-530",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4196643",
+                "-23.4196179",
+                "-46.4232660",
+                "-46.4230862"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Avenida+Francisco+Xavier+Correia&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8654363,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1425783701,
+              "lat": "-23.4198989",
+              "lon": "-46.4248424",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Francisco Xavier Correia",
+              "display_name": "Avenida Francisco Xavier Correia, Presidente Dutra, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07174-530, Brasil",
+              "address": {
+                "road": "Avenida Francisco Xavier Correia",
+                "suburb": "Presidente Dutra",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07174-530",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4201184",
+                "-23.4196674",
+                "-46.4258402",
+                "-46.4238473"
+              ]
+            },
+            {
+              "place_id": 8594585,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1425783693,
+              "lat": "-23.4196403",
+              "lon": "-46.4231759",
+              "category": "highway",
+              "type": "tertiary",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Francisco Xavier Correia",
+              "display_name": "Avenida Francisco Xavier Correia, Residencial Parque Cumbica, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07174-530, Brasil",
+              "address": {
+                "road": "Avenida Francisco Xavier Correia",
+                "quarter": "Residencial Parque Cumbica",
+                "suburb": "Bonsucesso",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07174-530",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4196643",
+                "-23.4196179",
+                "-46.4232660",
+                "-46.4230862"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-26": {
+      "nome": "Jardim Cumbica",
+      "endereco": "Av. Berinepe, 99, Jardim Cumbica",
+      "separado": {
+        "rua": "Avenida Berinepe",
+        "numero": "99",
+        "bairro": "Jardim Cumbica"
+      },
+      "confianca": "media",
+      "lat": -23.4451966,
+      "lng": -46.4413753,
+      "exibido": "Avenida Berinepe, Jardim Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07250-060, Brasil",
+      "tipo": "residential",
+      "rua": "Avenida Berinepe",
+      "numeroOSM": null,
+      "bairroOSM": null,
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=99+Avenida+Berinepe&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8668193,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 187094040,
+              "lat": "-23.4451966",
+              "lon": "-46.4413753",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Berinepe",
+              "display_name": "Avenida Berinepe, Jardim Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07250-060, Brasil",
+              "address": {
+                "road": "Avenida Berinepe",
+                "quarter": "Jardim Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07250-060",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4488089",
+                "-23.4416323",
+                "-46.4424928",
+                "-46.4404029"
+              ]
+            },
+            {
+              "place_id": 8717729,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 187094038,
+              "lat": "-23.4507342",
+              "lon": "-46.4421870",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Berinepe",
+              "display_name": "Avenida Berinepe, Jardim Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07240-120, Brasil",
+              "address": {
+                "road": "Avenida Berinepe",
+                "quarter": "Jardim Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07240-120",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4525179",
+                "-23.4489512",
+                "-46.4424060",
+                "-46.4419790"
+              ]
+            },
+            {
+              "place_id": 8703224,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 848378153,
+              "lat": "-23.4488800",
+              "lon": "-46.4424414",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Berinepe",
+              "display_name": "Avenida Berinepe, Jardim Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07240-170, Brasil",
+              "address": {
+                "road": "Avenida Berinepe",
+                "quarter": "Jardim Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07240-170",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4489512",
+                "-23.4488089",
+                "-46.4424768",
+                "-46.4424060"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Avenida+Berinepe&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8668193,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 187094040,
+              "lat": "-23.4451966",
+              "lon": "-46.4413753",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Berinepe",
+              "display_name": "Avenida Berinepe, Jardim Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07250-060, Brasil",
+              "address": {
+                "road": "Avenida Berinepe",
+                "quarter": "Jardim Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07250-060",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4488089",
+                "-23.4416323",
+                "-46.4424928",
+                "-46.4404029"
+              ]
+            },
+            {
+              "place_id": 8717729,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 187094038,
+              "lat": "-23.4507342",
+              "lon": "-46.4421870",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Berinepe",
+              "display_name": "Avenida Berinepe, Jardim Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07240-120, Brasil",
+              "address": {
+                "road": "Avenida Berinepe",
+                "quarter": "Jardim Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07240-120",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4525179",
+                "-23.4489512",
+                "-46.4424060",
+                "-46.4419790"
+              ]
+            },
+            {
+              "place_id": 8703224,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 848378153,
+              "lat": "-23.4488800",
+              "lon": "-46.4424414",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Avenida Berinepe",
+              "display_name": "Avenida Berinepe, Jardim Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07240-170, Brasil",
+              "address": {
+                "road": "Avenida Berinepe",
+                "quarter": "Jardim Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07240-170",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4489512",
+                "-23.4488089",
+                "-46.4424768",
+                "-46.4424060"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-27": {
+      "nome": "Favela 3D",
+      "endereco": "Rua São Martinho, 375, Cidade Satélite",
+      "separado": {
+        "rua": "Rua São Martinho",
+        "numero": "375",
+        "bairro": "Cidade Satélite"
+      },
+      "confianca": "media",
+      "lat": -23.4543375,
+      "lng": -46.4682773,
+      "exibido": "Rua São Martinho, Conjunto Paes de Barros, Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07222-000, Brasil",
+      "tipo": "residential",
+      "rua": "Rua São Martinho",
+      "numeroOSM": null,
+      "bairroOSM": "Cumbica",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=375+Rua+S%C3%A3o+Martinho&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8738687,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 199505569,
+              "lat": "-23.4543375",
+              "lon": "-46.4682773",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua São Martinho",
+              "display_name": "Rua São Martinho, Conjunto Paes de Barros, Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07222-000, Brasil",
+              "address": {
+                "road": "Rua São Martinho",
+                "quarter": "Conjunto Paes de Barros",
+                "suburb": "Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07222-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4557480",
+                "-23.4530485",
+                "-46.4686207",
+                "-46.4676656"
+              ]
+            },
+            {
+              "place_id": 8716898,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1353275721,
+              "lat": "-23.4528531",
+              "lon": "-46.4674246",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua São Martinho",
+              "display_name": "Rua São Martinho, Conjunto Paes de Barros, Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07182-000, Brasil",
+              "address": {
+                "road": "Rua São Martinho",
+                "quarter": "Conjunto Paes de Barros",
+                "suburb": "Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07182-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4530485",
+                "-23.4526731",
+                "-46.4676656",
+                "-46.4671719"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+S%C3%A3o+Martinho&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8738687,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 199505569,
+              "lat": "-23.4543375",
+              "lon": "-46.4682773",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua São Martinho",
+              "display_name": "Rua São Martinho, Conjunto Paes de Barros, Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07222-000, Brasil",
+              "address": {
+                "road": "Rua São Martinho",
+                "quarter": "Conjunto Paes de Barros",
+                "suburb": "Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07222-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4557480",
+                "-23.4530485",
+                "-46.4686207",
+                "-46.4676656"
+              ]
+            },
+            {
+              "place_id": 8716898,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1353275721,
+              "lat": "-23.4528531",
+              "lon": "-46.4674246",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua São Martinho",
+              "display_name": "Rua São Martinho, Conjunto Paes de Barros, Cumbica, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07182-000, Brasil",
+              "address": {
+                "road": "Rua São Martinho",
+                "quarter": "Conjunto Paes de Barros",
+                "suburb": "Cumbica",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07182-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4530485",
+                "-23.4526731",
+                "-46.4676656",
+                "-46.4671719"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-28": {
+      "nome": "Pimentas",
+      "endereco": "Rua Itália, 13, Parque das Nações",
+      "separado": {
+        "rua": "Rua Itália",
+        "numero": "13",
+        "bairro": "Parque das Nações"
+      },
+      "confianca": "alta",
+      "lat": -23.4370069,
+      "lng": -46.4084497,
+      "exibido": "Eco Ponto Pimentas, 13, Rua Itália, Parque das Nações, Jardim Albertina, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07243-550, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Itália",
+      "numeroOSM": "13",
+      "bairroOSM": "Parque das Nações",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=13+Rua+It%C3%A1lia&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8671517,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016641793,
+              "lat": "-23.4370069",
+              "lon": "-46.4084497",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Pimentas",
+              "display_name": "Eco Ponto Pimentas, 13, Rua Itália, Parque das Nações, Jardim Albertina, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07243-550, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Pimentas",
+                "house_number": "13",
+                "road": "Rua Itália",
+                "neighbourhood": "Parque das Nações",
+                "quarter": "Jardim Albertina",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07243-550",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4371988",
+                "-23.4367288",
+                "-46.4088841",
+                "-46.4079668"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-29": {
+      "nome": "Leblon",
+      "endereco": "Rua Araci, 188, Jardim Leblon",
+      "separado": {
+        "rua": "Rua Araci",
+        "numero": "188",
+        "bairro": "Jardim Leblon"
+      },
+      "confianca": "baixa",
+      "lat": -23.4561111,
+      "lng": -46.5361566,
+      "exibido": "Rua Araci Ubirajara e Silva, Vila Progresso, Centro, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07095-150, Brasil",
+      "tipo": "residential",
+      "rua": "Rua Araci Ubirajara e Silva",
+      "numeroOSM": null,
+      "bairroOSM": "Centro",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=188+Rua+Araci&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8554459,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 8035530,
+              "lat": "-23.4561111",
+              "lon": "-46.5361566",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Araci Ubirajara e Silva",
+              "display_name": "Rua Araci Ubirajara e Silva, Vila Progresso, Centro, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07095-150, Brasil",
+              "address": {
+                "road": "Rua Araci Ubirajara e Silva",
+                "quarter": "Vila Progresso",
+                "suburb": "Centro",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07095-150",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4565517",
+                "-23.4556636",
+                "-46.5371144",
+                "-46.5352020"
+              ]
+            },
+            {
+              "place_id": 8665194,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 153255268,
+              "lat": "-23.4082020",
+              "lon": "-46.4751940",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Araci de Almeida",
+              "display_name": "Rua Araci de Almeida, Jardim Princesa, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07152-864, Brasil",
+              "address": {
+                "road": "Rua Araci de Almeida",
+                "quarter": "Jardim Princesa",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07152-864",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4094414",
+                "-23.4069623",
+                "-46.4752718",
+                "-46.4751108"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Araci&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8569900,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 8035530,
+              "lat": "-23.4561111",
+              "lon": "-46.5361566",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Araci Ubirajara e Silva",
+              "display_name": "Rua Araci Ubirajara e Silva, Vila Progresso, Centro, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07095-150, Brasil",
+              "address": {
+                "road": "Rua Araci Ubirajara e Silva",
+                "quarter": "Vila Progresso",
+                "suburb": "Centro",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07095-150",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4565517",
+                "-23.4556636",
+                "-46.5371144",
+                "-46.5352020"
+              ]
+            },
+            {
+              "place_id": 8633869,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 153255268,
+              "lat": "-23.4082020",
+              "lon": "-46.4751940",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Araci de Almeida",
+              "display_name": "Rua Araci de Almeida, Jardim Princesa, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07152-864, Brasil",
+              "address": {
+                "road": "Rua Araci de Almeida",
+                "quarter": "Jardim Princesa",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07152-864",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4094414",
+                "-23.4069623",
+                "-46.4752718",
+                "-46.4751108"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Araci%2C+Jardim+Leblon%2C+Guarulhos%2C+S%C3%A3o+Paulo",
+          "resultados": []
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&q=Rua+Araci%2C+Guarulhos",
+          "resultados": [
+            {
+              "place_id": 8661491,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 8035530,
+              "lat": "-23.4561111",
+              "lon": "-46.5361566",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05341195162890055,
+              "addresstype": "road",
+              "name": "Rua Araci Ubirajara e Silva",
+              "display_name": "Rua Araci Ubirajara e Silva, Vila Progresso, Centro, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07095-150, Brasil",
+              "address": {
+                "road": "Rua Araci Ubirajara e Silva",
+                "quarter": "Vila Progresso",
+                "suburb": "Centro",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07095-150",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4565517",
+                "-23.4556636",
+                "-46.5371144",
+                "-46.5352020"
+              ]
+            },
+            {
+              "place_id": 8697132,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 153255268,
+              "lat": "-23.4082020",
+              "lon": "-46.4751940",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Araci de Almeida",
+              "display_name": "Rua Araci de Almeida, Jardim Princesa, Bananal, Distrito-sede de Guarulhos, Guarulhos, São Paulo, Região Sudeste, 07152-864, Brasil",
+              "address": {
+                "road": "Rua Araci de Almeida",
+                "quarter": "Jardim Princesa",
+                "suburb": "Bananal",
+                "city_district": "Distrito-sede de Guarulhos",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07152-864",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4094414",
+                "-23.4069623",
+                "-46.4752718",
+                "-46.4751108"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-30": {
+      "nome": "Ponte Alta",
+      "endereco": "Rua Zeferino Alves de Oliveira, 530, Ponte Alta I",
+      "separado": {
+        "rua": "Rua Zeferino Alves de Oliveira",
+        "numero": "530",
+        "bairro": "Ponte Alta I"
+      },
+      "confianca": "alta",
+      "lat": -23.4021847,
+      "lng": -46.4192444,
+      "exibido": "Eco Ponto Ponte Alta, 530, Rua Zeferino Alves de Oliveira, Núcleo Ponta Alta, Vila Anita Garibaldi, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07179-000, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Zeferino Alves de Oliveira",
+      "numeroOSM": "530",
+      "bairroOSM": "Bonsucesso",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=530+Rua+Zeferino+Alves+de+Oliveira&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8731628,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016643378,
+              "lat": "-23.4021847",
+              "lon": "-46.4192444",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Ponte Alta",
+              "display_name": "Eco Ponto Ponte Alta, 530, Rua Zeferino Alves de Oliveira, Núcleo Ponta Alta, Vila Anita Garibaldi, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07179-000, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Ponte Alta",
+                "house_number": "530",
+                "road": "Rua Zeferino Alves de Oliveira",
+                "residential": "Núcleo Ponta Alta",
+                "quarter": "Vila Anita Garibaldi",
+                "suburb": "Bonsucesso",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07179-000",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4025167",
+                "-23.4018843",
+                "-46.4194165",
+                "-46.4189890"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-31": {
+      "nome": "Nova Bonsucesso",
+      "endereco": "Rua Remanso esquina com Viela Urga, Vila Nova Bonsucesso",
+      "separado": {
+        "rua": "Rua Remanso",
+        "numero": null,
+        "bairro": "Vila Nova Bonsucesso"
+      },
+      "confianca": "media",
+      "lat": -23.4084782,
+      "lng": -46.3899106,
+      "exibido": "Rua Remanso, Vila Nova Bonsucesso, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07175-130, Brasil",
+      "tipo": "residential",
+      "rua": "Rua Remanso",
+      "numeroOSM": null,
+      "bairroOSM": "Bonsucesso",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Remanso&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8731156,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 188475225,
+              "lat": "-23.4084782",
+              "lon": "-46.3899106",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Remanso",
+              "display_name": "Rua Remanso, Vila Nova Bonsucesso, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07175-130, Brasil",
+              "address": {
+                "road": "Rua Remanso",
+                "quarter": "Vila Nova Bonsucesso",
+                "suburb": "Bonsucesso",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07175-130",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4091651",
+                "-23.4077921",
+                "-46.3921999",
+                "-46.3876212"
+              ]
+            },
+            {
+              "place_id": 8719386,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 263544487,
+              "lat": "-23.4083838",
+              "lon": "-46.3978019",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Remanso",
+              "display_name": "Rua Remanso, Vila Nova Bonsucesso, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07176-160, Brasil",
+              "address": {
+                "road": "Rua Remanso",
+                "quarter": "Vila Nova Bonsucesso",
+                "suburb": "Bonsucesso",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07176-160",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4088361",
+                "-23.4080330",
+                "-46.3993707",
+                "-46.3962603"
+              ]
+            },
+            {
+              "place_id": 8762875,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 263546576,
+              "lat": "-23.4092797",
+              "lon": "-46.3927075",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Remanso",
+              "display_name": "Rua Remanso, Vila Nova Bonsucesso, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07176-560, Brasil",
+              "address": {
+                "road": "Rua Remanso",
+                "quarter": "Vila Nova Bonsucesso",
+                "suburb": "Bonsucesso",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07176-560",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4093786",
+                "-23.4091651",
+                "-46.3932184",
+                "-46.3921999"
+              ]
+            },
+            {
+              "place_id": 8740455,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 941840991,
+              "lat": "-23.4083358",
+              "lon": "-46.4012185",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.053397476920729346,
+              "addresstype": "road",
+              "name": "Rua Remanso",
+              "display_name": "Rua Remanso, Jardim do Triunfo, Bonsucesso, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07176-160, Brasil",
+              "address": {
+                "road": "Rua Remanso",
+                "quarter": "Jardim do Triunfo",
+                "suburb": "Bonsucesso",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07176-160",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4083576",
+                "-23.4083141",
+                "-46.4013003",
+                "-46.4011367"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-32": {
+      "nome": "Álamo",
+      "endereco": "Rua Gentil da Silva Leite Filho, 15, Jd. Álamo",
+      "separado": {
+        "rua": "Rua Gentil da Silva Leite Filho",
+        "numero": "15",
+        "bairro": "Jd. Álamo"
+      },
+      "confianca": "media",
+      "lat": -23.4106638,
+      "lng": -46.3741663,
+      "exibido": "Rua Gentil da Silva Leite Filho, Jardim Álamo, Sadokim, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07176-660, Brasil",
+      "tipo": "residential",
+      "rua": "Rua Gentil da Silva Leite Filho",
+      "numeroOSM": null,
+      "bairroOSM": "Sadokim",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=15+Rua+Gentil+da+Silva+Leite+Filho&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8726751,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 188927219,
+              "lat": "-23.4106638",
+              "lon": "-46.3741663",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05339292515449756,
+              "addresstype": "road",
+              "name": "Rua Gentil da Silva Leite Filho",
+              "display_name": "Rua Gentil da Silva Leite Filho, Jardim Álamo, Sadokim, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07176-660, Brasil",
+              "address": {
+                "road": "Rua Gentil da Silva Leite Filho",
+                "neighbourhood": "Jardim Álamo",
+                "suburb": "Sadokim",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07176-660",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4124077",
+                "-23.4089247",
+                "-46.3755091",
+                "-46.3728297"
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=Rua+Gentil+da+Silva+Leite+Filho&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8726751,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 188927219,
+              "lat": "-23.4106638",
+              "lon": "-46.3741663",
+              "category": "highway",
+              "type": "residential",
+              "place_rank": 26,
+              "importance": 0.05339292515449756,
+              "addresstype": "road",
+              "name": "Rua Gentil da Silva Leite Filho",
+              "display_name": "Rua Gentil da Silva Leite Filho, Jardim Álamo, Sadokim, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07176-660, Brasil",
+              "address": {
+                "road": "Rua Gentil da Silva Leite Filho",
+                "neighbourhood": "Jardim Álamo",
+                "suburb": "Sadokim",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07176-660",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4124077",
+                "-23.4089247",
+                "-46.3755091",
+                "-46.3728297"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pev-33": {
+      "nome": "Jurema",
+      "endereco": "Rua Jacutinga, 470, Jurema",
+      "separado": {
+        "rua": "Rua Jacutinga",
+        "numero": "470",
+        "bairro": "Jurema"
+      },
+      "confianca": "alta",
+      "lat": -23.4498625,
+      "lng": -46.4175205,
+      "exibido": "Eco Ponto Jurema, 470, Rua Jacutinga, Jurema, Pimentas, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07244-010, Brasil",
+      "tipo": "recycling",
+      "rua": "Rua Jacutinga",
+      "numeroOSM": "470",
+      "bairroOSM": "Pimentas",
+      "brutos": [
+        {
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&countrycodes=br&street=470+Rua+Jacutinga&city=Guarulhos&state=S%C3%A3o+Paulo",
+          "resultados": [
+            {
+              "place_id": 8635933,
+              "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+              "osm_type": "way",
+              "osm_id": 1016637865,
+              "lat": "-23.4498625",
+              "lon": "-46.4175205",
+              "category": "amenity",
+              "type": "recycling",
+              "place_rank": 30,
+              "importance": 0.0000641435873960024,
+              "addresstype": "amenity",
+              "name": "Eco Ponto Jurema",
+              "display_name": "Eco Ponto Jurema, 470, Rua Jacutinga, Jurema, Pimentas, Distrito de Jardim Presidente Dutra, Guarulhos, São Paulo, Região Sudeste, 07244-010, Brasil",
+              "address": {
+                "amenity": "Eco Ponto Jurema",
+                "house_number": "470",
+                "road": "Rua Jacutinga",
+                "quarter": "Jurema",
+                "suburb": "Pimentas",
+                "district": "Distrito de Jardim Presidente Dutra",
+                "city": "Guarulhos",
+                "state": "São Paulo",
+                "ISO3166-2-lvl4": "BR-SP",
+                "region": "Região Sudeste",
+                "postcode": "07244-010",
+                "country": "Brasil",
+                "country_code": "br"
+              },
+              "boundingbox": [
+                "-23.4500298",
+                "-23.4496848",
+                "-46.4177516",
+                "-46.4173042"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "geradoEm": "2026-10-07T03:23:04.706Z",
+  "fonte": "Nominatim / OpenStreetMap (dados © colaboradores do OpenStreetMap, ODbL)"
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ciclo Ponto</title>
+<meta name="description" content="Ciclo Ponto: onde descartar ou doar lixo eletrônico, roupas e objetos em Guarulhos. App do Ciclo 12 (ODS 12).">
+<meta name="theme-color" content="#17673f">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icones/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ciclo Ponto">
+<link rel="stylesheet" href="../shared/estilo.css">
+<link rel="stylesheet" href="app.css">
+<script>/* animação: marca a página antes de desenhar (ver shared/animacao.js) */if(window.matchMedia&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window){document.documentElement.classList.add("anim-js")}</script>
+</head>
+<body>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo-miolo">
+    <a class="marca" href="#pontos" data-aba="pontos">
+      <img src="../shared/logo.svg" alt="" width="36" height="36">
+      <span>Ciclo Ponto</span>
+    </a>
+    <nav class="navegacao" aria-label="Outros módulos">
+      <a href="../chatbot/">Ciclo Bot</a>
+      <a href="../index.html" aria-label="Voltar ao Ciclo 12">Ciclo 12</a>
+    </nav>
+  </div>
+</header>
+
+<div class="faixa-offline" id="faixa-offline" role="status" hidden>Sem internet: mostrando a cópia guardada. O mapa de ruas pode não aparecer.</div>
+
+<main id="conteudo" class="app-miolo">
+
+  <!-- ================= PONTOS ================= -->
+  <section id="pontos" class="aba-app" aria-labelledby="t-pontos">
+    <h1 id="t-pontos">Onde levar</h1>
+
+    <div class="contexto">
+      <article class="contexto-cartao">
+        <span class="contexto-numero">22,3%</span>
+        <p>dos 62 milhões de toneladas de lixo eletrônico de 2022 tiveram coleta e reciclagem documentadas.</p>
+        <p class="fonte"><a href="https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling" target="_blank" rel="noopener">Global E-waste Monitor 2024</a></p>
+      </article>
+      <article class="contexto-cartao">
+        <span class="contexto-numero">73%</span>
+        <p>do material das roupas no mundo vai para aterro ou incineração.</p>
+        <p class="fonte"><a href="https://content.ellenmacarthurfoundation.org/m/7f818b40f06e1afd/original/Summary-of-findings-A-New-Textiles-Economy.pdf" target="_blank" rel="noopener">Ellen MacArthur Foundation (2017)</a></p>
+      </article>
+    </div>
+
+    <div class="controles-app">
+      <div class="campo">
+        <label for="filtro-tipo">Mostrar</label>
+        <select id="filtro-tipo">
+          <option value="pev">Ecopontos (descarte)</option>
+          <option value="doacao">Locais de doação</option>
+        </select>
+      </div>
+      <button class="botao" id="btn-perto" type="button">Perto de mim</button>
+    </div>
+    <p class="msg-status" id="msg-perto" role="status"></p>
+
+    <div id="mapa-app" class="mapa-app" role="region" aria-label="Mapa dos pontos"></div>
+    <p class="texto-pequeno" id="resumo-pontos"></p>
+    <ol class="lista-app" id="lista-pontos"></ol>
+  </section>
+
+  <!-- ================= DOAR / DESCARTAR ================= -->
+  <section id="doar" class="aba-app" aria-labelledby="t-doar" hidden>
+    <h1 id="t-doar">Doar ou descartar um item</h1>
+    <form id="form-item" class="cartao form-item" novalidate>
+      <div class="campo">
+        <span class="rotulo-campo" id="r-foto">Foto do item</span>
+        <label class="botao botao-secundario botao-foto" for="foto">Tirar ou escolher foto</label>
+        <input id="foto" class="so-leitor" type="file" accept="image/*" capture="environment" aria-labelledby="r-foto">
+        <span class="ajuda">No celular abre a câmera. A foto é diminuída para no máximo 800 px e fica só neste aparelho.</span>
+        <div id="previa-caixa" class="previa-caixa"></div>
+        <span class="mensagem-erro" id="e-foto" hidden></span>
+      </div>
+      <div class="campo">
+        <label for="i-nome">Nome do item</label>
+        <input id="i-nome" type="text" maxlength="60" placeholder="Ex.: celular antigo, jaqueta jeans" aria-describedby="e-nome">
+        <span class="mensagem-erro" id="e-nome" hidden></span>
+      </div>
+      <div class="campo">
+        <label for="i-categoria">Categoria</label>
+        <select id="i-categoria">
+          <option value="eletronico">Eletrônico</option>
+          <option value="roupa">Roupa</option>
+          <option value="objeto">Objeto</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="i-tipo">Tipo</label>
+        <select id="i-tipo"></select>
+      </div>
+      <div class="campo">
+        <label for="i-estado">Estado</label>
+        <select id="i-estado">
+          <option value="bom">Bom, funciona</option>
+          <option value="usado">Usado, com defeito pequeno</option>
+          <option value="estragado">Quebrado ou rasgado</option>
+        </select>
+      </div>
+      <fieldset class="campo grupo-acao">
+        <legend>O que você quer fazer?</legend>
+        <label class="campo-opcao"><input type="radio" name="acao" value="doar" checked> Doar</label>
+        <label class="campo-opcao"><input type="radio" name="acao" value="trocar"> Trocar</label>
+        <label class="campo-opcao"><input type="radio" name="acao" value="descartar"> Descartar</label>
+      </fieldset>
+      <fieldset class="campo checklist" id="checklist">
+        <legend id="checklist-titulo">Antes de entregar</legend>
+        <div id="checklist-itens"></div>
+      </fieldset>
+      <button class="botao botao-grande" type="submit">Salvar item</button>
+    </form>
+    <div id="resultado-item" aria-live="polite"></div>
+  </section>
+
+  <!-- ================= MEUS ITENS ================= -->
+  <section id="itens" class="aba-app" aria-labelledby="t-itens" hidden>
+    <h1 id="t-itens">Meus itens</h1>
+    <p class="texto-pequeno" id="modo-armazenamento"></p>
+    <ul class="lista-itens" id="lista-itens"></ul>
+    <div class="acoes-itens">
+      <button class="botao botao-secundario" type="button" id="btn-exportar">Exportar meus dados</button>
+      <button class="botao botao-secundario" type="button" id="btn-limpar">Apagar todos os itens</button>
+    </div>
+    <p class="msg-status" id="msg-itens" role="status"></p>
+  </section>
+
+  <!-- ================= AVISOS ================= -->
+  <section id="avisos" class="aba-app" aria-labelledby="t-avisos" hidden>
+    <h1 id="t-avisos">Lembretes</h1>
+    <div id="suporte-avisos" class="aviso aviso-confirmar" role="status"></div>
+    <button class="botao" type="button" id="btn-ativar">Ativar lembretes</button>
+    <form id="form-lembrete" class="cartao form-lembrete" novalidate>
+      <div class="campo">
+        <label for="l-texto">Lembrar de</label>
+        <input id="l-texto" type="text" maxlength="80" value="Levar meus itens ao ponto de coleta">
+      </div>
+      <div class="campo">
+        <label for="l-quando">Quando</label>
+        <input id="l-quando" type="datetime-local" aria-describedby="e-quando">
+        <span class="mensagem-erro" id="e-quando" hidden></span>
+      </div>
+      <button class="botao" type="submit">Agendar lembrete</button>
+    </form>
+    <ul class="lista-lembretes" id="lista-lembretes"></ul>
+    <details class="cartao como-funciona-avisos">
+      <summary>Como os lembretes funcionam</summary>
+      <p>O lembrete é uma <b>notificação local</b>: quem mostra é o próprio app, no seu aparelho. Para ela aparecer na hora certa, o app precisa estar aberto. No celular, o sistema pode pausar o app em segundo plano. Se o horário passar com o app fechado, o lembrete aparece assim que você abrir o app de novo.</p>
+      <p>Avisar com o app fechado exige <b>notificação push</b>, que precisa de um servidor mandando a mensagem. Isso é um próximo passo do projeto, ainda não está feito.</p>
+      <p>No iPhone, notificações de sites só funcionam depois de instalar o app na tela de início (Safari, botão Compartilhar, "Adicionar à Tela de Início").</p>
+    </details>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-padrao">
+    <nav class="rodape-modulos" aria-label="Módulos do Ciclo 12">
+      <a href="../index.html">Ciclo 12 (início)</a>
+      <a href="../app/">Ciclo Ponto (app)</a>
+      <a href="../plataforma/">Ciclo Prato (plataforma)</a>
+      <a href="../chatbot/">Ciclo Bot (chatbot)</a>
+      <a href="../site/">Ciclo Consumo (site)</a>
+      <a href="../sobre.html">Sobre o projeto</a>
+    </nav>
+    <p><b>Ciclo 12</b>: protótipo escolar para a ODS 12 da ONU (Consumo e produção responsáveis).
+      Feito por Enzo Penchel, Bárbara Valentina, Davi Biguetti e Julia Ayumi, do Colégio Progresso, Guarulhos/SP.</p>
+  </div>
+</footer>
+
+<nav class="nav-inferior" aria-label="Seções do app">
+  <a href="#pontos" data-aba="pontos">Pontos</a>
+  <a href="#doar" data-aba="doar">Doar</a>
+  <a href="#itens" data-aba="itens">Meus itens</a>
+  <a href="#avisos" data-aba="avisos">Avisos</a>
+</nav>
+
+<script src="../shared/animacao.js"></script>
+<script src="../shared/pontos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
